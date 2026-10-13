@@ -1,0 +1,18 @@
+.DS_Store
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Raw public source text stays local (large, and long excerpts must not be committed)
+data/*/raw/
+data/_cache/
+
+# Private: names of people to redact from stored headlines and keep out of tracked files
+config/private_names.txt
+
+# Local copies of earlier Extract runs (contain verbatim evidence that can include names)
+data/*/stages/runs/

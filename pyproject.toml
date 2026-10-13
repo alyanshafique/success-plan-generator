@@ -1,0 +1,38 @@
+[project]
+name = "success-plan"
+version = "0.1.0"
+description = "Generate a hypothetical customer success plan from public information only."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+    "anthropic>=1.0",
+    "beautifulsoup4>=4.12",
+    "httpx>=0.27",
+    "jsonschema>=4.22",
+    "lxml>=5.2",
+    "pydantic>=2.7",
+    "python-docx>=1.2.0",
+    "python-dotenv>=1.0",
+    "pyyaml>=6.0",
+    "typer>=0.12",
+]
+
+[project.scripts]
+spg = "success_plan.cli:app"
+
+[dependency-groups]
+dev = ["pytest>=8.2"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/success_plan"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["live: hits real external services (EDGAR, GDELT); run with -m live"]
+addopts = "-m 'not live'"

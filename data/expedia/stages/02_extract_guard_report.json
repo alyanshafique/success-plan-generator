@@ -1,0 +1,34 @@
+{
+  "stage": "extract",
+  "generated_at": "2026-10-12T22:52:48Z",
+  "rejected_citations": [],
+  "flagged": [
+    {
+      "item_id": "I-01",
+      "kind": "initiative",
+      "title": "AI across products and operations",
+      "reason": "unsupported_statement: sentence 3, support 70%: \"In the second quarter 2026 release, the Chief Executive Officer described using AI to innovate faster and operate more efficiently.\" (not in its cited chunks: second, described, using); found in 10k-item7-p016, 10k-item1-p007, 10k-item1-p008 (mis-cited)"
+    },
+    {
+      "item_id": "I-03",
+      "kind": "initiative",
+      "title": "B2B segment growth",
+      "reason": "unsupported_statement: sentence 2, support 71%: \"It also plans to grow B2B by introducing additional products and services.\" (not in its cited chunks: plans, introducing); found in 10k-item1-p001, 10k-item1-p002, 10k-item1-p004 (mis-cited)"
+    },
+    {
+      "item_id": "I-12",
+      "kind": "initiative",
+      "title": "trivago brand rejuvenation",
+      "reason": "long_quote: sentence 1: copies 15+ consecutive words from a source"
+    },
+    {
+      "item_id": "C-06",
+      "kind": "challenge",
+      "title": "Alternative accommodations regulation",
+      "reason": "long_quote: sentence 1: copies 15+ consecutive words from a source"
+    }
+  ],
+  "excluded": [],
+  "overflow": [],
+  "dropped_sentences": []
+}

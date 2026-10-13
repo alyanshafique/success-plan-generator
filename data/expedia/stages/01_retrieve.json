@@ -1,0 +1,1163 @@
+{
+  "stage": "retrieve",
+  "generated_at": "2026-10-12T19:31:01Z",
+  "as_of": "2026-10-12",
+  "company": {
+    "input_name": "Expedia",
+    "name": "Expedia Group, Inc.",
+    "ticker": "EXPE",
+    "cik": 1324424
+  },
+  "filing": {
+    "form": "10-K",
+    "accession": "0001324424-26-000008",
+    "fiscal_year": "2025",
+    "period_end": "2025-12-31",
+    "filing_date": "2026-02-13",
+    "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+    "cover_fiscal_year_end": "2025-12-31",
+    "fiscal_year_check": "passed"
+  },
+  "sections": [
+    {
+      "item": "1",
+      "title": "Item 1. Business",
+      "word_count": 6039,
+      "chunk_count": 30,
+      "first_chunk_id": "10k-item1-p001",
+      "last_chunk_id": "10k-item1-p030"
+    },
+    {
+      "item": "1a",
+      "title": "Item 1A. Risk Factors",
+      "word_count": 11274,
+      "chunk_count": 58,
+      "first_chunk_id": "10k-item1a-p001",
+      "last_chunk_id": "10k-item1a-p058"
+    },
+    {
+      "item": "7",
+      "title": "Item 7. Management's Discussion and Analysis",
+      "word_count": 10606,
+      "chunk_count": 58,
+      "first_chunk_id": "10k-item7-p001",
+      "last_chunk_id": "10k-item7-p058"
+    }
+  ],
+  "eight_ks": {
+    "events_window_from": "2025-10-12",
+    "events_window_to": "2026-10-12",
+    "events": [
+      {
+        "accession": "0001324424-26-000016",
+        "filing_date": "2026-04-23",
+        "event_date": "2026-04-17",
+        "items": [
+          "5.02",
+          "7.01",
+          "9.01"
+        ],
+        "item_labels": [
+          "Departure or appointment of directors or certain officers"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000016/expe-20260417.htm",
+        "exhibit_99_1_url": null,
+        "chunk_count": 8
+      },
+      {
+        "accession": "0001104659-26-036875",
+        "filing_date": "2026-03-30",
+        "event_date": "2026-03-27",
+        "items": [
+          "1.01",
+          "1.02",
+          "2.03",
+          "8.01",
+          "9.01"
+        ],
+        "item_labels": [
+          "Entry into a material definitive agreement"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+        "exhibit_99_1_url": null,
+        "chunk_count": 11
+      }
+    ],
+    "earnings_releases": [
+      {
+        "accession": "0001324424-26-000051",
+        "filing_date": "2026-08-05",
+        "event_date": "2026-08-05",
+        "items": [
+          "2.02",
+          "7.01",
+          "8.01",
+          "9.01"
+        ],
+        "item_labels": [
+          "Results of operations and financial condition"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000051/expe-20260805.htm",
+        "exhibit_99_1_url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000051/earningsrelease-q22026.htm",
+        "chunk_count": 43
+      },
+      {
+        "accession": "0001324424-26-000031",
+        "filing_date": "2026-05-07",
+        "event_date": "2026-05-07",
+        "items": [
+          "2.02",
+          "8.01",
+          "9.01"
+        ],
+        "item_labels": [
+          "Results of operations and financial condition"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000031/expe-20260507.htm",
+        "exhibit_99_1_url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000031/earningsrelease-q12026.htm",
+        "chunk_count": 42
+      }
+    ]
+  },
+  "news": {
+    "provider": "gdelt",
+    "status": "ok",
+    "query": "\"Expedia Group\" sourcelang:english",
+    "window_from": "2026-07-14",
+    "window_to": "2026-10-12",
+    "error": null,
+    "aliases": [
+      "Expedia Group",
+      "Expedia",
+      "Hotels.com",
+      "Vrbo",
+      "Orbitz",
+      "Travelocity",
+      "ebookers",
+      "Wotif",
+      "trivago",
+      "EXPE"
+    ],
+    "low_signal_domains": [
+      "tickerreport.com",
+      "dailypolitical.com",
+      "themarketsdaily.com"
+    ],
+    "from_cache": true,
+    "returned_count": 114,
+    "eligible_count": 27,
+    "low_signal_count": 16,
+    "headlines": [
+      {
+        "chunk_id": "news-gdelt-001",
+        "headline": "Vrbo to Double Commissions as It Plays Catch - Up to Airbnb",
+        "url": "https://skift.com/2026/09/29/vrbo-to-double-commissions-as-it-plays-catch-up-to-airbnb/",
+        "date": "2026-09-30",
+        "domain": "skift.com",
+        "matched_aliases": [
+          "Vrbo"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-002",
+        "headline": "Expedia Group Advertising and Redion Announce the First Travel Protection Partnership in Landmark Collaboration",
+        "url": "https://www.webwire.com/ViewPressRel.asp?aId=360920",
+        "date": "2026-09-24",
+        "domain": "webwire.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-003",
+        "headline": "Expedia cuts 58 Seattle jobs in second round of layoffs this year",
+        "url": "https://www.kiro7.com/news/local/expedia-cuts-58-seattle-jobs-second-round-layoffs-this-year/6F7KLLQL3BHPTJPWQ3CA4MLPOI/",
+        "date": "2026-09-23",
+        "domain": "kiro7.com",
+        "matched_aliases": [
+          "Expedia"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-004",
+        "headline": "Morgan Stanley Cuts Expedia ( EXPE ) to Underweight as Rivals Pull Ahead on Users",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-cuts-expedia-expe-215829626.html",
+        "date": "2026-09-23",
+        "domain": "finance.yahoo.com",
+        "matched_aliases": [
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-005",
+        "headline": "Vrbo Biggest Product Push Yet , and What Hosts Need to Know",
+        "url": "https://skift.com/2026/09/07/vrbos-biggest-product-push-yet-and-what-hosts-need-to-know/",
+        "date": "2026-09-08",
+        "domain": "skift.com",
+        "matched_aliases": [
+          "Vrbo"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-006",
+        "headline": "What Is Drawing Fresh Attention To Expedia Group ( EXPE )?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/drawing-fresh-attention-expedia-group-070703502.html",
+        "date": "2026-09-05",
+        "domain": "finance.yahoo.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-007",
+        "headline": "Expedia Group ( EXPE ) Stock Gets Fair Value Boost After Raised 2026 Outlook",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/expedia-group-expe-stock-gets-031004599.html",
+        "date": "2026-09-05",
+        "domain": "finance.yahoo.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-008",
+        "headline": "Expedia fights off claim for damages by Cuban exile families",
+        "url": "https://www.sun-sentinel.com/2026/09/01/expedia-fights-off-claim-for-damages-by-cuban-exile-families-2/",
+        "date": "2026-09-01",
+        "domain": "sun-sentinel.com",
+        "matched_aliases": [
+          "Expedia"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-009",
+        "headline": "Could Expedia ( EXPE ) Stock Keep Rising as B2B Growth Fuels its Next Phase ?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/could-expedia-expe-stock-keep-232712441.html",
+        "date": "2026-08-28",
+        "domain": "finance.yahoo.com",
+        "matched_aliases": [
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-010",
+        "headline": "Expedia Executive Sells 3 , 133 Shares for $1 Million",
+        "url": "https://www.fool.com/coverage/filings/2026/08/26/expedia-executive-sells-3-133-shares-for-usd1-million/?source=iedfolrf0000001",
+        "date": "2026-08-26",
+        "domain": "fool.com",
+        "matched_aliases": [
+          "Expedia"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-011",
+        "headline": "Stocks making the biggest moves midday : EXPE , NVDA , MSTR , HIMS",
+        "url": "https://www.cnbc.com/2026/08/24/stocks-making-the-biggest-moves-midday-expe-nvda-mstr-hims.html",
+        "date": "2026-08-24",
+        "domain": "cnbc.com",
+        "matched_aliases": [
+          "EXPE"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-012",
+        "headline": "Expedia Cuts Eight Executives in AI - Focused Reorganization",
+        "url": "https://skift.com/2026/08/20/expedia-cuts-eight-executives-as-it-reorganizes-around-ai/",
+        "date": "2026-08-21",
+        "domain": "skift.com",
+        "matched_aliases": [
+          "Expedia"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-013",
+        "headline": "Internal memo : Eight execs out at Expedia Group in AI - driven shakeup",
+        "url": "https://www.geekwire.com/2026/internal-memo-eight-execs-out-at-expedia-group-in-ai-driven-shakeup/",
+        "date": "2026-08-19",
+        "domain": "geekwire.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-014",
+        "headline": "Expedia Takes Its AI Recruitment Push to Silicon Valley",
+        "url": "https://skift.com/2026/08/14/inside-expedias-silicon-valley-bid-for-ai-talent/",
+        "date": "2026-08-14",
+        "domain": "skift.com",
+        "matched_aliases": [
+          "Expedia"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-015",
+        "headline": "[headline removed: names a person]",
+        "url": "https://insidermonkey.com/",
+        "date": "2026-08-14",
+        "domain": "insidermonkey.com",
+        "matched_aliases": [
+          "Expedia"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-016",
+        "headline": "Expedia B2B Is Mostly Hotels , But It Wants a One - Stop Shop",
+        "url": "https://skift.com/2026/08/05/expedia-is-investing-in-its-leading-b2b-product-as-competition-heats-up/",
+        "date": "2026-08-05",
+        "domain": "skift.com",
+        "matched_aliases": [
+          "Expedia"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-017",
+        "headline": "trivago Delivers 21 % Growth in Q2 , Raises Guidance Again After Sixth Consecutive Double - Digit Quarter",
+        "url": "https://www.manilatimes.net/2026/08/05/tmt-newswire/globenewswire/trivago-delivers-21-growth-in-q2-raises-guidance-again-after-sixth-consecutive-double-digit-quarter/2398507",
+        "date": "2026-08-04",
+        "domain": "manilatimes.net",
+        "matched_aliases": [
+          "trivago"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-018",
+        "headline": "Expedia Buys Layla : What the AI Trip Planner Deal Changes for Travelers",
+        "url": "https://www.travelerstoday.com/articles/60678/20260801/expedia-buys-layla-what-ai-trip-planner-deal-changes-travelers.htm",
+        "date": "2026-08-01",
+        "domain": "travelerstoday.com",
+        "matched_aliases": [
+          "Expedia"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-019",
+        "headline": "Expedia Acquired AI Trip - Planner Layla : Exclusive",
+        "url": "https://skift.com/2026/07/31/expedia-acquired-ai-trip-planner-layla-exclusive/",
+        "date": "2026-07-31",
+        "domain": "skift.com",
+        "matched_aliases": [
+          "Expedia"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-020",
+        "headline": "Expedia Group Stock : Is Wall Street Bullish or Bearish ?",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/expedia-group-stock-wall-street-122311874.html",
+        "date": "2026-07-30",
+        "domain": "finance.yahoo.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-021",
+        "headline": "Quality Pays : New Vrbo Research Finds Travelers Will Spend More on Vacation Rentals They Trust",
+        "url": "https://www.finanznachrichten.de/nachrichten-2026-07/69156885-quality-pays-new-vrbo-research-finds-travelers-will-spend-more-on-vacation-rentals-they-trust-004.htm",
+        "date": "2026-07-29",
+        "domain": "finanznachrichten.de",
+        "matched_aliases": [
+          "Vrbo"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-022",
+        "headline": "What to Expect From Expedia Group Next Quarterly Earnings Report",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/expect-expedia-groups-next-quarterly-130459190.html",
+        "date": "2026-07-22",
+        "domain": "finance.yahoo.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-023",
+        "headline": "Expedia Island Hot List 2026 : See Top Travel Destinations , Reviews",
+        "url": "https://variety.com/2026/shopping/news/best-island-travel-destinations-2026-expedia-booking-reviews-1236812514/",
+        "date": "2026-07-21",
+        "domain": "variety.com",
+        "matched_aliases": [
+          "Expedia"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-024",
+        "headline": "Expedia AI Talent Strategy Explained",
+        "url": "https://skift.com/2026/07/20/expedia-cto-ramana-thumu-ai-talent-strategy/",
+        "date": "2026-07-21",
+        "domain": "skift.com",
+        "matched_aliases": [
+          "Expedia"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-025",
+        "headline": "Can $1 Billion Fora Travel Challenge Expedia And Booking . com ?",
+        "url": "https://www.forbes.com/sites/jacquesledbetter/2026/07/17/can-1-billion-fora-travel-challenge-expedia-and-bookingcom/",
+        "date": "2026-07-17",
+        "domain": "forbes.com",
+        "matched_aliases": [
+          "Expedia"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-026",
+        "headline": "Allegiant on Expedia : 566 Nonstop Routes Now Bookable , With a Hidden Catch",
+        "url": "https://www.travelerstoday.com/articles/60419/20260717/allegiant-expedia-566-nonstop-routes-now-bookable-hidden-catch.htm",
+        "date": "2026-07-17",
+        "domain": "travelerstoday.com",
+        "matched_aliases": [
+          "Expedia"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-027",
+        "headline": "Customers Prefer ChatGPT Over Company Chatbots : How Klarna , Expedia , Instacart and Others Are Responding",
+        "url": "https://infotechlead.com/artificial-intelligence/customers-prefer-chatgpt-over-company-chatbots-how-klarna-expedia-instacart-and-others-are-responding-97106",
+        "date": "2026-07-15",
+        "domain": "infotechlead.com",
+        "matched_aliases": [
+          "Expedia"
+        ],
+        "low_signal": false,
+        "eligible_for_extract": true
+      },
+      {
+        "chunk_id": "news-gdelt-028",
+        "headline": "Expedia Group , Inc . $EXPE Position Raised by Andra AP fonden",
+        "url": "https://www.tickerreport.com/banking-finance/13591882/expedia-group-inc-expe-position-raised-by-andra-ap-fonden.html",
+        "date": "2026-09-22",
+        "domain": "tickerreport.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": true,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-029",
+        "headline": "Expedia Group ( NASDAQ : EXPE ) Upgraded by Wall Street Zen to Strong - Buy Rating",
+        "url": "https://www.themarketsdaily.com/2026/09/20/expedia-group-nasdaqexpe-upgraded-by-wall-street-zen-to-strong-buy-rating.html",
+        "date": "2026-09-20",
+        "domain": "themarketsdaily.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": true,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-030",
+        "headline": "Expedia Group ( NASDAQ : EXPE ) Shares Down 7 % – Here What Happened",
+        "url": "https://www.tickerreport.com/banking-finance/13577123/expedia-group-nasdaqexpe-shares-down-7-heres-what-happened.html",
+        "date": "2026-09-08",
+        "domain": "tickerreport.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": true,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-031",
+        "headline": "Contrasting Expedia Group ( NASDAQ : EXPE ) and CAVA Group ( NYSE : CAVA )",
+        "url": "https://www.themarketsdaily.com/2026/09/07/contrasting-expedia-group-nasdaqexpe-and-cava-group-nysecava.html",
+        "date": "2026-09-07",
+        "domain": "themarketsdaily.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": true,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-032",
+        "headline": "Nykredit A S Takes $14 . 82 Million Position in Expedia Group , Inc . $EXPE",
+        "url": "https://www.dailypolitical.com/2026/09/05/nykredit-a-s-takes-14-82-million-position-in-expedia-group-inc-expe.html",
+        "date": "2026-09-05",
+        "domain": "dailypolitical.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": true,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-033",
+        "headline": "Brokerages Set Expedia Group , Inc . ( NASDAQ : EXPE ) Price Target at $314 . 27",
+        "url": "https://www.dailypolitical.com/2026/08/23/brokerages-set-expedia-group-inc-nasdaqexpe-price-target-at-314-27.html",
+        "date": "2026-08-24",
+        "domain": "dailypolitical.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": true,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-034",
+        "headline": "Head - To - Head Contrast : Expedia Group ( NASDAQ : EXPE ) versus Dalata Hotel Group ( OTCMKTS : DLTTF )",
+        "url": "https://www.themarketsdaily.com/2026/08/09/head-to-head-contrast-expedia-group-nasdaqexpe-versus-dalata-hotel-group-otcmktsdlttf.html",
+        "date": "2026-08-09",
+        "domain": "themarketsdaily.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": true,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-035",
+        "headline": "Expedia Group , Inc . to Issue Quarterly Dividend of $0 . 48 ( NASDAQ : EXPE )",
+        "url": "https://www.tickerreport.com/banking-finance/13532412/expedia-group-inc-to-issue-quarterly-dividend-of-0-48-nasdaqexpe.html",
+        "date": "2026-08-06",
+        "domain": "tickerreport.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": true,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-036",
+        "headline": "Expedia Group ( NASDAQ : EXPE ) Announces Quarterly Earnings Results , Beats Expectations By $0 . 54 EPS",
+        "url": "https://www.tickerreport.com/banking-finance/13531510/expedia-group-nasdaqexpe-announces-quarterly-earnings-results-beats-expectations-by-0-54-eps.html",
+        "date": "2026-08-06",
+        "domain": "tickerreport.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": true,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-037",
+        "headline": "Essential Partners LLC Trims Position in Expedia Group , Inc . $EXPE",
+        "url": "https://www.dailypolitical.com/2026/07/31/essential-partners-llc-trims-position-in-expedia-group-inc-expe.html",
+        "date": "2026-07-31",
+        "domain": "dailypolitical.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": true,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-038",
+        "headline": "Essential Partners LLC Sells 2 , 244 Shares of Expedia Group , Inc . $EXPE",
+        "url": "https://www.tickerreport.com/banking-finance/13524073/essential-partners-llc-sells-2244-shares-of-expedia-group-inc-expe.html",
+        "date": "2026-07-31",
+        "domain": "tickerreport.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": true,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-039",
+        "headline": "Maverick Capital Ltd . Sells 8 , 434 Shares of Expedia Group , Inc . $EXPE",
+        "url": "https://www.themarketsdaily.com/2026/07/28/maverick-capital-ltd-sells-8434-shares-of-expedia-group-inc-expe.html",
+        "date": "2026-07-28",
+        "domain": "themarketsdaily.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": true,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-040",
+        "headline": "Sei Investments Co . Has $129 . 41 Million Position in Expedia Group , Inc . $EXPE",
+        "url": "https://www.tickerreport.com/banking-finance/13513864/sei-investments-co-has-129-41-million-position-in-expedia-group-inc-expe.html",
+        "date": "2026-07-24",
+        "domain": "tickerreport.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": true,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-041",
+        "headline": "Sanctuary Advisors LLC Cuts Stock Position in Expedia Group , Inc . $EXPE",
+        "url": "https://www.dailypolitical.com/2026/07/21/sanctuary-advisors-llc-cuts-stock-position-in-expedia-group-inc-expe.html",
+        "date": "2026-07-21",
+        "domain": "dailypolitical.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": true,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-042",
+        "headline": "Three Seasons Wealth LLC Acquires 6 , 002 Shares of Expedia Group , Inc . $EXPE",
+        "url": "https://www.tickerreport.com/banking-finance/13505592/three-seasons-wealth-llc-acquires-6002-shares-of-expedia-group-inc-expe.html",
+        "date": "2026-07-16",
+        "domain": "tickerreport.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": true,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-043",
+        "headline": "Teachers Retirement System of The State of Kentucky Decreases Position in Expedia Group , Inc . $EXPE",
+        "url": "https://www.dailypolitical.com/2026/07/15/teachers-retirement-system-of-the-state-of-kentucky-decreases-position-in-expedia-group-inc-expe.html",
+        "date": "2026-07-15",
+        "domain": "dailypolitical.com",
+        "matched_aliases": [
+          "Expedia Group",
+          "Expedia",
+          "EXPE"
+        ],
+        "low_signal": true,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-044",
+        "headline": "TTN - Travel & Tourism News Middle East",
+        "url": "https://www.ttnworldwide.com:443/ArticleTTN/487271/travelai-appoints-dan-godsell",
+        "date": "2026-10-01",
+        "domain": "ttnworldwide.com",
+        "matched_aliases": [],
+        "low_signal": false,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-045",
+        "headline": "Hotel Stocks To Follow Now – September 30th",
+        "url": "https://www.themarketsdaily.com/2026/09/30/hotel-stocks-to-follow-now-september-30th.html",
+        "date": "2026-09-30",
+        "domain": "themarketsdaily.com",
+        "matched_aliases": [],
+        "low_signal": true,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-046",
+        "headline": "Uber Is Coming for STR . Airbnb Has an AI Agent Coming .",
+        "url": "https://skift.com/2026/09/28/uber-is-coming-for-str-airbnb-has-an-ai-agent-coming/",
+        "date": "2026-09-29",
+        "domain": "skift.com",
+        "matched_aliases": [],
+        "low_signal": false,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-047",
+        "headline": "Jet2 Uses Agentic AI to Personalize Holidays for 10 Million myJet2 Members",
+        "url": "https://www.travelerstoday.com/articles/61034/20260925/jet2-uses-agentic-ai-personalize-holidays-10-million-myjet2-members.htm",
+        "date": "2026-09-25",
+        "domain": "travelerstoday.com",
+        "matched_aliases": [],
+        "low_signal": false,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-048",
+        "headline": "Tourism industry leaders to gather in Honolulu for Hawaiʻi Visitor Industry Conference : Big Island Now",
+        "url": "https://bigislandnow.com/2026/09/23/tourism-industry-leaders-to-gather-in-honolulu-for-hawai%CA%BBis-visitor-industry-conference/",
+        "date": "2026-09-23",
+        "domain": "bigislandnow.com",
+        "matched_aliases": [],
+        "low_signal": false,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-049",
+        "headline": "Promising Hotel Stocks To Watch Today – September 23rd",
+        "url": "https://www.tickerreport.com/banking-finance/13592732/promising-hotel-stocks-to-watch-today-september-23rd.html",
+        "date": "2026-09-23",
+        "domain": "tickerreport.com",
+        "matched_aliases": [],
+        "low_signal": true,
+        "eligible_for_extract": false
+      },
+      {
+        "chunk_id": "news-gdelt-050",
+        "headline": "NZ Super Fund boss says the sovereign fund punches above its weight",
+        "url": "https://www.interest.co.nz/investing/140364/nz-super-fund-expects-its-investment-approach-be-examined-and-times-challenged",
+        "date": "2026-09-23",
+        "domain": "interest.co.nz",
+        "matched_aliases": [],
+        "low_signal": false,
+        "eligible_for_extract": false
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "10k-item1",
+      "source_type": "filing",
+      "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+      "date": "2026-02-13",
+      "event_date": null,
+      "location": "Item 1 Business",
+      "signal": "primary",
+      "chunk_count": 30
+    },
+    {
+      "source_id": "10k-item1a",
+      "source_type": "filing",
+      "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+      "date": "2026-02-13",
+      "event_date": null,
+      "location": "Item 1A Risk Factors",
+      "signal": "primary",
+      "chunk_count": 58
+    },
+    {
+      "source_id": "10k-item7",
+      "source_type": "filing",
+      "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+      "date": "2026-02-13",
+      "event_date": null,
+      "location": "Item 7 MD&A",
+      "signal": "primary",
+      "chunk_count": 58
+    },
+    {
+      "source_id": "8k-0001324424-26-000016",
+      "source_type": "filing",
+      "title": "Expedia Group, Inc. Form 8-K filed 2026-04-23 (Departure or appointment of directors or certain officers)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000016/expe-20260417.htm",
+      "date": "2026-04-23",
+      "event_date": "2026-04-17",
+      "location": "Form 8-K Items 5.02, 7.01, 9.01",
+      "signal": "primary",
+      "chunk_count": 8
+    },
+    {
+      "source_id": "8k-0001104659-26-036875",
+      "source_type": "filing",
+      "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+      "date": "2026-03-30",
+      "event_date": "2026-03-27",
+      "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+      "signal": "primary",
+      "chunk_count": 11
+    },
+    {
+      "source_id": "8k-0001324424-26-000051-ex991",
+      "source_type": "filing",
+      "title": "Expedia Group, Inc. earnings release (Form 8-K Ex. 99.1) filed 2026-08-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000051/earningsrelease-q22026.htm",
+      "date": "2026-08-05",
+      "event_date": "2026-08-05",
+      "location": "Form 8-K Exhibit 99.1",
+      "signal": "primary",
+      "chunk_count": 43
+    },
+    {
+      "source_id": "8k-0001324424-26-000031-ex991",
+      "source_type": "filing",
+      "title": "Expedia Group, Inc. earnings release (Form 8-K Ex. 99.1) filed 2026-05-07",
+      "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000031/earningsrelease-q12026.htm",
+      "date": "2026-05-07",
+      "event_date": "2026-05-07",
+      "location": "Form 8-K Exhibit 99.1",
+      "signal": "primary",
+      "chunk_count": 42
+    },
+    {
+      "source_id": "news-gdelt-001",
+      "source_type": "news",
+      "title": "Vrbo to Double Commissions as It Plays Catch - Up to Airbnb",
+      "url": "https://skift.com/2026/09/29/vrbo-to-double-commissions-as-it-plays-catch-up-to-airbnb/",
+      "date": "2026-09-30",
+      "event_date": null,
+      "location": "skift.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-002",
+      "source_type": "news",
+      "title": "Expedia Group Advertising and Redion Announce the First Travel Protection Partnership in Landmark Collaboration",
+      "url": "https://www.webwire.com/ViewPressRel.asp?aId=360920",
+      "date": "2026-09-24",
+      "event_date": null,
+      "location": "webwire.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-003",
+      "source_type": "news",
+      "title": "Expedia cuts 58 Seattle jobs in second round of layoffs this year",
+      "url": "https://www.kiro7.com/news/local/expedia-cuts-58-seattle-jobs-second-round-layoffs-this-year/6F7KLLQL3BHPTJPWQ3CA4MLPOI/",
+      "date": "2026-09-23",
+      "event_date": null,
+      "location": "kiro7.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-004",
+      "source_type": "news",
+      "title": "Morgan Stanley Cuts Expedia ( EXPE ) to Underweight as Rivals Pull Ahead on Users",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-cuts-expedia-expe-215829626.html",
+      "date": "2026-09-23",
+      "event_date": null,
+      "location": "finance.yahoo.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-005",
+      "source_type": "news",
+      "title": "Vrbo Biggest Product Push Yet , and What Hosts Need to Know",
+      "url": "https://skift.com/2026/09/07/vrbos-biggest-product-push-yet-and-what-hosts-need-to-know/",
+      "date": "2026-09-08",
+      "event_date": null,
+      "location": "skift.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-006",
+      "source_type": "news",
+      "title": "What Is Drawing Fresh Attention To Expedia Group ( EXPE )?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/drawing-fresh-attention-expedia-group-070703502.html",
+      "date": "2026-09-05",
+      "event_date": null,
+      "location": "finance.yahoo.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-007",
+      "source_type": "news",
+      "title": "Expedia Group ( EXPE ) Stock Gets Fair Value Boost After Raised 2026 Outlook",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/expedia-group-expe-stock-gets-031004599.html",
+      "date": "2026-09-05",
+      "event_date": null,
+      "location": "finance.yahoo.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-008",
+      "source_type": "news",
+      "title": "Expedia fights off claim for damages by Cuban exile families",
+      "url": "https://www.sun-sentinel.com/2026/09/01/expedia-fights-off-claim-for-damages-by-cuban-exile-families-2/",
+      "date": "2026-09-01",
+      "event_date": null,
+      "location": "sun-sentinel.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-009",
+      "source_type": "news",
+      "title": "Could Expedia ( EXPE ) Stock Keep Rising as B2B Growth Fuels its Next Phase ?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/could-expedia-expe-stock-keep-232712441.html",
+      "date": "2026-08-28",
+      "event_date": null,
+      "location": "finance.yahoo.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-010",
+      "source_type": "news",
+      "title": "Expedia Executive Sells 3 , 133 Shares for $1 Million",
+      "url": "https://www.fool.com/coverage/filings/2026/08/26/expedia-executive-sells-3-133-shares-for-usd1-million/?source=iedfolrf0000001",
+      "date": "2026-08-26",
+      "event_date": null,
+      "location": "fool.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-011",
+      "source_type": "news",
+      "title": "Stocks making the biggest moves midday : EXPE , NVDA , MSTR , HIMS",
+      "url": "https://www.cnbc.com/2026/08/24/stocks-making-the-biggest-moves-midday-expe-nvda-mstr-hims.html",
+      "date": "2026-08-24",
+      "event_date": null,
+      "location": "cnbc.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-012",
+      "source_type": "news",
+      "title": "Expedia Cuts Eight Executives in AI - Focused Reorganization",
+      "url": "https://skift.com/2026/08/20/expedia-cuts-eight-executives-as-it-reorganizes-around-ai/",
+      "date": "2026-08-21",
+      "event_date": null,
+      "location": "skift.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-013",
+      "source_type": "news",
+      "title": "Internal memo : Eight execs out at Expedia Group in AI - driven shakeup",
+      "url": "https://www.geekwire.com/2026/internal-memo-eight-execs-out-at-expedia-group-in-ai-driven-shakeup/",
+      "date": "2026-08-19",
+      "event_date": null,
+      "location": "geekwire.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-014",
+      "source_type": "news",
+      "title": "Expedia Takes Its AI Recruitment Push to Silicon Valley",
+      "url": "https://skift.com/2026/08/14/inside-expedias-silicon-valley-bid-for-ai-talent/",
+      "date": "2026-08-14",
+      "event_date": null,
+      "location": "skift.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-015",
+      "source_type": "news",
+      "title": "[headline removed: names a person]",
+      "url": "https://insidermonkey.com/",
+      "date": "2026-08-14",
+      "event_date": null,
+      "location": "insidermonkey.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-016",
+      "source_type": "news",
+      "title": "Expedia B2B Is Mostly Hotels , But It Wants a One - Stop Shop",
+      "url": "https://skift.com/2026/08/05/expedia-is-investing-in-its-leading-b2b-product-as-competition-heats-up/",
+      "date": "2026-08-05",
+      "event_date": null,
+      "location": "skift.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-017",
+      "source_type": "news",
+      "title": "trivago Delivers 21 % Growth in Q2 , Raises Guidance Again After Sixth Consecutive Double - Digit Quarter",
+      "url": "https://www.manilatimes.net/2026/08/05/tmt-newswire/globenewswire/trivago-delivers-21-growth-in-q2-raises-guidance-again-after-sixth-consecutive-double-digit-quarter/2398507",
+      "date": "2026-08-04",
+      "event_date": null,
+      "location": "manilatimes.net",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-018",
+      "source_type": "news",
+      "title": "Expedia Buys Layla : What the AI Trip Planner Deal Changes for Travelers",
+      "url": "https://www.travelerstoday.com/articles/60678/20260801/expedia-buys-layla-what-ai-trip-planner-deal-changes-travelers.htm",
+      "date": "2026-08-01",
+      "event_date": null,
+      "location": "travelerstoday.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-019",
+      "source_type": "news",
+      "title": "Expedia Acquired AI Trip - Planner Layla : Exclusive",
+      "url": "https://skift.com/2026/07/31/expedia-acquired-ai-trip-planner-layla-exclusive/",
+      "date": "2026-07-31",
+      "event_date": null,
+      "location": "skift.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-020",
+      "source_type": "news",
+      "title": "Expedia Group Stock : Is Wall Street Bullish or Bearish ?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/expedia-group-stock-wall-street-122311874.html",
+      "date": "2026-07-30",
+      "event_date": null,
+      "location": "finance.yahoo.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-021",
+      "source_type": "news",
+      "title": "Quality Pays : New Vrbo Research Finds Travelers Will Spend More on Vacation Rentals They Trust",
+      "url": "https://www.finanznachrichten.de/nachrichten-2026-07/69156885-quality-pays-new-vrbo-research-finds-travelers-will-spend-more-on-vacation-rentals-they-trust-004.htm",
+      "date": "2026-07-29",
+      "event_date": null,
+      "location": "finanznachrichten.de",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-022",
+      "source_type": "news",
+      "title": "What to Expect From Expedia Group Next Quarterly Earnings Report",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/expect-expedia-groups-next-quarterly-130459190.html",
+      "date": "2026-07-22",
+      "event_date": null,
+      "location": "finance.yahoo.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-023",
+      "source_type": "news",
+      "title": "Expedia Island Hot List 2026 : See Top Travel Destinations , Reviews",
+      "url": "https://variety.com/2026/shopping/news/best-island-travel-destinations-2026-expedia-booking-reviews-1236812514/",
+      "date": "2026-07-21",
+      "event_date": null,
+      "location": "variety.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-024",
+      "source_type": "news",
+      "title": "Expedia AI Talent Strategy Explained",
+      "url": "https://skift.com/2026/07/20/expedia-cto-ramana-thumu-ai-talent-strategy/",
+      "date": "2026-07-21",
+      "event_date": null,
+      "location": "skift.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-025",
+      "source_type": "news",
+      "title": "Can $1 Billion Fora Travel Challenge Expedia And Booking . com ?",
+      "url": "https://www.forbes.com/sites/jacquesledbetter/2026/07/17/can-1-billion-fora-travel-challenge-expedia-and-bookingcom/",
+      "date": "2026-07-17",
+      "event_date": null,
+      "location": "forbes.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-026",
+      "source_type": "news",
+      "title": "Allegiant on Expedia : 566 Nonstop Routes Now Bookable , With a Hidden Catch",
+      "url": "https://www.travelerstoday.com/articles/60419/20260717/allegiant-expedia-566-nonstop-routes-now-bookable-hidden-catch.htm",
+      "date": "2026-07-17",
+      "event_date": null,
+      "location": "travelerstoday.com",
+      "signal": "weak",
+      "chunk_count": 1
+    },
+    {
+      "source_id": "news-gdelt-027",
+      "source_type": "news",
+      "title": "Customers Prefer ChatGPT Over Company Chatbots : How Klarna , Expedia , Instacart and Others Are Responding",
+      "url": "https://infotechlead.com/artificial-intelligence/customers-prefer-chatgpt-over-company-chatbots-how-klarna-expedia-instacart-and-others-are-responding-97106",
+      "date": "2026-07-15",
+      "event_date": null,
+      "location": "infotechlead.com",
+      "signal": "weak",
+      "chunk_count": 1
+    }
+  ],
+  "total_chunks": 277,
+  "request_count": 2,
+  "warnings": [
+    "7 GDELT headline(s) name neither the company nor an alias; kept in the manifest for review but not eligible for Extract.",
+    "16 GDELT headline(s) from low-signal domains (config/news_sources.yaml); kept in the manifest for review but not eligible for Extract."
+  ]
+}

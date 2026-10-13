@@ -1,0 +1,583 @@
+{
+  "stage": "draft",
+  "generated_at": "2026-10-13T21:51:19Z",
+  "company": "Expedia Group, Inc.",
+  "profile": "dev",
+  "extract_generated_at": "2026-10-12T22:52:48Z",
+  "map_generated_at": "2026-10-13T21:51:18Z",
+  "map_profile": "dev",
+  "map_replayed_from": "data/expedia/raw/llm/map-20261012T235845Z-dev",
+  "objectives": [
+    {
+      "id": "O-01",
+      "title": "Explore support for: AI across products and operations",
+      "owner": "shared",
+      "provenance": "inferred",
+      "linked_initiative_ids": [
+        "I-01"
+      ],
+      "benefit_id": "B-01",
+      "capability_ids": [
+        "JIRA-AI-ROVO"
+      ],
+      "fit": "partial",
+      "labels": [
+        "partial fit: supports the work, does not deliver the outcome"
+      ],
+      "success_criteria": [
+        {
+          "id": "O-01-C1",
+          "text": "Track how many Jira work items are created from content using AI.",
+          "owner": "shared",
+          "provenance": "inferred",
+          "refs": [
+            "B-01.s2"
+          ],
+          "citations": [],
+          "product_citations": [
+            {
+              "claim_id": "JIRA-AI-ROVO#d6",
+              "capability_id": "JIRA-AI-ROVO",
+              "capability_name": "Rovo AI (search, chat, agents) in Jira",
+              "evidence": "Content can be turned into Jira work items with AI.",
+              "source_urls": [
+                "https://www.atlassian.com/software/jira",
+                "https://www.atlassian.com/software/confluence/ai",
+                "https://www.atlassian.com/software/confluence/create-and-edit-with-rovo"
+              ],
+              "verified_on": "2026-10-12",
+              "verified_by": "owner_manual_check",
+              "unconfirmed": false,
+              "evidence_truncated": false
+            }
+          ],
+          "criterion_type": "product_usage",
+          "indicator_type": "leading",
+          "measure": "number of Jira work items created from content with AI",
+          "direction": "increase",
+          "proposed_target": "Increase: number of Jira work items created from content with AI. Target: [CSM to complete: set after baseline]",
+          "needs_baseline": true,
+          "baseline_question": "How many Jira work items are created from content with AI today?",
+          "validation_question": "Is creating work items from content a step your teams want to make faster?",
+          "support_score": 0.556,
+          "labels": [],
+          "flags": [
+            {
+              "type": "unsupported_statement",
+              "detail": "support 56%: not in its references: Track, many, created, using"
+            }
+          ]
+        },
+        {
+          "id": "O-01-C2",
+          "text": "Track how many people run AI searches across Jira, Confluence, and connected apps.",
+          "owner": "shared",
+          "provenance": "inferred",
+          "refs": [
+            "B-01.s1"
+          ],
+          "citations": [],
+          "product_citations": [
+            {
+              "claim_id": "JIRA-AI-ROVO#d2",
+              "capability_id": "JIRA-AI-ROVO",
+              "capability_name": "Rovo AI (search, chat, agents) in Jira",
+              "evidence": "It offers AI search across Jira, Confluence, and connected apps;",
+              "source_urls": [
+                "https://www.atlassian.com/software/jira",
+                "https://www.atlassian.com/software/confluence/ai",
+                "https://www.atlassian.com/software/confluence/create-and-edit-with-rovo"
+              ],
+              "verified_on": "2026-10-12",
+              "verified_by": "owner_manual_check",
+              "unconfirmed": false,
+              "evidence_truncated": false
+            }
+          ],
+          "criterion_type": "product_usage",
+          "indicator_type": "leading",
+          "measure": "number of people using AI search across Jira, Confluence, and connected apps",
+          "direction": "increase",
+          "proposed_target": "Increase: number of people using AI search across Jira, Confluence, and connected apps. Target: [CSM to complete: set after baseline]",
+          "needs_baseline": true,
+          "baseline_question": "How many people use AI search across your work tools today?",
+          "validation_question": "Do your teams currently struggle to find information across work tools?",
+          "support_score": 0.636,
+          "labels": [],
+          "flags": [
+            {
+              "type": "unsupported_statement",
+              "detail": "support 64%: not in its references: Track, many, people, run"
+            }
+          ]
+        },
+        {
+          "id": "O-01-C3",
+          "text": "Track speed of resolution in customer service teams.",
+          "owner": "shared",
+          "provenance": "inferred",
+          "refs": [
+            "I-01.s2"
+          ],
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p005",
+              "source_id": "10k-item1",
+              "evidence": "enhancing developer productivity and improving resolution speed in our customer service teams",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "product_citations": [],
+          "criterion_type": "business_outcome",
+          "indicator_type": "lagging",
+          "measure": "speed of resolution in customer service teams",
+          "direction": "increase",
+          "proposed_target": "Increase: speed of resolution in customer service teams. Target: [CSM to complete: set after baseline]",
+          "needs_baseline": true,
+          "baseline_question": "What is your current speed of resolution in customer service teams?",
+          "validation_question": "Is speed of resolution a measure your leaders review for AI use in operations?",
+          "support_score": 0.833,
+          "labels": [
+            "company measure; not attributable to the product"
+          ],
+          "flags": []
+        }
+      ],
+      "tasks": [
+        {
+          "id": "O-01-T1",
+          "task_id": "T-DISCOVERY",
+          "text": "Run a discovery call on the work behind 'AI across products and operations'.",
+          "responsible_role": "CSM",
+          "window": "Day 0-30",
+          "is_proposed": true,
+          "provenance": "inferred",
+          "validation_question": "Who owns the work behind 'AI across products and operations', and how is it tracked today?"
+        },
+        {
+          "id": "O-01-T2",
+          "task_id": "T-DEMO",
+          "text": "Demo Rovo AI search to the team.",
+          "responsible_role": "CSM",
+          "window": "Day 31-60",
+          "is_proposed": true,
+          "provenance": "inferred",
+          "validation_question": "How closely would Rovo AI search fit the way the team works today?"
+        },
+        {
+          "id": "O-01-T3",
+          "task_id": "T-BASELINES",
+          "text": "Agree baselines for this objective's success criteria.",
+          "responsible_role": "CSM",
+          "window": "Day 31-60",
+          "is_proposed": true,
+          "provenance": "inferred",
+          "validation_question": "Which of these measures can the company already report, and from which system?"
+        },
+        {
+          "id": "O-01-T4",
+          "task_id": "T-PILOT",
+          "text": "Propose a pilot of Rovo AI search with one team.",
+          "responsible_role": "Customer team lead",
+          "window": "Day 61-90",
+          "is_proposed": true,
+          "provenance": "inferred",
+          "validation_question": "Which team would be a good first pilot, and who would sponsor it?"
+        }
+      ]
+    },
+    {
+      "id": "O-02",
+      "title": "Explore support for: Unified technology platform",
+      "owner": "shared",
+      "provenance": "inferred",
+      "linked_initiative_ids": [
+        "I-02"
+      ],
+      "benefit_id": "B-02",
+      "capability_ids": [
+        "JIRA-WORKFLOWS",
+        "JIRA-PLANNING-ROADMAPS"
+      ],
+      "fit": "partial",
+      "labels": [
+        "partial fit: supports the work, does not deliver the outcome"
+      ],
+      "success_criteria": [
+        {
+          "id": "O-02-C1",
+          "text": "Track how many teams follow one shared workflow scheme across multiple spaces.",
+          "owner": "shared",
+          "provenance": "inferred",
+          "refs": [
+            "B-02.s1"
+          ],
+          "citations": [],
+          "product_citations": [
+            {
+              "claim_id": "JIRA-WORKFLOWS#d2",
+              "capability_id": "JIRA-WORKFLOWS",
+              "capability_name": "Customizable workflows and standardization",
+              "evidence": "one scheme can be shared across multiple spaces (projects), so many teams can follow",
+              "source_urls": [
+                "https://support.atlassian.com/jira-cloud-administration/docs/configure-workflow-schemes/",
+                "https://support.atlassian.com/jira-cloud-administration/docs/explore-jira-cloud-plans/"
+              ],
+              "verified_on": "2026-10-12",
+              "verified_by": "owner_manual_check",
+              "unconfirmed": false,
+              "evidence_truncated": true
+            }
+          ],
+          "criterion_type": "product_usage",
+          "indicator_type": "leading",
+          "measure": "number of teams using one shared workflow scheme",
+          "direction": "increase",
+          "proposed_target": "Increase: number of teams using one shared workflow scheme. Target: [CSM to complete: set after baseline]",
+          "needs_baseline": true,
+          "baseline_question": "How many teams follow one shared workflow scheme today?",
+          "validation_question": "Would a single shared process across spaces matter to your teams?",
+          "support_score": 0.909,
+          "labels": [],
+          "flags": []
+        },
+        {
+          "id": "O-02-C2",
+          "text": "Track how many plans combine work items from boards, spaces, and filters into one cross-team view.",
+          "owner": "shared",
+          "provenance": "inferred",
+          "refs": [
+            "B-02.s2"
+          ],
+          "citations": [],
+          "product_citations": [
+            {
+              "claim_id": "JIRA-PLANNING-ROADMAPS#d1",
+              "capability_id": "JIRA-PLANNING-ROADMAPS",
+              "capability_name": "Cross-team planning, roadmaps, and dependency tracking",
+              "evidence": "Plans combine work items from boards, spaces, and filters into one view for planning",
+              "source_urls": [
+                "https://support.atlassian.com/jira-software-cloud/docs/what-is-advanced-roadmaps/",
+                "https://support.atlassian.com/jira-cloud-administration/docs/explore-jira-cloud-plans/"
+              ],
+              "verified_on": "2026-10-12",
+              "verified_by": null,
+              "unconfirmed": false,
+              "evidence_truncated": true
+            }
+          ],
+          "criterion_type": "product_usage",
+          "indicator_type": "leading",
+          "measure": "number of plans combining work items from multiple sources into one view",
+          "direction": "increase",
+          "proposed_target": "Increase: number of plans combining work items from multiple sources into one view. Target: [CSM to complete: set after baseline]",
+          "needs_baseline": true,
+          "baseline_question": "How many cross-team plans combine work items from several sources today?",
+          "validation_question": "Do your teams need one view of work across boards and spaces?",
+          "support_score": 0.769,
+          "labels": [],
+          "flags": []
+        },
+        {
+          "id": "O-02-C3",
+          "text": "Track how fast new capabilities and features ship.",
+          "owner": "shared",
+          "provenance": "inferred",
+          "refs": [
+            "I-02.s3"
+          ],
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p008",
+              "source_id": "10k-item1",
+              "evidence": "ship new capabilities and features faster; create a foundation for more innovative",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "product_citations": [],
+          "criterion_type": "business_outcome",
+          "indicator_type": "lagging",
+          "measure": "speed of shipping new capabilities and features",
+          "direction": "increase",
+          "proposed_target": "Increase: speed of shipping new capabilities and features. Target: [CSM to complete: set after baseline]",
+          "needs_baseline": true,
+          "baseline_question": "How long does it take today to ship new capabilities and features?",
+          "validation_question": "Is faster shipping of new features a measure your leaders track for the shared platform?",
+          "support_score": 0.8,
+          "labels": [
+            "company measure; not attributable to the product"
+          ],
+          "flags": []
+        }
+      ],
+      "tasks": [
+        {
+          "id": "O-02-T1",
+          "task_id": "T-WORKFLOW-REVIEW",
+          "text": "Review the current workflow behind 'Unified technology platform'.",
+          "responsible_role": "Customer admin",
+          "window": "Day 0-30",
+          "is_proposed": true,
+          "provenance": "inferred",
+          "validation_question": "Which steps in this workflow are manual or tracked outside a shared tool today?"
+        },
+        {
+          "id": "O-02-T2",
+          "task_id": "T-DEMO",
+          "text": "Demo shared workflow schemes and cross-team plans to the team.",
+          "responsible_role": "CSM",
+          "window": "Day 31-60",
+          "is_proposed": true,
+          "provenance": "inferred",
+          "validation_question": "How closely would shared workflow schemes and cross-team plans fit the way the team works today?"
+        },
+        {
+          "id": "O-02-T3",
+          "task_id": "T-BASELINES",
+          "text": "Agree baselines for this objective's success criteria.",
+          "responsible_role": "CSM",
+          "window": "Day 31-60",
+          "is_proposed": true,
+          "provenance": "inferred",
+          "validation_question": "Which of these measures can the company already report, and from which system?"
+        },
+        {
+          "id": "O-02-T4",
+          "task_id": "T-PILOT",
+          "text": "Propose a pilot of shared workflow schemes and cross-team plans with one team.",
+          "responsible_role": "Customer engineering lead",
+          "window": "Day 61-90",
+          "is_proposed": true,
+          "provenance": "inferred",
+          "validation_question": "Which team would be a good first pilot, and who would sponsor it?"
+        }
+      ]
+    },
+    {
+      "id": "O-03",
+      "title": "Explore support for: Restructuring and cost efficiency",
+      "owner": "shared",
+      "provenance": "inferred",
+      "linked_initiative_ids": [
+        "I-08"
+      ],
+      "benefit_id": "B-08",
+      "capability_ids": [
+        "JIRA-AUTOMATION",
+        "JIRA-WORKFLOWS"
+      ],
+      "fit": "partial",
+      "labels": [
+        "partial fit: supports the work, does not deliver the outcome"
+      ],
+      "success_criteria": [
+        {
+          "id": "O-03-C1",
+          "text": "Track how many automation rules that close parent work items or auto-assign work are active.",
+          "owner": "shared",
+          "provenance": "inferred",
+          "refs": [
+            "B-08.s1"
+          ],
+          "citations": [],
+          "product_citations": [
+            {
+              "claim_id": "JIRA-AUTOMATION#d2",
+              "capability_id": "JIRA-AUTOMATION",
+              "capability_name": "Automation rules",
+              "evidence": "closing a parent work item when its last sub-task closes, auto-assigning work, syncing work",
+              "source_urls": [
+                "https://www.atlassian.com/software/jira/features/automation",
+                "https://support.atlassian.com/cloud-automation/docs/how-is-my-usage-calculated/",
+                "https://support.atlassian.com/jira-cloud-administration/docs/explore-jira-cloud-plans/"
+              ],
+              "verified_on": "2026-10-12",
+              "verified_by": null,
+              "unconfirmed": false,
+              "evidence_truncated": true
+            }
+          ],
+          "criterion_type": "product_usage",
+          "indicator_type": "leading",
+          "measure": "number of active automation rules that close parent work items or auto-assign work",
+          "direction": "increase",
+          "proposed_target": "Increase: number of active automation rules that close parent work items or auto-assign work. Target: [CSM to complete: set after baseline]",
+          "needs_baseline": true,
+          "baseline_question": "How many automation rules for closing parent work items or assigning work are active today?",
+          "validation_question": "Is closing parent items or assigning work by hand a task your teams spend time on?",
+          "support_score": 0.727,
+          "labels": [],
+          "flags": [
+            {
+              "type": "unsupported_statement",
+              "detail": "support 73%: not in its references: Track, many, active"
+            }
+          ]
+        },
+        {
+          "id": "O-03-C2",
+          "text": "Track how many teams follow one process from a single workflow configuration.",
+          "owner": "shared",
+          "provenance": "inferred",
+          "refs": [
+            "B-08.s2"
+          ],
+          "citations": [],
+          "product_citations": [
+            {
+              "claim_id": "JIRA-WORKFLOWS#d2",
+              "capability_id": "JIRA-WORKFLOWS",
+              "capability_name": "Customizable workflows and standardization",
+              "evidence": "so many teams can follow the same process from a single configuration",
+              "source_urls": [
+                "https://support.atlassian.com/jira-cloud-administration/docs/configure-workflow-schemes/",
+                "https://support.atlassian.com/jira-cloud-administration/docs/explore-jira-cloud-plans/"
+              ],
+              "verified_on": "2026-10-12",
+              "verified_by": "owner_manual_check",
+              "unconfirmed": false,
+              "evidence_truncated": false
+            }
+          ],
+          "criterion_type": "product_usage",
+          "indicator_type": "leading",
+          "measure": "number of teams using one workflow scheme configuration",
+          "direction": "increase",
+          "proposed_target": "Increase: number of teams using one workflow scheme configuration. Target: [CSM to complete: set after baseline]",
+          "needs_baseline": true,
+          "baseline_question": "How many teams follow one process from a single configuration today?",
+          "validation_question": "Would one configuration for many teams matter to how you run your work?",
+          "support_score": 0.889,
+          "labels": [],
+          "flags": []
+        },
+        {
+          "id": "O-03-C3",
+          "text": "Track transactional efficiencies in payments and customer service.",
+          "owner": "shared",
+          "provenance": "inferred",
+          "refs": [
+            "I-08.s4"
+          ],
+          "citations": [
+            {
+              "chunk_id": "10k-item7-p030",
+              "source_id": "10k-item7",
+              "evidence": "ongoing initiatives continued to drive transactional efficiencies, particularly in payments and customer service",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 7 MD&A",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "product_citations": [],
+          "criterion_type": "business_outcome",
+          "indicator_type": "lagging",
+          "measure": "transactional efficiency in payments and customer service",
+          "direction": "increase",
+          "proposed_target": "Increase: transactional efficiency in payments and customer service. Target: [CSM to complete: set after baseline]",
+          "needs_baseline": true,
+          "baseline_question": "How do you measure transactional efficiency in payments and customer service today, and what is the current value?",
+          "validation_question": "Are transactional efficiencies in payments and customer service a priority measure for your teams?",
+          "support_score": 0.833,
+          "labels": [
+            "company measure; not attributable to the product"
+          ],
+          "flags": []
+        }
+      ],
+      "tasks": [
+        {
+          "id": "O-03-T1",
+          "task_id": "T-DISCOVERY",
+          "text": "Run a discovery call on the work behind 'Restructuring and cost efficiency'.",
+          "responsible_role": "CSM",
+          "window": "Day 0-30",
+          "is_proposed": true,
+          "provenance": "inferred",
+          "validation_question": "Who owns the work behind 'Restructuring and cost efficiency', and how is it tracked today?"
+        },
+        {
+          "id": "O-03-T2",
+          "task_id": "T-DEMO",
+          "text": "Demo automation rules and shared workflow schemes to the team.",
+          "responsible_role": "CSM",
+          "window": "Day 31-60",
+          "is_proposed": true,
+          "provenance": "inferred",
+          "validation_question": "How closely would automation rules and shared workflow schemes fit the way the team works today?"
+        },
+        {
+          "id": "O-03-T3",
+          "task_id": "T-BASELINES",
+          "text": "Agree baselines for this objective's success criteria.",
+          "responsible_role": "CSM",
+          "window": "Day 31-60",
+          "is_proposed": true,
+          "provenance": "inferred",
+          "validation_question": "Which of these measures can the company already report, and from which system?"
+        },
+        {
+          "id": "O-03-T4",
+          "task_id": "T-PILOT",
+          "text": "Propose a pilot of automation rules and shared workflow schemes with one team.",
+          "responsible_role": "Customer admin",
+          "window": "Day 61-90",
+          "is_proposed": true,
+          "provenance": "inferred",
+          "validation_question": "Which team would be a good first pilot, and who would sponsor it?"
+        }
+      ]
+    }
+  ],
+  "objectives_blank": "[CSM to complete: add objectives for initiatives the tool did not map]",
+  "not_drafted": [
+    "I-03",
+    "I-04",
+    "I-05",
+    "I-06",
+    "I-07",
+    "I-09",
+    "I-10",
+    "I-11",
+    "I-12"
+  ],
+  "usage": [
+    {
+      "call": "draft",
+      "model": "claude-sonnet-5-5",
+      "effort": "medium",
+      "input_tokens": 4332,
+      "output_tokens": 1924,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "cost_usd": 0.0,
+      "estimated_input_tokens": 0,
+      "estimated_cost_usd": 0.0
+    }
+  ],
+  "total_cost_usd": 0.0,
+  "prices_as_of": "2026-10-06",
+  "warnings": [
+    "3 flags; see 04_draft_guard_report.json."
+  ],
+  "replayed_from": "data/expedia/raw/llm/draft-20261013T214056Z-dev"
+}

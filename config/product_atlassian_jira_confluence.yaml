@@ -1,0 +1,503 @@
+# Product capability config: Jira + Confluence (Atlassian Cloud)
+#
+# PURPOSE
+#   The mapping stage may ONLY cite capability IDs defined in this file.
+#   If an initiative does not fit any capability, the stage must return "no_fit".
+#
+# SOURCING RULES
+#   - Public Atlassian sources only (atlassian.com, support.atlassian.com). No internal or partner material.
+#   - verification_status values:
+#       atlassian_source : confirmed against an Atlassian page listed in source_urls
+#       third_party_only : seen only on third-party review/pricing sites; MUST be re-checked on atlassian.com
+#                          before the project is published
+#   - plan_availability is deliberately loose. Third-party sources disagree on which features sit in
+#     Standard vs Premium vs Enterprise, and Atlassian changes this often. Treat as "verify" until confirmed
+#     on the live pricing page. The tool should never state plan-level claims as fact in its output.
+#   - Naming has been shifting (for example "issues" vs "work items", "Atlassian Intelligence" vs "Rovo",
+#     "Advanced Roadmaps" vs "Plans"). Re-check current names before publishing.
+#   - verified_on: date the capability was last checked against the pages in source_urls.
+#   - unconfirmed (optional): claims kept in the entry that no Atlassian page checked confirms. The tool
+#     must not present these as sourced.
+#   - inferred (optional): claims reasoned from Atlassian sources but not stated on them directly.
+#   - verified_by (optional): owner_manual_check when the project owner manually confirmed the claims
+#     listed in owner_verified on Atlassian's public pages (date in verified_on). Entries without it are
+#     verified against source_urls only. Owner verification does not change the output rule above:
+#     the tool still never states plan-level claims as fact.
+#
+# LAST DRAFTED: 2026-10-12  (re-verify before each release)
+# LAST VERIFIED: 2026-10-12  (all capabilities; see verified_on)
+
+meta:
+  products_in_scope: [Jira, Confluence]
+  out_of_scope_for_now: [Jira Service Management, Jira Product Discovery, Compass, Loom, Atlassian Guard (standalone), Bitbucket]
+  pricing_pages_to_verify:
+    - https://www.atlassian.com/software/jira/pricing
+    - https://www.atlassian.com/software/confluence/pricing
+  owner_manual_check:
+    date: "2026-10-12"
+    verified_by: owner_manual_check
+    scope: Compared the public Jira and Confluence plan-comparison tables against the plan_availability lines in this file.
+    result: No discrepancies found.
+
+capabilities:
+
+  # ---------------------------------------------------------------- JIRA
+  - id: JIRA-WORK-TRACKING
+    product: Jira
+    name: Work tracking, boards, backlogs, and sprints
+    description: >
+      Track work items (Atlassian's current term for issues) on boards, where cards move across columns
+      that show each item's status. Boards are for near-term, tactical tracking. Teams can use a backlog
+      to rank work and, when sprints are enabled, plan fixed time periods of committed work. Atlassian
+      provides Scrum reports (sprint, burndown, velocity) and Kanban reports (cumulative flow, control chart).
+    addresses:
+      - Lack of a shared view of what engineering teams are working on
+      - Fragmented tracking across spreadsheets and disconnected tools
+      - Need for consistent agile delivery practices across teams
+    typical_personas: [Engineering manager, Product manager, Delivery lead, Program manager]
+    plan_availability: Boards are available on all plans.
+    limitations:
+      - Does not itself build, test, or deploy code
+      - A board shows up to 5,000 work items at once, except in the new board view that is rolling out, where the cap applies only to company-managed boards drawing from multiple spaces
+    verification_status: atlassian_source
+    verified_on: "2026-10-12"
+    verified_by: owner_manual_check
+    owner_verified:
+      - Jira boards are available on all plans
+    source_urls:
+      - https://support.atlassian.com/jira-software-cloud/docs/what-is-a-jira-software-board/
+      - https://support.atlassian.com/jira-software-cloud/docs/use-your-scrum-backlog/
+      - https://support.atlassian.com/jira-software-cloud/docs/coordinate-and-monitor-work-with-sprints/
+      - https://www.atlassian.com/software/jira/features/reports
+
+  - id: JIRA-WORKFLOWS
+    product: Jira
+    name: Customizable workflows and standardization
+    description: >
+      Workflows define how work items move through a process. Jira admins map workflows to work types
+      using workflow schemes, and one scheme can be shared across multiple spaces (projects), so many
+      teams can follow the same process from a single configuration.
+    addresses:
+      - Inconsistent processes across teams or business units
+      - Integrating acquired teams into a common way of working
+      - Need for auditability of how work moves
+    typical_personas: [Jira admin, Engineering leadership, Process or PMO owner]
+    plan_availability: >
+      Workflows are available on all plans. Atlassian's plan comparison lists "advanced permissions, roles,
+      and permission sharing between company-managed spaces" from Standard upward, and lists them as a
+      Free plan limitation.
+    limitations:
+      - Standardization requires organizational agreement; the tool enforces process but does not create it
+      - Changes to a shared workflow scheme affect every space using it
+      - Schemes are managed by Jira administrators; editing a workflow requires the edit workflow permission
+    verification_status: atlassian_source
+    verified_on: "2026-10-12"
+    verified_by: owner_manual_check
+    owner_verified:
+      - Jira workflows are available on all plans
+    source_urls:
+      - https://support.atlassian.com/jira-cloud-administration/docs/configure-workflow-schemes/
+      - https://support.atlassian.com/jira-cloud-administration/docs/explore-jira-cloud-plans/
+
+  - id: JIRA-AUTOMATION
+    product: Jira
+    name: Automation rules
+    description: >
+      A no-code rule builder for if-this-then-that rules triggered by events in Jira, with templates
+      available. Atlassian's examples include closing a parent work item when its last sub-task closes,
+      auto-assigning work, syncing work across projects, and connecting to tools such as Slack, Microsoft
+      Teams, Bitbucket, and GitHub. Rules can be scoped to a single project, to multiple projects, or globally.
+    addresses:
+      - Manual, repetitive coordination work
+      - Slow handoffs between teams
+      - Cost efficiency through reduced administrative overhead
+    typical_personas: [Jira admin, Team lead, Engineering manager]
+    plan_availability: >
+      Included on every Jira Cloud plan. Usage is measured in steps per month: Free 150 per subscription,
+      Standard 400 per user, Premium 750 per user, Enterprise 1,000 per user. Allowances are pooled at the
+      organization level and shared across Atlassian apps (verify)
+    limitations:
+      - Step allowances depend on plan tier. Each trigger, condition, action, branch, or loop executed counts as a step.
+      - Only Global or Project Admins can create rules
+      - Agentic components (for example "Use Rovo") are billed in Rovo credits, not automation steps
+    verification_status: atlassian_source
+    verified_on: "2026-10-12"
+    source_urls:
+      - https://www.atlassian.com/software/jira/features/automation
+      - https://support.atlassian.com/cloud-automation/docs/how-is-my-usage-calculated/
+      - https://support.atlassian.com/jira-cloud-administration/docs/explore-jira-cloud-plans/
+
+  - id: JIRA-PLANNING-ROADMAPS
+    product: Jira
+    name: Cross-team planning, roadmaps, and dependency tracking
+    description: >
+      Plans combine work items from boards, spaces, and filters into one view for planning across
+      multiple teams or the whole organization. Plans can estimate release dates across teams, schedule
+      work by team capacity and velocity, show dependencies that may affect the timeline (including ones
+      outside the plan), and use scenarios to explore "what if" versions of a plan.
+    addresses:
+      - Lack of visibility into cross-team dependencies
+      - Aligning many teams on delivery timelines for strategic initiatives
+      - Coordinating delivery across brands or business units
+    typical_personas: [Program manager, VP Engineering, Product leadership]
+    plan_availability: Plans are Premium and Enterprise only. Free and Standard have basic roadmaps only (verify)
+    limitations:
+      - Not a replacement for a dedicated portfolio or financial planning tool
+      - Lower plans have basic roadmaps only, not cross-team Plans
+    verification_status: atlassian_source
+    verified_on: "2026-10-12"
+    # Naming: the support page's URL slug still says "advanced-roadmaps", but the page itself does not state the former name.
+    source_urls:
+      - https://support.atlassian.com/jira-software-cloud/docs/what-is-advanced-roadmaps/
+      - https://support.atlassian.com/jira-cloud-administration/docs/explore-jira-cloud-plans/
+
+  - id: JIRA-REPORTING
+    product: Jira
+    name: Dashboards, built-in reports, and JQL search
+    description: >
+      Dashboards built from configurable gadgets, plus built-in reports: sprint report, burndown, release
+      burndown, velocity, cumulative flow diagram, and control chart (cycle and lead time), along with
+      work item analysis and workload reports. Advanced search uses Jira Query Language (JQL), and saved
+      searches (filters) can feed reports and dashboards.
+    addresses:
+      - Limited visibility into delivery speed and throughput
+      - Need for data to measure release cadence and cycle time
+    typical_personas: [Engineering manager, Delivery lead, Executive sponsor]
+    plan_availability: Available on all plans.
+    limitations:
+      - Reports reflect only what teams record in Jira; data quality depends on adoption
+      - Does not measure production incident metrics (MTTD/MTTR) on its own
+      - Built-in gadgets cannot show data across multiple Jira instances or combine multiple data sources in one chart
+      - Some gadgets need specific fields (for example, time tracking) to be set up
+    verification_status: atlassian_source
+    verified_on: "2026-10-12"
+    verified_by: owner_manual_check
+    owner_verified:
+      - Jira reporting is available on all plans
+    source_urls:
+      - https://www.atlassian.com/software/jira/features/reports
+      - https://support.atlassian.com/jira-software-cloud/docs/search-for-work-items-in-jira/
+      - https://support.atlassian.com/jira-software-cloud/docs/add-and-customize-gadgets/
+
+  - id: JIRA-ANALYTICS-ENTERPRISE
+    product: Jira
+    name: Atlassian Analytics and Atlassian Data Lake (cross-product insights)
+    description: >
+      Atlassian Data Lake holds pre-modeled, continuously updated data from Atlassian Cloud apps (Jira,
+      Confluence, Jira Service Management, Teamwork Collection), and can also hold third-party data.
+      Atlassian Analytics is the app for querying it. Organization admins use it to set up data
+      connections, connect external sources, and control data access.
+    addresses:
+      - Need for organization-wide delivery and collaboration metrics
+      - Executive reporting across many teams and sites
+    typical_personas: [Engineering operations, Executive sponsor, Data or BI team]
+    plan_availability: Atlassian Cloud Enterprise only (verify)
+    limitations:
+      - Enterprise-tier capability; not available on lower plans
+      - Requires organization admin setup of data connections
+    verification_status: atlassian_source
+    verified_on: "2026-10-12"
+    source_urls:
+      - https://www.atlassian.com/platform/analytics/what-is-atlassian-data-lake
+
+  - id: JIRA-INTEGRATIONS
+    product: Jira
+    name: Developer-tool integrations and Marketplace apps
+    description: >
+      Connect Jira to code repositories, CI/CD pipelines, and monitoring tools. For example, GitHub can
+      show pull requests, commits, branches, deployments, and vulnerabilities on Jira work items. Atlassian
+      says the Marketplace lists over 3,000 apps that add capabilities or connect Jira to other platforms,
+      such as Salesforce or Azure DevOps. Automation rules can also connect to Slack and Microsoft Teams.
+    addresses:
+      - Tool sprawl and context switching between systems
+      - Lack of traceability from work item to code change to release
+    typical_personas: [Engineering manager, DevOps lead, Jira admin]
+    plan_availability: Available on all plans, including the Slack and Microsoft Teams integrations. Third-party app availability varies by app.
+    limitations:
+      - Jira is not a CI/CD system or code host; it tracks and connects to them
+      - Third-party app licensing is separate from the Jira subscription
+    verification_status: atlassian_source
+    verified_on: "2026-10-12"
+    verified_by: owner_manual_check
+    owner_verified:
+      - Jira integrations are available on all plans, including Slack and Microsoft Teams
+    # Not confirmed: the integrations guide names no specific design tools ("design handoff" appears only as a category).
+    source_urls:
+      - https://www.atlassian.com/software/jira/guides/integrations/overview
+      - https://www.atlassian.com/software/jira/features/automation
+
+  - id: JIRA-ADMIN-GOVERNANCE
+    product: Jira
+    name: Administration, security, and governance controls
+    description: >
+      Admin controls that expand by plan: advanced permissions and roles, audit logs of important
+      changes, sandboxes and release tracks for controlled change management, data residency (pin
+      app data to a region such as the EU or US), and identity and security controls through Atlassian
+      Guard (SSO, user provisioning, API token management, data security controls). Enterprise allows
+      up to 150 instances, compared with one on other plans.
+    addresses:
+      - Security, compliance, and audit obligations
+      - Managing multiple Jira instances after acquisitions
+      - Controlled change management for the Jira platform itself
+    typical_personas: [Jira admin, IT security, Compliance, Enterprise architect]
+    plan_availability: >
+      Product-level audit logs on Standard, Premium, and Enterprise; organization-level audit logs on
+      Enterprise or with Atlassian Guard; both retain up to 180 days. Advanced permissions are listed in
+      the Standard plan section and as a Free plan limitation. Sandboxes and release tracks on Premium and Enterprise. Data residency on Standard, Premium, and Enterprise.
+      Instances: one on Free, Standard, and Premium; up to 150 on Enterprise. Atlassian Guard Standard is
+      included with Enterprise and is a separate subscription on other plans. Guard Premium is an add-on
+      to Guard Standard (verify)
+    limitations:
+      - Specific controls and retention periods differ by plan; confirm on live plan comparison
+      - Data residency is not available in Atlassian Government Cloud
+      - Guard Premium features (data classification, threat detection, extended audit logs) are a paid add-on
+    verification_status: atlassian_source
+    verified_on: "2026-10-12"
+    verified_by: owner_manual_check
+    owner_verified:  # audit logs only; all other details in this entry are atlassian_source without owner verification
+      - Product-level audit logs are available on Standard, Premium, and Enterprise
+      - Organization-level audit logs are available on Enterprise or with Atlassian Guard
+      - Both product-level and organization-level audit logs have retention of up to 180 days
+    source_urls:
+      - https://support.atlassian.com/jira-cloud-administration/docs/explore-jira-cloud-plans/
+      - https://support.atlassian.com/security-and-access-policies/docs/understand-data-residency/
+      - https://support.atlassian.com/security-and-access-policies/docs/understand-atlassian-guard/
+
+  - id: JIRA-AI-ROVO
+    product: Jira
+    name: Rovo AI (search, chat, agents) in Jira
+    description: >
+      Rovo is Atlassian's AI layer. It offers AI search across Jira, Confluence, and connected apps;
+      Rovo Chat; prebuilt agents; and Studio for building custom agents. Content can be turned into Jira
+      work items with AI. It also includes AI-assisted work features such as summarization inside Jira.
+    addresses:
+      - Time lost searching for information across tools
+      - Pressure to adopt AI to speed delivery
+      - Manual summarization and triage effort
+    typical_personas: [Engineering manager, Product manager, Executive sponsor]
+    plan_availability: >
+      Rovo in Jira is available on paid plans only (Standard, Premium, and Enterprise); not on Free.
+    limitations:
+      - Output quality depends on the content and permissions in connected systems
+      - Can be deactivated by admins, which removes chat and agents
+    verification_status: atlassian_source
+    verified_on: "2026-10-12"
+    verified_by: owner_manual_check
+    owner_verified:
+      - Rovo in Jira is available on paid plans only (Standard, Premium, Enterprise)
+      - Rovo summarizes content inside Jira
+    source_urls:
+      - https://www.atlassian.com/software/jira
+      - https://www.atlassian.com/software/confluence/ai
+      - https://www.atlassian.com/software/confluence/create-and-edit-with-rovo
+
+  # ---------------------------------------------------------------- CONFLUENCE
+  - id: CONF-KNOWLEDGE-BASE
+    product: Confluence
+    name: Pages, spaces, and templates (single source of truth)
+    description: >
+      Collaborative pages with real-time editing, in-line comments, and version history, organized in
+      spaces through a content tree. Includes best-practice templates (from product requirement documents
+      to marketing plans) across categories such as Product Management, Project Management, Software & IT,
+      and Human Resources, for living documentation such as project plans, policies, and meeting notes.
+    addresses:
+      - Scattered, outdated documentation
+      - Knowledge loss from reorganizations and leadership changes
+      - Onboarding teams and acquired subsidiaries to shared standards
+    typical_personas: [Engineering manager, Program manager, Enablement or onboarding lead, Knowledge manager]
+    plan_availability: >
+      Available on all plans, with unlimited spaces and pages on every plan, including Free. Standard adds
+      page archiving and page insights (view analytics).
+    limitations:
+      - Documentation quality and freshness depend on team habits and ownership
+    verification_status: atlassian_source
+    verified_on: "2026-10-12"
+    verified_by: owner_manual_check
+    owner_verified:
+      - Pages, spaces, and templates are available on all plans
+      - The knowledge base supports project plans, policies, and meeting notes
+    source_urls:
+      - https://www.atlassian.com/software/confluence/whats-new
+
+  - id: CONF-WHITEBOARDS
+    product: Confluence
+    name: Whiteboards
+    description: >
+      An infinite canvas for brainstorming and planning, with voting. Shapes and sticky notes can be
+      turned into Jira work items, and existing work items can be imported or linked. Boards can be
+      imported from Miro, Mural, and FigJam.
+    addresses:
+      - Distributed teams planning and aligning remotely
+      - Moving from ideation to tracked work
+    typical_personas: [Product manager, Team lead, Facilitator]
+    plan_availability: >
+      Available on all plans. Active whiteboards per user: Free 3, Standard 10, Premium and Enterprise
+      unlimited. Jira integration is on all plans. Standard adds board-level permissions; Premium and
+      Enterprise add smart sections and smart connectors. Over the limit, older boards become read-only.
+    limitations:
+      - Whiteboard limits vary by plan
+    verification_status: atlassian_source
+    verified_on: "2026-10-12"
+    verified_by: owner_manual_check
+    owner_verified:
+      - Confluence whiteboards are available on all plans
+    source_urls:
+      - https://support.atlassian.com/confluence-cloud/docs/advanced-tools-and-workflows-in-whiteboards/
+      - https://support.atlassian.com/confluence-cloud/docs/understand-confluence-whiteboards-plans-and-features/
+
+  - id: CONF-DATABASES
+    product: Confluence
+    name: Databases
+    description: >
+      Structured data inside Confluence that aggregates information from Jira and third-party apps,
+      with real-time syncing and table, card, or board views. Supports fields, filtering, sorting,
+      import, and export.
+    addresses:
+      - Inconsistent or duplicated tracking of information across teams
+      - Need for structured reference data (for example inventories or registers) alongside documents
+    typical_personas: [Program manager, Operations lead, Knowledge manager]
+    plan_availability: Available on all plans.
+    limitations:
+      - Databases have documented limitations; see Atlassian "what Confluence databases don't support"
+    verification_status: atlassian_source
+    verified_on: "2026-10-12"
+    verified_by: owner_manual_check
+    owner_verified:
+      - Confluence databases are available on all plans
+    source_urls:
+      - https://www.atlassian.com/software/confluence/whats-new
+      - https://support.atlassian.com/confluence-cloud/docs/navigate-around-confluence
+
+  - id: CONF-AUTOMATION
+    product: Confluence
+    name: Automation rules
+    description: >
+      Rule-based automation for recurring content actions, such as organizing spaces and sending
+      reminders, using out-of-the-box rule templates and low-code/no-code custom rules.
+    addresses:
+      - Manual content maintenance and routing
+      - Efficiency and cost reduction
+    typical_personas: [Confluence admin, Knowledge manager]
+    plan_availability: >
+      Available on all plans. Monthly step allowances for Confluence: Free 50 per subscription, Standard
+      100 per user, Premium 250 per user, Enterprise 500 per user. Enterprise is not unlimited.
+    limitations:
+      - Step allowances depend on plan tier (Atlassian meters automation in steps, not rule runs)
+    verification_status: atlassian_source
+    verified_on: "2026-10-12"
+    verified_by: owner_manual_check
+    owner_verified:
+      - Confluence automation is available on all plans
+    source_urls:
+      - https://support.atlassian.com/cloud-automation/docs/how-is-my-usage-calculated/
+      - https://support.atlassian.com/confluence-cloud/docs/learn-about-confluence-cloud-plans/
+      - https://www.atlassian.com/software/confluence/whats-new
+
+  - id: CONF-AI-ROVO
+    product: Confluence
+    name: Rovo in Confluence
+    description: >
+      Search for answers, define terms, summarize pages, live docs, blogs, comments, changes, and
+      whiteboards, draft and edit pages, whiteboards, and databases from a description, generate
+      slides, and listen to audio briefings of content.
+    addresses:
+      - Hard-to-find institutional knowledge
+      - Time spent writing and summarizing documentation
+      - Pressure to adopt AI across knowledge work
+    typical_personas: [Knowledge worker, Engineering manager, Executive sponsor]
+    plan_availability: >
+      AI features, including Rovo, are on Standard, Premium, and Enterprise; Premium and Enterprise have
+      higher usage quotas. Free is not listed (verify)
+    limitations:
+      - Answers depend on available, well-maintained content and permissions
+    verification_status: atlassian_source
+    verified_on: "2026-10-12"
+    source_urls:
+      - https://support.atlassian.com/confluence-cloud/docs/navigate-around-confluence
+      - https://www.atlassian.com/software/confluence/create-and-edit-with-rovo
+      - https://support.atlassian.com/confluence-cloud/docs/learn-about-confluence-cloud-plans/
+      - https://www.atlassian.com/software/confluence/ai
+
+  - id: CONF-ADMIN-SECURITY
+    product: Confluence
+    name: Data protection and security at scale
+    description: >
+      Security controls that expand by plan: global, space, and content permissions, audit logs of
+      important changes, and data residency; then IP allowlisting and an admin key to bypass content
+      restrictions; then Atlassian Guard Standard (SSO, SCIM) and up to 150 app instances in one plan.
+    addresses:
+      - Security and compliance obligations for documentation
+      - Governance of knowledge across many teams and sites
+    typical_personas: [IT security, Confluence admin, Compliance]
+    plan_availability: >
+      Permissions, audit logs, and data residency from Standard (Free cannot customize permissions).
+      IP allowlisting and the admin key from Premium. Atlassian Guard Standard and up to 150 instances
+      on Enterprise; Guard is an add-on on Standard and Premium (verify)
+    limitations:
+      - Specific controls differ by plan; confirm on live plan comparison
+    verification_status: atlassian_source
+    verified_on: "2026-10-12"
+    source_urls:
+      - https://support.atlassian.com/confluence-cloud/docs/learn-about-confluence-cloud-plans/
+      - https://www.atlassian.com/software/confluence/whats-new
+
+  - id: CONF-APPS-INTEGRATIONS
+    product: Confluence
+    name: Third-party apps and Atlassian suite integration
+    description: >
+      Extend Confluence with Marketplace apps (Atlassian cites hundreds of apps for theming,
+      diagramming, and workflow management) and connect it with the rest of the Atlassian suite,
+      including Jira, Jira Service Management, Trello, and Loom.
+    addresses:
+      - Tool sprawl and context switching
+      - Need to work where teams already are
+    typical_personas: [Confluence admin, Engineering manager]
+    plan_availability: third-party apps are listed under the Free plan, and higher plans include Free features (verify)
+    limitations:
+      - Marketplace app licensing is separate
+    verification_status: atlassian_source
+    verified_on: "2026-10-12"
+    source_urls:
+      - https://www.atlassian.com/software/confluence/whats-new
+
+  # ---------------------------------------------------------------- CROSS-PRODUCT
+  - id: XPROD-REQUIREMENTS-TO-WORK
+    product: Jira + Confluence
+    name: Connecting documentation and planning to tracked work
+    description: >
+      Link documents and whiteboards in Confluence to Jira work items, and turn ideas and content
+      into work items, so strategy, requirements, and delivery stay connected.
+    addresses:
+      - Disconnect between requirements or strategy and engineering execution
+      - Poor traceability for audits and retrospectives
+      - Onboarding acquired teams to a common planning-to-delivery model
+    typical_personas: [Product manager, Program manager, Engineering manager]
+    plan_availability: Available on all plans, including linking Confluence pages to Jira work items and whiteboard-to-Jira integration.
+    limitations:
+      - Value depends on both products being adopted; neither enforces linking by itself
+    verification_status: atlassian_source
+    verified_on: "2026-10-12"
+    verified_by: owner_manual_check
+    owner_verified:
+      - Linking Confluence pages to Jira work items is available on all plans
+    source_urls:
+      - https://www.atlassian.com/software/confluence/ai
+      - https://support.atlassian.com/confluence-cloud/docs/advanced-tools-and-workflows-in-whiteboards/
+      - https://support.atlassian.com/confluence-cloud/docs/understand-confluence-whiteboards-plans-and-features/
+
+# Things these two products do NOT do. Use these to justify "no_fit".
+not_covered:
+  - id: GAP-OBSERVABILITY
+    text: Application and infrastructure monitoring, logging, tracing, and MTTD/MTTR measurement from production telemetry
+  - id: GAP-CICD
+    text: Building, testing, and deploying code (Jira connects to these tools but is not one)
+  - id: GAP-SOURCE-CONTROL
+    text: Source code hosting
+  - id: GAP-ITSM
+    text: Full IT service management, incident and on-call management (that is Jira Service Management, out of scope here)
+  - id: GAP-FINANCIAL-PLANNING
+    text: Budgeting, financial planning, and ERP functions
+  - id: GAP-CUSTOMER-FACING
+    text: Customer-facing sales, marketing, or e-commerce capabilities
+  - id: GAP-ENTERPRISE-SECURITY-OPS
+    text: Security operations tooling (SIEM, threat detection, vulnerability scanning)

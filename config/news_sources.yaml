@@ -1,0 +1,11 @@
+# News source rules for the Retrieve stage (GDELT headlines).
+#
+# low_signal_domains: sites that publish automated stock-position, rating, and price-target posts.
+# Their headlines name the company but carry little or no business signal. Headlines from these
+# domains (or their subdomains) are flagged low_signal, kept in the manifest for review, and
+# excluded from chunks and from Extract.
+
+low_signal_domains:
+  - tickerreport.com
+  - dailypolitical.com
+  - themarketsdaily.com

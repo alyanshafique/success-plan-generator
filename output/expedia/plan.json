@@ -1,0 +1,2954 @@
+{
+  "metadata": {
+    "company": "Expedia Group, Inc.",
+    "ticker": "EXPE",
+    "product": "Atlassian Jira and Confluence",
+    "generated_at": "2026-10-13T22:29:57+00:00",
+    "filing": {
+      "form": "10-K",
+      "fiscal_year": "2025",
+      "filing_date": "2026-02-13",
+      "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm"
+    },
+    "news_window": {
+      "from": "2026-07-14",
+      "to": "2026-10-12"
+    },
+    "notice": "First-draft hypothesis for a CSM to review and edit.",
+    "stages": {
+      "extract": {
+        "profile": "final",
+        "model": "claude-opus-5-5",
+        "replayed_from": null,
+        "cost_usd": 1.159164,
+        "cost_note": "Cost of this run."
+      },
+      "map": {
+        "profile": "dev",
+        "model": "claude-sonnet-5-5",
+        "replayed_from": "data/expedia/raw/llm/map-20261012T235845Z-dev",
+        "cost_usd": 0.045456,
+        "cost_note": "Replay of a saved real run (data/expedia/raw/llm/map-20261012T235845Z-dev); no API call at replay. Real cost from usage_log.jsonl."
+      },
+      "draft": {
+        "profile": "dev",
+        "model": "claude-sonnet-5-5",
+        "replayed_from": "data/expedia/raw/llm/draft-20261013T214056Z-dev",
+        "cost_usd": 0.027904,
+        "cost_note": "Replay of a saved real run (data/expedia/raw/llm/draft-20261013T214056Z-dev); no API call at replay. Real cost from usage_log.jsonl."
+      }
+    },
+    "omitted_sentences": "3 sentences omitted: verbatim runs of 15+ words",
+    "csm_selection": "none: every initiative awaits CSM review",
+    "disclaimer": "All inputs are publicly available. This tool does not use proprietary or customer data. This output is a hypothesis generated from public information and has not been validated with the company."
+  },
+  "company_highlights": {
+    "overview": {
+      "id": "CH-01",
+      "text": "Expedia Group, Inc. (ticker EXPE). Latest annual report: Form 10-K for fiscal year 2025, filed 2026-02-13. Brands named in Item 1 (Business) of that filing: Expedia, Hotels.com, Vrbo, Orbitz, Travelocity, ebookers, Wotif, trivago.",
+      "owner": "claude",
+      "provenance": "sourced",
+      "citations": [
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13"
+        }
+      ]
+    },
+    "account_history": {
+      "owner": "csm",
+      "provenance": "csm-input",
+      "placeholder": "[CSM to complete: account history]"
+    }
+  },
+  "key_business_initiatives": [
+    {
+      "id": "I-01",
+      "title": "AI across products and operations",
+      "text": "The company has integrated AI into its products and technology. It also uses AI to improve developer productivity and the speed of resolution in customer service teams. In the second quarter 2026 release, the Chief Executive Officer described using AI to innovate faster and operate more efficiently. Management believes products improved by machine learning and AI will continue to drive greater retention, repeat and direct business.",
+      "owner": "shared",
+      "provenance": "sourced",
+      "citations": [
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. earnings release (Form 8-K Ex. 99.1) filed 2026-08-05",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000051/earningsrelease-q22026.htm",
+          "date": "2026-08-05",
+          "location": "Form 8-K Exhibit 99.1",
+          "event_date": "2026-08-05"
+        },
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "location": "Item 1 Business"
+        }
+      ],
+      "sentences": [
+        {
+          "text": "The company has integrated AI into its products and technology.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        },
+        {
+          "text": "It also uses AI to improve developer productivity and the speed of resolution in customer service teams.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        },
+        {
+          "text": "In the second quarter 2026 release, the Chief Executive Officer described using AI to innovate faster and operate more efficiently.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. earnings release (Form 8-K Ex. 99.1) filed 2026-08-05",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000051/earningsrelease-q22026.htm",
+              "date": "2026-08-05",
+              "location": "Form 8-K Exhibit 99.1",
+              "event_date": "2026-08-05"
+            }
+          ]
+        },
+        {
+          "text": "Management believes products improved by machine learning and AI will continue to drive greater retention, repeat and direct business.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        }
+      ],
+      "validation_question": "Which AI use cases in products, engineering, and customer service are your highest priorities for the next year?",
+      "labels": [],
+      "csm_selected": null
+    },
+    {
+      "id": "I-02",
+      "title": "Unified technology platform",
+      "text": "In 2023, the company moved the Hotels.com and Vrbo front-end stacks onto the Brand Expedia stack. Its platform focus is on configurable technical capabilities that support various travel products on standard architecture. Management believes this strategy will enable it to ship new capabilities and features faster. All transaction-based businesses now run on the shared platform infrastructure.",
+      "owner": "shared",
+      "provenance": "sourced",
+      "citations": [
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "location": "Item 1 Business"
+        }
+      ],
+      "sentences": [
+        {
+          "text": "In 2023, the company moved the Hotels.com and Vrbo front-end stacks onto the Brand Expedia stack.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        },
+        {
+          "text": "Its platform focus is on configurable technical capabilities that support various travel products on standard architecture.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        },
+        {
+          "text": "Management believes this strategy will enable it to ship new capabilities and features faster.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        },
+        {
+          "text": "All transaction-based businesses now run on the shared platform infrastructure.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        }
+      ],
+      "validation_question": "What platform capabilities are you prioritizing next as the shared infrastructure matures?",
+      "labels": [],
+      "csm_selected": null
+    },
+    {
+      "id": "I-03",
+      "title": "B2B segment growth",
+      "text": "The company intends to grow B2B by increasing wallet share with existing customers and winning new customer contracts. It also plans to grow B2B by introducing additional products and services. Management expects to continue to cement its B2B leadership as B2B benefits from B2C product and technology work. B2B partners can connect through the Rapid API or adopt customized white label or co-branded templates.",
+      "owner": "shared",
+      "provenance": "sourced",
+      "citations": [
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "location": "Item 1 Business"
+        }
+      ],
+      "sentences": [
+        {
+          "text": "The company intends to grow B2B by increasing wallet share with existing customers and winning new customer contracts.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        },
+        {
+          "text": "It also plans to grow B2B by introducing additional products and services.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        },
+        {
+          "text": "Management expects to continue to cement its B2B leadership as B2B benefits from B2C product and technology work.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        },
+        {
+          "text": "B2B partners can connect through the Rapid API or adopt customized white label or co-branded templates.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        }
+      ],
+      "validation_question": "How are you balancing wallet-share growth with existing B2B partners against new partner wins and new product launches?",
+      "labels": [],
+      "csm_selected": null
+    },
+    {
+      "id": "I-04",
+      "title": "Global lodging supply expansion",
+      "text": "The company continues to expand the breadth and depth of its global hotel offering. Specific initiatives are intended to drive greater global size and scale through faster room night growth. In some cases, the company has reduced its economics in various geographies based on local market conditions. In the second quarter 2026 release, the Chief Executive Officer said the company expanded supply across its business.",
+      "owner": "shared",
+      "provenance": "sourced",
+      "citations": [
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. earnings release (Form 8-K Ex. 99.1) filed 2026-08-05",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000051/earningsrelease-q22026.htm",
+          "date": "2026-08-05",
+          "location": "Form 8-K Exhibit 99.1",
+          "event_date": "2026-08-05"
+        },
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "location": "Item 7 MD&A"
+        }
+      ],
+      "sentences": [
+        {
+          "text": "The company continues to expand the breadth and depth of its global hotel offering.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 7 MD&A"
+            }
+          ]
+        },
+        {
+          "text": "Specific initiatives are intended to drive greater global size and scale through faster room night growth.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 7 MD&A"
+            }
+          ]
+        },
+        {
+          "text": "In some cases, the company has reduced its economics in various geographies based on local market conditions.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 7 MD&A"
+            }
+          ]
+        },
+        {
+          "text": "In the second quarter 2026 release, the Chief Executive Officer said the company expanded supply across its business.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. earnings release (Form 8-K Ex. 99.1) filed 2026-08-05",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000051/earningsrelease-q22026.htm",
+              "date": "2026-08-05",
+              "location": "Form 8-K Exhibit 99.1",
+              "event_date": "2026-08-05"
+            }
+          ]
+        }
+      ],
+      "validation_question": "Which geographies or supply types are the focus of your current supply expansion efforts?",
+      "labels": [],
+      "csm_selected": null
+    },
+    {
+      "id": "I-05",
+      "title": "One Key loyalty program",
+      "text": "One Key is a unified loyalty program for Brand Expedia, Hotels.com and Vrbo with cross-earning and cross-redeeming. The program launched in the United States in 2023 and the United Kingdom in 2024. In 2025, One Key expanded to new Brand Expedia markets, with most Expedia Rewards members migrated.",
+      "owner": "shared",
+      "provenance": "sourced",
+      "citations": [
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "location": "Item 1 Business"
+        }
+      ],
+      "sentences": [
+        {
+          "text": "One Key is a unified loyalty program for Brand Expedia, Hotels.com and Vrbo with cross-earning and cross-redeeming.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        },
+        {
+          "text": "The program launched in the United States in 2023 and the United Kingdom in 2024.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        },
+        {
+          "text": "In 2025, One Key expanded to new Brand Expedia markets, with most Expedia Rewards members migrated.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        }
+      ],
+      "validation_question": "Which markets are next for One Key, and when do you expect remaining Expedia Rewards members to migrate?",
+      "labels": [],
+      "csm_selected": null
+    },
+    {
+      "id": "I-06",
+      "title": "Core brand focus and marketing management",
+      "text": "The company manages marketing investments holistically across its B2C brand portfolio. It makes marketing decisions market by market and by customer segment. Most marketing effort goes to the three core consumer brands: Expedia, Hotels.com and Vrbo. In 2024, the company introduced general managers to lead each core consumer brand.",
+      "owner": "shared",
+      "provenance": "sourced",
+      "citations": [
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "location": "Item 1 Business"
+        }
+      ],
+      "sentences": [
+        {
+          "text": "The company manages marketing investments holistically across its B2C brand portfolio.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        },
+        {
+          "text": "It makes marketing decisions market by market and by customer segment.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        },
+        {
+          "text": "Most marketing effort goes to the three core consumer brands: Expedia, Hotels.com and Vrbo.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        },
+        {
+          "text": "In 2024, the company introduced general managers to lead each core consumer brand.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        }
+      ],
+      "validation_question": "How do brand general managers and the central marketing team share decisions on marketing allocation across markets?",
+      "labels": [],
+      "csm_selected": null
+    },
+    {
+      "id": "I-07",
+      "title": "International market expansion",
+      "text": "In 2025, the company continued investing in global market expansion beyond its core markets. Management believes international markets represent especially large opportunities. The company says emerging markets continue to present an attractive growth opportunity. It continues to add airlines to ensure local coverage in new markets.",
+      "owner": "shared",
+      "provenance": "sourced",
+      "citations": [
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "location": "Item 1 Business"
+        },
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "location": "Item 7 MD&A"
+        }
+      ],
+      "sentences": [
+        {
+          "text": "In 2025, the company continued investing in global market expansion beyond its core markets.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        },
+        {
+          "text": "Management believes international markets represent especially large opportunities.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        },
+        {
+          "text": "The company says emerging markets continue to present an attractive growth opportunity.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 7 MD&A"
+            }
+          ]
+        },
+        {
+          "text": "It continues to add airlines to ensure local coverage in new markets.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 7 MD&A"
+            }
+          ]
+        }
+      ],
+      "validation_question": "Which international markets are your top priorities for expansion investment?",
+      "labels": [],
+      "csm_selected": null
+    },
+    {
+      "id": "I-08",
+      "title": "Restructuring and cost efficiency",
+      "text": "In February 2024, the company committed to restructuring actions to recalibrate resources, which reduced headcount. During 2025, the company decided to expand these restructuring actions. The company continues to evaluate additional cost reduction efforts. Ongoing initiatives target transactional efficiencies, particularly in payments and customer service.",
+      "owner": "shared",
+      "provenance": "sourced",
+      "citations": [
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "location": "Item 7 MD&A"
+        }
+      ],
+      "sentences": [
+        {
+          "text": "In February 2024, the company committed to restructuring actions to recalibrate resources, which reduced headcount.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 7 MD&A"
+            }
+          ]
+        },
+        {
+          "text": "During 2025, the company decided to expand these restructuring actions.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 7 MD&A"
+            }
+          ]
+        },
+        {
+          "text": "The company continues to evaluate additional cost reduction efforts.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 7 MD&A"
+            }
+          ]
+        },
+        {
+          "text": "Ongoing initiatives target transactional efficiencies, particularly in payments and customer service.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 7 MD&A"
+            }
+          ]
+        }
+      ],
+      "validation_question": "Which areas are in scope for the additional cost reduction efforts you are evaluating?",
+      "labels": [],
+      "csm_selected": null
+    },
+    {
+      "id": "I-09",
+      "title": "Personalization and direct customer relationships",
+      "text": "A stated focus is to build longer-lasting direct relationships with customers. In the second quarter 2026 release, the Chief Executive Officer cited more personalized consumer product experiences. The company describes itself as delivering predictive, personalized experiences.",
+      "owner": "shared",
+      "provenance": "sourced",
+      "citations": [
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. earnings release (Form 8-K Ex. 99.1) filed 2026-08-05",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000051/earningsrelease-q22026.htm",
+          "date": "2026-08-05",
+          "location": "Form 8-K Exhibit 99.1",
+          "event_date": "2026-08-05"
+        },
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "location": "Item 1 Business"
+        }
+      ],
+      "sentences": [
+        {
+          "text": "A stated focus is to build longer-lasting direct relationships with customers.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        },
+        {
+          "text": "In the second quarter 2026 release, the Chief Executive Officer cited more personalized consumer product experiences.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. earnings release (Form 8-K Ex. 99.1) filed 2026-08-05",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000051/earningsrelease-q22026.htm",
+              "date": "2026-08-05",
+              "location": "Form 8-K Exhibit 99.1",
+              "event_date": "2026-08-05"
+            }
+          ]
+        },
+        {
+          "text": "The company describes itself as delivering predictive, personalized experiences.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. earnings release (Form 8-K Ex. 99.1) filed 2026-08-05",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000051/earningsrelease-q22026.htm",
+              "date": "2026-08-05",
+              "location": "Form 8-K Exhibit 99.1",
+              "event_date": "2026-08-05"
+            },
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        }
+      ],
+      "validation_question": "Which personalization features are you prioritizing to increase direct and repeat bookings?",
+      "labels": [],
+      "csm_selected": null
+    },
+    {
+      "id": "I-10",
+      "title": "Customer service technology",
+      "text": "The company invested significantly in contact center technologies to improve customer experience and agent efficiency. It expects to continue reaping the benefits of these investments. It continues to invest in a customer service platform that uses AI for online and self-service options.",
+      "owner": "shared",
+      "provenance": "sourced",
+      "citations": [
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "location": "Item 1 Business"
+        }
+      ],
+      "sentences": [
+        {
+          "text": "The company invested significantly in contact center technologies to improve customer experience and agent efficiency.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        },
+        {
+          "text": "It expects to continue reaping the benefits of these investments.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        },
+        {
+          "text": "It continues to invest in a customer service platform that uses AI for online and self-service options.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ]
+        }
+      ],
+      "validation_question": "What self-service and AI capabilities are you adding to the customer service platform next?",
+      "labels": [],
+      "csm_selected": null
+    },
+    {
+      "id": "I-11",
+      "title": "Vrbo transactional model",
+      "text": "Vrbo moved from a listings-based classified advertising model to an online transactional model. The goal is to increase monetization and drive growth through marketing and product and technology investments. The company views Vrbo as an attractive growth opportunity.",
+      "owner": "shared",
+      "provenance": "sourced",
+      "citations": [
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "location": "Item 7 MD&A"
+        }
+      ],
+      "sentences": [
+        {
+          "text": "Vrbo moved from a listings-based classified advertising model to an online transactional model.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 7 MD&A"
+            }
+          ]
+        },
+        {
+          "text": "The goal is to increase monetization and drive growth through marketing and product and technology investments.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 7 MD&A"
+            }
+          ]
+        },
+        {
+          "text": "The company views Vrbo as an attractive growth opportunity.",
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 7 MD&A"
+            }
+          ]
+        }
+      ],
+      "validation_question": "Which marketing and product investments are you making in Vrbo to increase monetization?",
+      "labels": [],
+      "csm_selected": null
+    },
+    {
+      "id": "I-12",
+      "title": "trivago brand rejuvenation",
+      "text": "Source passages omitted (verbatim text from the filing); see source link",
+      "owner": "shared",
+      "provenance": "sourced",
+      "citations": [
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "location": "Item 7 MD&A"
+        }
+      ],
+      "validation_question": "[CSM to complete: validation question]",
+      "labels": [],
+      "csm_selected": null
+    }
+  ],
+  "key_benefits": [
+    {
+      "id": "B-01",
+      "initiative_id": "I-01",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "partial",
+      "capability_ids": [
+        "JIRA-AI-ROVO"
+      ],
+      "fit_rationale": "Rovo supports AI use in internal work and team productivity but does not build AI into travel products.",
+      "validation_question": "Which internal teams would use AI search or agents over their work content, and is that in scope for this initiative?",
+      "labels": [],
+      "text": "Rovo offers AI search across Jira, Confluence, and connected apps. Content can be turned into Jira work items with AI.",
+      "citations": [
+        {
+          "source_type": "product_docs",
+          "title": "Rovo AI (search, chat, agents) in Jira",
+          "url": "https://www.atlassian.com/software/jira",
+          "date": "2026-10-12"
+        }
+      ],
+      "plan_confirmation": "[CSM to confirm which plan includes these capabilities]",
+      "sentences": [
+        {
+          "text": "Rovo offers AI search across Jira, Confluence, and connected apps.",
+          "citations": [
+            {
+              "source_type": "product_docs",
+              "title": "Rovo AI (search, chat, agents) in Jira",
+              "url": "https://www.atlassian.com/software/jira",
+              "date": "2026-10-12"
+            }
+          ]
+        },
+        {
+          "text": "Content can be turned into Jira work items with AI.",
+          "citations": [
+            {
+              "source_type": "product_docs",
+              "title": "Rovo AI (search, chat, agents) in Jira",
+              "url": "https://www.atlassian.com/software/jira",
+              "date": "2026-10-12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B-02",
+      "initiative_id": "I-02",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "partial",
+      "capability_ids": [
+        "JIRA-WORKFLOWS",
+        "JIRA-PLANNING-ROADMAPS"
+      ],
+      "fit_rationale": "These capabilities support coordinating engineering work across teams but do not provide the shared technology platform itself.",
+      "validation_question": "How do engineering teams across the brands currently coordinate work and process on the shared platform?",
+      "labels": [],
+      "text": "Workflow schemes can be shared across multiple spaces so many teams follow one process. Plans combine work items from boards, spaces, and filters into one view across teams.",
+      "citations": [
+        {
+          "source_type": "product_docs",
+          "title": "Customizable workflows and standardization",
+          "url": "https://support.atlassian.com/jira-cloud-administration/docs/configure-workflow-schemes/",
+          "date": "2026-10-12"
+        },
+        {
+          "source_type": "product_docs",
+          "title": "Cross-team planning, roadmaps, and dependency tracking",
+          "url": "https://support.atlassian.com/jira-software-cloud/docs/what-is-advanced-roadmaps/",
+          "date": "2026-10-12"
+        }
+      ],
+      "plan_confirmation": "[CSM to confirm which plan includes these capabilities]",
+      "sentences": [
+        {
+          "text": "Workflow schemes can be shared across multiple spaces so many teams follow one process.",
+          "citations": [
+            {
+              "source_type": "product_docs",
+              "title": "Customizable workflows and standardization",
+              "url": "https://support.atlassian.com/jira-cloud-administration/docs/configure-workflow-schemes/",
+              "date": "2026-10-12"
+            }
+          ]
+        },
+        {
+          "text": "Plans combine work items from boards, spaces, and filters into one view across teams.",
+          "citations": [
+            {
+              "source_type": "product_docs",
+              "title": "Cross-team planning, roadmaps, and dependency tracking",
+              "url": "https://support.atlassian.com/jira-software-cloud/docs/what-is-advanced-roadmaps/",
+              "date": "2026-10-12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B-03",
+      "initiative_id": "I-03",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "no_fit",
+      "capability_ids": [],
+      "fit_rationale": "The initiative is about commercial growth with partners, not an activity these capabilities perform.",
+      "validation_question": "Is there an internal delivery or planning challenge in the B2B teams that tracked work could address?",
+      "labels": [],
+      "text": "No fit with the capabilities in the product config.",
+      "no_fit_reason": "B2B sales growth, partner contracts and APIs are commercial activities these work-management capabilities do not perform.",
+      "gap_ids": [
+        "GAP-CUSTOMER-FACING"
+      ]
+    },
+    {
+      "id": "B-04",
+      "initiative_id": "I-04",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "no_fit",
+      "capability_ids": [],
+      "fit_rationale": "Supply expansion is a commercial and partner activity, not work tracking or documentation.",
+      "validation_question": "Does the supply team track onboarding or contracting work in a tool where workflow tracking would help?",
+      "labels": [],
+      "text": "No fit with the capabilities in the product config.",
+      "no_fit_reason": "Expanding hotel supply and negotiating economics is a commercial activity; no capability covers it.",
+      "gap_ids": [
+        "GAP-CUSTOMER-FACING"
+      ]
+    },
+    {
+      "id": "B-05",
+      "initiative_id": "I-05",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "no_fit",
+      "capability_ids": [],
+      "fit_rationale": "The loyalty program itself is customer-facing and outside these capabilities.",
+      "validation_question": "How are cross-brand loyalty rollout tasks currently planned and tracked by internal teams?",
+      "labels": [],
+      "text": "No fit with the capabilities in the product config.",
+      "no_fit_reason": "A consumer loyalty program is a customer-facing capability, which these products do not provide.",
+      "gap_ids": [
+        "GAP-CUSTOMER-FACING"
+      ]
+    },
+    {
+      "id": "B-06",
+      "initiative_id": "I-06",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "no_fit",
+      "capability_ids": [],
+      "fit_rationale": "The initiative is about marketing allocation, which no capability performs.",
+      "validation_question": "Do marketing teams need shared planning or documentation for campaign work across brands?",
+      "labels": [],
+      "text": "No fit with the capabilities in the product config.",
+      "no_fit_reason": "Marketing investment decisions and brand management are customer-facing marketing activities not covered by these capabilities.",
+      "gap_ids": [
+        "GAP-CUSTOMER-FACING"
+      ]
+    },
+    {
+      "id": "B-07",
+      "initiative_id": "I-07",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "no_fit",
+      "capability_ids": [],
+      "fit_rationale": "Entering new markets is a business expansion activity outside these capabilities.",
+      "validation_question": "Is there a program-management need for coordinating market launches across teams?",
+      "labels": [],
+      "text": "No fit with the capabilities in the product config.",
+      "no_fit_reason": "Market expansion and adding airline coverage are commercial activities, not work-tracking or documentation functions.",
+      "gap_ids": [
+        "GAP-CUSTOMER-FACING"
+      ]
+    },
+    {
+      "id": "B-08",
+      "initiative_id": "I-08",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "partial",
+      "capability_ids": [
+        "JIRA-AUTOMATION",
+        "JIRA-WORKFLOWS"
+      ],
+      "fit_rationale": "Automation and standard workflows support efficiency in internal work processes but do not deliver restructuring or payment efficiencies.",
+      "validation_question": "Which internal processes are manual and repetitive enough to be candidates for automation?",
+      "labels": [],
+      "text": "Automation rules can close parent work items and auto-assign work. Workflow schemes let many teams follow one process from a single configuration.",
+      "citations": [
+        {
+          "source_type": "product_docs",
+          "title": "Automation rules",
+          "url": "https://www.atlassian.com/software/jira/features/automation",
+          "date": "2026-10-12"
+        },
+        {
+          "source_type": "product_docs",
+          "title": "Customizable workflows and standardization",
+          "url": "https://support.atlassian.com/jira-cloud-administration/docs/configure-workflow-schemes/",
+          "date": "2026-10-12"
+        }
+      ],
+      "plan_confirmation": "[CSM to confirm which plan includes these capabilities]",
+      "sentences": [
+        {
+          "text": "Automation rules can close parent work items and auto-assign work.",
+          "citations": [
+            {
+              "source_type": "product_docs",
+              "title": "Automation rules",
+              "url": "https://www.atlassian.com/software/jira/features/automation",
+              "date": "2026-10-12"
+            }
+          ]
+        },
+        {
+          "text": "Workflow schemes let many teams follow one process from a single configuration.",
+          "citations": [
+            {
+              "source_type": "product_docs",
+              "title": "Customizable workflows and standardization",
+              "url": "https://support.atlassian.com/jira-cloud-administration/docs/configure-workflow-schemes/",
+              "date": "2026-10-12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B-09",
+      "initiative_id": "I-09",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "no_fit",
+      "capability_ids": [],
+      "fit_rationale": "Consumer personalization is outside these internal work-management capabilities.",
+      "validation_question": "Do product teams building personalization features need better requirements-to-delivery tracking?",
+      "labels": [],
+      "text": "No fit with the capabilities in the product config.",
+      "no_fit_reason": "Personalized consumer experiences and direct customer relationships are customer-facing capabilities not provided here.",
+      "gap_ids": [
+        "GAP-CUSTOMER-FACING"
+      ]
+    },
+    {
+      "id": "B-10",
+      "initiative_id": "I-10",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "no_fit",
+      "capability_ids": [],
+      "fit_rationale": "The initiative concerns a customer service platform, which is outside the listed capabilities.",
+      "validation_question": "Which customer service platform is in use, and do its engineering teams track work separately?",
+      "labels": [],
+      "text": "No fit with the capabilities in the product config.",
+      "no_fit_reason": "Contact center and customer service platforms are service-management and customer-facing functions, which these capabilities do not cover.",
+      "gap_ids": [
+        "GAP-ITSM",
+        "GAP-CUSTOMER-FACING"
+      ]
+    },
+    {
+      "id": "B-11",
+      "initiative_id": "I-11",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "no_fit",
+      "capability_ids": [],
+      "fit_rationale": "The business model change is commercial and e-commerce, not work tracking.",
+      "validation_question": "How is the delivery of Vrbo transactional product work planned and tracked today?",
+      "labels": [],
+      "text": "No fit with the capabilities in the product config.",
+      "no_fit_reason": "Moving Vrbo to a transactional e-commerce model is a customer-facing monetization change that no capability provides.",
+      "gap_ids": [
+        "GAP-CUSTOMER-FACING"
+      ]
+    },
+    {
+      "id": "B-12",
+      "initiative_id": "I-12",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "no_fit",
+      "capability_ids": [],
+      "fit_rationale": "Brand identity and marketing work is not something these capabilities perform.",
+      "validation_question": "Does the trivago marketing team need shared documentation or planning tools?",
+      "labels": [],
+      "text": "No fit with the capabilities in the product config.",
+      "no_fit_reason": "Brand rejuvenation, logo and marketing strategy are customer-facing marketing activities outside these capabilities.",
+      "gap_ids": [
+        "GAP-CUSTOMER-FACING"
+      ]
+    }
+  ],
+  "renewal": {
+    "owner": "csm",
+    "provenance": "csm-input",
+    "placeholder": "[CSM to complete: renewal date, ARR, status, next steps]"
+  },
+  "success_criteria": [
+    {
+      "id": "O-01-C1",
+      "text": "Track how many Jira work items are created from content using AI.",
+      "owner": "shared",
+      "provenance": "inferred",
+      "needs_baseline": true,
+      "validation_question": "Is creating work items from content a step your teams want to make faster?",
+      "labels": [],
+      "citations": [
+        {
+          "source_type": "product_docs",
+          "title": "Rovo AI (search, chat, agents) in Jira",
+          "url": "https://www.atlassian.com/software/jira",
+          "date": "2026-10-12"
+        }
+      ],
+      "criterion_type": "product_usage",
+      "indicator_type": "leading",
+      "measure": "number of Jira work items created from content with AI",
+      "proposed_target": "Increase: number of Jira work items created from content with AI. Target: [CSM to complete: set after baseline]",
+      "baseline_question": "How many Jira work items are created from content with AI today?"
+    },
+    {
+      "id": "O-01-C2",
+      "text": "Track how many people run AI searches across Jira, Confluence, and connected apps.",
+      "owner": "shared",
+      "provenance": "inferred",
+      "needs_baseline": true,
+      "validation_question": "Do your teams currently struggle to find information across work tools?",
+      "labels": [],
+      "citations": [
+        {
+          "source_type": "product_docs",
+          "title": "Rovo AI (search, chat, agents) in Jira",
+          "url": "https://www.atlassian.com/software/jira",
+          "date": "2026-10-12"
+        }
+      ],
+      "criterion_type": "product_usage",
+      "indicator_type": "leading",
+      "measure": "number of people using AI search across Jira, Confluence, and connected apps",
+      "proposed_target": "Increase: number of people using AI search across Jira, Confluence, and connected apps. Target: [CSM to complete: set after baseline]",
+      "baseline_question": "How many people use AI search across your work tools today?"
+    },
+    {
+      "id": "O-01-C3",
+      "text": "Track speed of resolution in customer service teams.",
+      "owner": "shared",
+      "provenance": "inferred",
+      "needs_baseline": true,
+      "validation_question": "Is speed of resolution a measure your leaders review for AI use in operations?",
+      "labels": [
+        "company measure; not attributable to the product"
+      ],
+      "citations": [
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "location": "Item 1 Business"
+        }
+      ],
+      "criterion_type": "business_outcome",
+      "indicator_type": "lagging",
+      "measure": "speed of resolution in customer service teams",
+      "proposed_target": "Increase: speed of resolution in customer service teams. Target: [CSM to complete: set after baseline]",
+      "baseline_question": "What is your current speed of resolution in customer service teams?"
+    },
+    {
+      "id": "O-02-C1",
+      "text": "Track how many teams follow one shared workflow scheme across multiple spaces.",
+      "owner": "shared",
+      "provenance": "inferred",
+      "needs_baseline": true,
+      "validation_question": "Would a single shared process across spaces matter to your teams?",
+      "labels": [],
+      "citations": [
+        {
+          "source_type": "product_docs",
+          "title": "Customizable workflows and standardization",
+          "url": "https://support.atlassian.com/jira-cloud-administration/docs/configure-workflow-schemes/",
+          "date": "2026-10-12"
+        }
+      ],
+      "criterion_type": "product_usage",
+      "indicator_type": "leading",
+      "measure": "number of teams using one shared workflow scheme",
+      "proposed_target": "Increase: number of teams using one shared workflow scheme. Target: [CSM to complete: set after baseline]",
+      "baseline_question": "How many teams follow one shared workflow scheme today?"
+    },
+    {
+      "id": "O-02-C2",
+      "text": "Track how many plans combine work items from boards, spaces, and filters into one cross-team view.",
+      "owner": "shared",
+      "provenance": "inferred",
+      "needs_baseline": true,
+      "validation_question": "Do your teams need one view of work across boards and spaces?",
+      "labels": [],
+      "citations": [
+        {
+          "source_type": "product_docs",
+          "title": "Cross-team planning, roadmaps, and dependency tracking",
+          "url": "https://support.atlassian.com/jira-software-cloud/docs/what-is-advanced-roadmaps/",
+          "date": "2026-10-12"
+        }
+      ],
+      "criterion_type": "product_usage",
+      "indicator_type": "leading",
+      "measure": "number of plans combining work items from multiple sources into one view",
+      "proposed_target": "Increase: number of plans combining work items from multiple sources into one view. Target: [CSM to complete: set after baseline]",
+      "baseline_question": "How many cross-team plans combine work items from several sources today?"
+    },
+    {
+      "id": "O-02-C3",
+      "text": "Track how fast new capabilities and features ship.",
+      "owner": "shared",
+      "provenance": "inferred",
+      "needs_baseline": true,
+      "validation_question": "Is faster shipping of new features a measure your leaders track for the shared platform?",
+      "labels": [
+        "company measure; not attributable to the product"
+      ],
+      "citations": [
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "location": "Item 1 Business"
+        }
+      ],
+      "criterion_type": "business_outcome",
+      "indicator_type": "lagging",
+      "measure": "speed of shipping new capabilities and features",
+      "proposed_target": "Increase: speed of shipping new capabilities and features. Target: [CSM to complete: set after baseline]",
+      "baseline_question": "How long does it take today to ship new capabilities and features?"
+    },
+    {
+      "id": "O-03-C1",
+      "text": "Track how many automation rules that close parent work items or auto-assign work are active.",
+      "owner": "shared",
+      "provenance": "inferred",
+      "needs_baseline": true,
+      "validation_question": "Is closing parent items or assigning work by hand a task your teams spend time on?",
+      "labels": [],
+      "citations": [
+        {
+          "source_type": "product_docs",
+          "title": "Automation rules",
+          "url": "https://www.atlassian.com/software/jira/features/automation",
+          "date": "2026-10-12"
+        }
+      ],
+      "criterion_type": "product_usage",
+      "indicator_type": "leading",
+      "measure": "number of active automation rules that close parent work items or auto-assign work",
+      "proposed_target": "Increase: number of active automation rules that close parent work items or auto-assign work. Target: [CSM to complete: set after baseline]",
+      "baseline_question": "How many automation rules for closing parent work items or assigning work are active today?"
+    },
+    {
+      "id": "O-03-C2",
+      "text": "Track how many teams follow one process from a single workflow configuration.",
+      "owner": "shared",
+      "provenance": "inferred",
+      "needs_baseline": true,
+      "validation_question": "Would one configuration for many teams matter to how you run your work?",
+      "labels": [],
+      "citations": [
+        {
+          "source_type": "product_docs",
+          "title": "Customizable workflows and standardization",
+          "url": "https://support.atlassian.com/jira-cloud-administration/docs/configure-workflow-schemes/",
+          "date": "2026-10-12"
+        }
+      ],
+      "criterion_type": "product_usage",
+      "indicator_type": "leading",
+      "measure": "number of teams using one workflow scheme configuration",
+      "proposed_target": "Increase: number of teams using one workflow scheme configuration. Target: [CSM to complete: set after baseline]",
+      "baseline_question": "How many teams follow one process from a single configuration today?"
+    },
+    {
+      "id": "O-03-C3",
+      "text": "Track transactional efficiencies in payments and customer service.",
+      "owner": "shared",
+      "provenance": "inferred",
+      "needs_baseline": true,
+      "validation_question": "Are transactional efficiencies in payments and customer service a priority measure for your teams?",
+      "labels": [
+        "company measure; not attributable to the product"
+      ],
+      "citations": [
+        {
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "location": "Item 7 MD&A"
+        }
+      ],
+      "criterion_type": "business_outcome",
+      "indicator_type": "lagging",
+      "measure": "transactional efficiency in payments and customer service",
+      "proposed_target": "Increase: transactional efficiency in payments and customer service. Target: [CSM to complete: set after baseline]",
+      "baseline_question": "How do you measure transactional efficiency in payments and customer service today, and what is the current value?"
+    }
+  ],
+  "key_challenges": {
+    "public_signals": [
+      {
+        "id": "C-01",
+        "title": "AI-driven competitive disruption",
+        "text": "The 10-K says generative and agentic AI is likely to further intensify competition for the company's services. If it cannot integrate advanced AI capabilities, the company may experience lost market share and reduced direct-booking rates.",
+        "owner": "shared",
+        "provenance": "sourced",
+        "citations": [
+          {
+            "source_type": "filing",
+            "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+            "date": "2026-02-13",
+            "location": "Item 1A Risk Factors"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "The 10-K says generative and agentic AI is likely to further intensify competition for the company's services.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "If it cannot integrate advanced AI capabilities, the company may experience lost market share and reduced direct-booking rates.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          }
+        ],
+        "validation_question": "How are you prioritizing investment to compete with AI-driven travel search and booking platforms?",
+        "labels": []
+      },
+      {
+        "id": "C-02",
+        "title": "Intense competition from OTAs and large platforms",
+        "text": "The company describes its market as intensely competitive and constantly evolving. The 10-K states that Google has used its search market position to promote its own travel services. Airbnb has expanded into tours, activities, and hotel bookings, according to the 10-K.",
+        "owner": "shared",
+        "provenance": "sourced",
+        "citations": [
+          {
+            "source_type": "filing",
+            "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+            "date": "2026-02-13",
+            "location": "Item 1A Risk Factors"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "The company describes its market as intensely competitive and constantly evolving.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "The 10-K states that Google has used its search market position to promote its own travel services.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "Airbnb has expanded into tours, activities, and hotel bookings, according to the 10-K.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          }
+        ],
+        "validation_question": "Which competitors are you most focused on as they broaden their travel offerings?",
+        "labels": []
+      },
+      {
+        "id": "C-03",
+        "title": "Dependence on search engine traffic",
+        "text": "The company generates a significant portion of its website traffic from internet search engines such as Google. Search providers have added their own travel search features, which may continue to reduce traffic to the company's sites. The 10-K says AI search platforms and changing consumer behavior adversely affect search traffic and margins.",
+        "owner": "shared",
+        "provenance": "sourced",
+        "citations": [
+          {
+            "source_type": "filing",
+            "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+            "date": "2026-02-13",
+            "location": "Item 1A Risk Factors"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "The company generates a significant portion of its website traffic from internet search engines such as Google.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "Search providers have added their own travel search features, which may continue to reduce traffic to the company's sites.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "The 10-K says AI search platforms and changing consumer behavior adversely affect search traffic and margins.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          }
+        ],
+        "validation_question": "How is the shift toward AI search changing your traffic acquisition mix and costs?",
+        "labels": []
+      },
+      {
+        "id": "C-04",
+        "title": "Reliance on supplier and B2B partner relationships",
+        "text": "A substantial portion of revenue comes from compensation negotiated with travel suppliers, especially lodging suppliers, airlines and GDS partners. The company says there is no assurance that travel suppliers will elect to participate in its platform.",
+        "owner": "shared",
+        "provenance": "sourced",
+        "citations": [
+          {
+            "source_type": "filing",
+            "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+            "date": "2026-02-13",
+            "location": "Item 1A Risk Factors"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "A substantial portion of revenue comes from compensation negotiated with travel suppliers, especially lodging suppliers, airlines and GDS partners.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "The company says there is no assurance that travel suppliers will elect to participate in its platform.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          }
+        ],
+        "validation_question": "Are any major supplier contract renegotiations affecting your compensation or inventory access this year?",
+        "labels": []
+      },
+      {
+        "id": "C-05",
+        "title": "Travel industry disruption and macro conditions",
+        "text": "Adverse macroeconomic and geopolitical conditions, such as slow growth or recession, could adversely affect travel demand. Disruptive events could result in significant additional costs and lower revenues, particularly when travelers receive refunds. During 2024, Hurricanes Helene and Milton negatively impacted financial results for the third and fourth quarters.",
+        "owner": "shared",
+        "provenance": "sourced",
+        "citations": [
+          {
+            "source_type": "filing",
+            "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+            "date": "2026-02-13",
+            "location": "Item 1A Risk Factors"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "Adverse macroeconomic and geopolitical conditions, such as slow growth or recession, could adversely affect travel demand.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "Disruptive events could result in significant additional costs and lower revenues, particularly when travelers receive refunds.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "During 2024, Hurricanes Helene and Milton negatively impacted financial results for the third and fourth quarters.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          }
+        ],
+        "validation_question": "How are current macroeconomic and geopolitical conditions shaping your demand outlook and spending plans?",
+        "labels": []
+      },
+      {
+        "id": "C-06",
+        "title": "Alternative accommodations regulation",
+        "text": "[sentence omitted: verbatim passage from the filing] New and evolving regulatory schemes may decrease listings available on the company's sites.",
+        "owner": "shared",
+        "provenance": "sourced",
+        "citations": [
+          {
+            "source_type": "filing",
+            "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+            "date": "2026-02-13",
+            "location": "Item 1A Risk Factors"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "[sentence omitted: verbatim passage from the filing]",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "New and evolving regulatory schemes may decrease listings available on the company's sites.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          }
+        ],
+        "validation_question": "[CSM to complete: validation question]",
+        "labels": []
+      },
+      {
+        "id": "C-07",
+        "title": "Cybersecurity and system availability",
+        "text": "Some attackers are using AI to launch more sophisticated, automated and targeted attacks that are harder to detect. Migrating legacy systems to newer technology increases the risk of system interruptions. Incidents affecting AWS could adversely affect the availability of the company's platform.",
+        "owner": "shared",
+        "provenance": "sourced",
+        "citations": [
+          {
+            "source_type": "filing",
+            "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+            "date": "2026-02-13",
+            "location": "Item 1A Risk Factors"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "Some attackers are using AI to launch more sophisticated, automated and targeted attacks that are harder to detect.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "Migrating legacy systems to newer technology increases the risk of system interruptions.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "Incidents affecting AWS could adversely affect the availability of the company's platform.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          }
+        ],
+        "validation_question": "How are you managing resilience and security risk during your cloud and legacy system migration?",
+        "labels": []
+      },
+      {
+        "id": "C-08",
+        "title": "Fraud exposure",
+        "text": "Fraudulent schemes have become increasingly common and sophisticated, according to the 10-K. The company has not broadly adopted protections such as app-based multi-factor authentication or third-party identity verification. Agentic booking capabilities that may lack strong consent controls may significantly increase fraud risks.",
+        "owner": "shared",
+        "provenance": "sourced",
+        "citations": [
+          {
+            "source_type": "filing",
+            "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+            "date": "2026-02-13",
+            "location": "Item 1A Risk Factors"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "Fraudulent schemes have become increasingly common and sophisticated, according to the 10-K.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "The company has not broadly adopted protections such as app-based multi-factor authentication or third-party identity verification.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "Agentic booking capabilities that may lack strong consent controls may significantly increase fraud risks.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          }
+        ],
+        "validation_question": "Are you planning to broaden fraud protections such as multi-factor authentication or identity verification?",
+        "labels": []
+      },
+      {
+        "id": "C-09",
+        "title": "Litigation and tax disputes",
+        "text": "The 10-K says defending legal actions has been, and will likely continue to be, time consuming and expensive. Taxing authorities have made inquiries, filed lawsuits, and levied assessments over transactional taxes on travel facilitation services. A September 1, 2026 headline reported the company fighting a damages claim by Cuban exile families.",
+        "owner": "shared",
+        "provenance": "sourced",
+        "citations": [
+          {
+            "source_type": "news",
+            "title": "News article (sun-sentinel.com)",
+            "url": "https://www.sun-sentinel.com/2026/09/01/expedia-fights-off-claim-for-damages-by-cuban-exile-families-2/",
+            "date": "2026-09-01",
+            "location": "sun-sentinel.com"
+          },
+          {
+            "source_type": "filing",
+            "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+            "date": "2026-02-13",
+            "location": "Item 1A Risk Factors"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "The 10-K says defending legal actions has been, and will likely continue to be, time consuming and expensive.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "Taxing authorities have made inquiries, filed lawsuits, and levied assessments over transactional taxes on travel facilitation services.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "A September 1, 2026 headline reported the company fighting a damages claim by Cuban exile families.",
+            "citations": [
+              {
+                "source_type": "news",
+                "title": "News article (sun-sentinel.com)",
+                "url": "https://www.sun-sentinel.com/2026/09/01/expedia-fights-off-claim-for-damages-by-cuban-exile-families-2/",
+                "date": "2026-09-01",
+                "location": "sun-sentinel.com"
+              }
+            ]
+          }
+        ],
+        "validation_question": "Which pending legal or tax proceedings are drawing the most management attention and resources?",
+        "labels": [
+          "uncorroborated headline"
+        ]
+      },
+      {
+        "id": "C-10",
+        "title": "Website display and fee disclosure rules",
+        "text": "The 10-K cites the Federal Trade Commission Rule on Unfair or Deceptive Fees, effective May 2025, as a new display rule. The EU Digital Services Act requires the company to display a variety of supplier-related information. Such laws may be costly and time consuming to implement.",
+        "owner": "shared",
+        "provenance": "sourced",
+        "citations": [
+          {
+            "source_type": "filing",
+            "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+            "date": "2026-02-13",
+            "location": "Item 1A Risk Factors"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "The 10-K cites the Federal Trade Commission Rule on Unfair or Deceptive Fees, effective May 2025, as a new display rule.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "The EU Digital Services Act requires the company to display a variety of supplier-related information.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "Such laws may be costly and time consuming to implement.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          }
+        ],
+        "validation_question": "How much effort is going into meeting fee display and supplier disclosure requirements across markets?",
+        "labels": []
+      },
+      {
+        "id": "C-11",
+        "title": "Indebtedness and covenants",
+        "text": "As of December 31, 2025, long-term indebtedness, including current maturities, had a face value of $6.3 billion. The revolving credit facility requires the company not to exceed a specified maximum consolidated leverage ratio.",
+        "owner": "shared",
+        "provenance": "sourced",
+        "citations": [
+          {
+            "source_type": "filing",
+            "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+            "date": "2026-03-30",
+            "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+            "event_date": "2026-03-27"
+          },
+          {
+            "source_type": "filing",
+            "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+            "date": "2026-02-13",
+            "location": "Item 1A Risk Factors"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "As of December 31, 2025, long-term indebtedness, including current maturities, had a face value of $6.3 billion.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "The revolving credit facility requires the company not to exceed a specified maximum consolidated leverage ratio.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+                "date": "2026-03-30",
+                "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+                "event_date": "2026-03-27"
+              },
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          }
+        ],
+        "validation_question": "Do leverage covenants influence how you plan capital spending and investment this year?",
+        "labels": []
+      },
+      {
+        "id": "C-12",
+        "title": "Talent competition and leadership transitions",
+        "text": "The labor market is highly competitive, particularly in AI and machine learning specialties. The company has experienced a number of leadership transitions, which it says can be difficult to manage.",
+        "owner": "shared",
+        "provenance": "sourced",
+        "citations": [
+          {
+            "source_type": "filing",
+            "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+            "date": "2026-02-13",
+            "location": "Item 1A Risk Factors"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "The labor market is highly competitive, particularly in AI and machine learning specialties.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          },
+          {
+            "text": "The company has experienced a number of leadership transitions, which it says can be difficult to manage.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+                "date": "2026-02-13",
+                "location": "Item 1A Risk Factors"
+              }
+            ]
+          }
+        ],
+        "validation_question": "How are recent leadership transitions and AI hiring needs affecting team priorities?",
+        "labels": []
+      },
+      {
+        "id": "S-01",
+        "title": "Chief Financial Officer transition",
+        "text": "On April 17, 2026, the company and the Chief Financial Officer agreed he would step down effective May 11, 2026. The filing states the departure is not the result of any disagreement with the company. On April 23, 2026, the company announced a new Chief Financial Officer, succeeding in the role on May 11, 2026.",
+        "owner": "shared",
+        "provenance": "sourced",
+        "citations": [
+          {
+            "source_type": "filing",
+            "title": "Expedia Group, Inc. Form 8-K filed 2026-04-23 (Departure or appointment of directors or certain officers)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000016/expe-20260417.htm",
+            "date": "2026-04-23",
+            "location": "Form 8-K Items 5.02, 7.01, 9.01",
+            "event_date": "2026-04-17"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "On April 17, 2026, the company and the Chief Financial Officer agreed he would step down effective May 11, 2026.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 8-K filed 2026-04-23 (Departure or appointment of directors or certain officers)",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000016/expe-20260417.htm",
+                "date": "2026-04-23",
+                "location": "Form 8-K Items 5.02, 7.01, 9.01",
+                "event_date": "2026-04-17"
+              }
+            ]
+          },
+          {
+            "text": "The filing states the departure is not the result of any disagreement with the company.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 8-K filed 2026-04-23 (Departure or appointment of directors or certain officers)",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000016/expe-20260417.htm",
+                "date": "2026-04-23",
+                "location": "Form 8-K Items 5.02, 7.01, 9.01",
+                "event_date": "2026-04-17"
+              }
+            ]
+          },
+          {
+            "text": "On April 23, 2026, the company announced a new Chief Financial Officer, succeeding in the role on May 11, 2026.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 8-K filed 2026-04-23 (Departure or appointment of directors or certain officers)",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000016/expe-20260417.htm",
+                "date": "2026-04-23",
+                "location": "Form 8-K Items 5.02, 7.01, 9.01",
+                "event_date": "2026-04-17"
+              }
+            ]
+          }
+        ],
+        "validation_question": "What finance priorities is the new Chief Financial Officer focusing on after the May 11, 2026 transition?",
+        "labels": []
+      },
+      {
+        "id": "S-02",
+        "title": "Executive reorganization",
+        "text": "News headlines in August 2026 reported eight executives leaving the company in an AI-focused reorganization.",
+        "owner": "shared",
+        "provenance": "inferred",
+        "citations": [
+          {
+            "source_type": "news",
+            "title": "News article (skift.com)",
+            "url": "https://skift.com/2026/08/20/expedia-cuts-eight-executives-as-it-reorganizes-around-ai/",
+            "date": "2026-08-21",
+            "location": "skift.com"
+          },
+          {
+            "source_type": "news",
+            "title": "News article (geekwire.com)",
+            "url": "https://www.geekwire.com/2026/internal-memo-eight-execs-out-at-expedia-group-in-ai-driven-shakeup/",
+            "date": "2026-08-19",
+            "location": "geekwire.com"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "News headlines in August 2026 reported eight executives leaving the company in an AI-focused reorganization.",
+            "citations": [
+              {
+                "source_type": "news",
+                "title": "News article (skift.com)",
+                "url": "https://skift.com/2026/08/20/expedia-cuts-eight-executives-as-it-reorganizes-around-ai/",
+                "date": "2026-08-21",
+                "location": "skift.com"
+              },
+              {
+                "source_type": "news",
+                "title": "News article (geekwire.com)",
+                "url": "https://www.geekwire.com/2026/internal-memo-eight-execs-out-at-expedia-group-in-ai-driven-shakeup/",
+                "date": "2026-08-19",
+                "location": "geekwire.com"
+              }
+            ]
+          }
+        ],
+        "validation_question": "How has the August 2026 leadership reorganization changed reporting lines and decision owners?",
+        "labels": [
+          "news headline only"
+        ]
+      },
+      {
+        "id": "S-03",
+        "title": "Seattle layoffs",
+        "text": "A September 23, 2026 headline reported 58 Seattle job cuts in a second round of layoffs in 2026.",
+        "owner": "shared",
+        "provenance": "inferred",
+        "citations": [
+          {
+            "source_type": "news",
+            "title": "News article (kiro7.com)",
+            "url": "https://www.kiro7.com/news/local/expedia-cuts-58-seattle-jobs-second-round-layoffs-this-year/6F7KLLQL3BHPTJPWQ3CA4MLPOI/",
+            "date": "2026-09-23",
+            "location": "kiro7.com"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "A September 23, 2026 headline reported 58 Seattle job cuts in a second round of layoffs in 2026.",
+            "citations": [
+              {
+                "source_type": "news",
+                "title": "News article (kiro7.com)",
+                "url": "https://www.kiro7.com/news/local/expedia-cuts-58-seattle-jobs-second-round-layoffs-this-year/6F7KLLQL3BHPTJPWQ3CA4MLPOI/",
+                "date": "2026-09-23",
+                "location": "kiro7.com"
+              }
+            ]
+          }
+        ],
+        "validation_question": "Which teams were affected by the 2026 layoff rounds?",
+        "labels": [
+          "news headline only"
+        ]
+      },
+      {
+        "id": "S-04",
+        "title": "Acquisition of AI trip planner Layla",
+        "text": "Headlines in late July and early August 2026 reported the company acquired AI trip planner Layla.",
+        "owner": "shared",
+        "provenance": "inferred",
+        "citations": [
+          {
+            "source_type": "news",
+            "title": "News article (travelerstoday.com)",
+            "url": "https://www.travelerstoday.com/articles/60678/20260801/expedia-buys-layla-what-ai-trip-planner-deal-changes-travelers.htm",
+            "date": "2026-08-01",
+            "location": "travelerstoday.com"
+          },
+          {
+            "source_type": "news",
+            "title": "News article (skift.com)",
+            "url": "https://skift.com/2026/07/31/expedia-acquired-ai-trip-planner-layla-exclusive/",
+            "date": "2026-07-31",
+            "location": "skift.com"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "Headlines in late July and early August 2026 reported the company acquired AI trip planner Layla.",
+            "citations": [
+              {
+                "source_type": "news",
+                "title": "News article (travelerstoday.com)",
+                "url": "https://www.travelerstoday.com/articles/60678/20260801/expedia-buys-layla-what-ai-trip-planner-deal-changes-travelers.htm",
+                "date": "2026-08-01",
+                "location": "travelerstoday.com"
+              },
+              {
+                "source_type": "news",
+                "title": "News article (skift.com)",
+                "url": "https://skift.com/2026/07/31/expedia-acquired-ai-trip-planner-layla-exclusive/",
+                "date": "2026-07-31",
+                "location": "skift.com"
+              }
+            ]
+          }
+        ],
+        "validation_question": "How will the Layla acquisition be integrated into your products and teams?",
+        "labels": [
+          "news headline only"
+        ]
+      },
+      {
+        "id": "S-05",
+        "title": "New revolving credit facility",
+        "text": "On March 27, 2026, the company entered a new revolving credit facility that is unsecured and not guaranteed by subsidiaries. Aggregate commitments total $2.5 billion, with a $120 million letter of credit sublimit. The facility matures on March 27, 2031. The company terminated commitments and repaid obligations under its April 14, 2022 credit agreement.",
+        "owner": "shared",
+        "provenance": "sourced",
+        "citations": [
+          {
+            "source_type": "filing",
+            "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+            "date": "2026-03-30",
+            "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+            "event_date": "2026-03-27"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "On March 27, 2026, the company entered a new revolving credit facility that is unsecured and not guaranteed by subsidiaries.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+                "date": "2026-03-30",
+                "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+                "event_date": "2026-03-27"
+              }
+            ]
+          },
+          {
+            "text": "Aggregate commitments total $2.5 billion, with a $120 million letter of credit sublimit.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+                "date": "2026-03-30",
+                "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+                "event_date": "2026-03-27"
+              }
+            ]
+          },
+          {
+            "text": "The facility matures on March 27, 2031.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+                "date": "2026-03-30",
+                "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+                "event_date": "2026-03-27"
+              }
+            ]
+          },
+          {
+            "text": "The company terminated commitments and repaid obligations under its April 14, 2022 credit agreement.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+                "date": "2026-03-30",
+                "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+                "event_date": "2026-03-27"
+              }
+            ]
+          }
+        ],
+        "validation_question": "Has the March 2026 credit facility changed how you plan liquidity for upcoming initiatives?",
+        "labels": []
+      },
+      {
+        "id": "S-06",
+        "title": "Release of subsidiary note guarantees",
+        "text": "With the new facility, subsidiary guarantors were automatically released from their guarantees under each series of senior notes.",
+        "owner": "shared",
+        "provenance": "sourced",
+        "citations": [
+          {
+            "source_type": "filing",
+            "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+            "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+            "date": "2026-03-30",
+            "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+            "event_date": "2026-03-27"
+          }
+        ],
+        "sentences": [
+          {
+            "text": "With the new facility, subsidiary guarantors were automatically released from their guarantees under each series of senior notes.",
+            "citations": [
+              {
+                "source_type": "filing",
+                "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+                "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+                "date": "2026-03-30",
+                "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+                "event_date": "2026-03-27"
+              }
+            ]
+          }
+        ],
+        "validation_question": "Did the release of subsidiary guarantees change any internal treasury or entity structure processes?",
+        "labels": []
+      }
+    ],
+    "customer_raised": {
+      "owner": "csm",
+      "provenance": "csm-input",
+      "placeholder": "[CSM to complete: challenges the customer has raised]"
+    }
+  },
+  "objectives": [
+    {
+      "id": "O-01",
+      "title": "Explore support for: AI across products and operations",
+      "owner": "shared",
+      "provenance": "inferred",
+      "linked_initiative_ids": [
+        "I-01"
+      ],
+      "capability_ids": [
+        "JIRA-AI-ROVO"
+      ],
+      "fit": "partial",
+      "labels": [
+        "partial fit: supports the work, does not deliver the outcome"
+      ],
+      "success_criteria": [
+        {
+          "id": "O-01-C1",
+          "text": "Track how many Jira work items are created from content using AI.",
+          "owner": "shared",
+          "provenance": "inferred",
+          "needs_baseline": true,
+          "validation_question": "Is creating work items from content a step your teams want to make faster?",
+          "labels": [],
+          "citations": [
+            {
+              "source_type": "product_docs",
+              "title": "Rovo AI (search, chat, agents) in Jira",
+              "url": "https://www.atlassian.com/software/jira",
+              "date": "2026-10-12"
+            }
+          ],
+          "criterion_type": "product_usage",
+          "indicator_type": "leading",
+          "measure": "number of Jira work items created from content with AI",
+          "proposed_target": "Increase: number of Jira work items created from content with AI. Target: [CSM to complete: set after baseline]",
+          "baseline_question": "How many Jira work items are created from content with AI today?"
+        },
+        {
+          "id": "O-01-C2",
+          "text": "Track how many people run AI searches across Jira, Confluence, and connected apps.",
+          "owner": "shared",
+          "provenance": "inferred",
+          "needs_baseline": true,
+          "validation_question": "Do your teams currently struggle to find information across work tools?",
+          "labels": [],
+          "citations": [
+            {
+              "source_type": "product_docs",
+              "title": "Rovo AI (search, chat, agents) in Jira",
+              "url": "https://www.atlassian.com/software/jira",
+              "date": "2026-10-12"
+            }
+          ],
+          "criterion_type": "product_usage",
+          "indicator_type": "leading",
+          "measure": "number of people using AI search across Jira, Confluence, and connected apps",
+          "proposed_target": "Increase: number of people using AI search across Jira, Confluence, and connected apps. Target: [CSM to complete: set after baseline]",
+          "baseline_question": "How many people use AI search across your work tools today?"
+        },
+        {
+          "id": "O-01-C3",
+          "text": "Track speed of resolution in customer service teams.",
+          "owner": "shared",
+          "provenance": "inferred",
+          "needs_baseline": true,
+          "validation_question": "Is speed of resolution a measure your leaders review for AI use in operations?",
+          "labels": [
+            "company measure; not attributable to the product"
+          ],
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ],
+          "criterion_type": "business_outcome",
+          "indicator_type": "lagging",
+          "measure": "speed of resolution in customer service teams",
+          "proposed_target": "Increase: speed of resolution in customer service teams. Target: [CSM to complete: set after baseline]",
+          "baseline_question": "What is your current speed of resolution in customer service teams?"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "O-01-T1",
+          "text": "Run a discovery call on the work behind 'AI across products and operations'.",
+          "responsible_role": "CSM",
+          "proposed_timeline": {
+            "window": "Day 0-30",
+            "is_proposed": true
+          },
+          "provenance": "inferred",
+          "validation_question": "Who owns the work behind 'AI across products and operations', and how is it tracked today?"
+        },
+        {
+          "id": "O-01-T2",
+          "text": "Demo Rovo AI search to the team.",
+          "responsible_role": "CSM",
+          "proposed_timeline": {
+            "window": "Day 31-60",
+            "is_proposed": true
+          },
+          "provenance": "inferred",
+          "validation_question": "How closely would Rovo AI search fit the way the team works today?"
+        },
+        {
+          "id": "O-01-T3",
+          "text": "Agree baselines for this objective's success criteria.",
+          "responsible_role": "CSM",
+          "proposed_timeline": {
+            "window": "Day 31-60",
+            "is_proposed": true
+          },
+          "provenance": "inferred",
+          "validation_question": "Which of these measures can the company already report, and from which system?"
+        },
+        {
+          "id": "O-01-T4",
+          "text": "Propose a pilot of Rovo AI search with one team.",
+          "responsible_role": "Customer team lead",
+          "proposed_timeline": {
+            "window": "Day 61-90",
+            "is_proposed": true
+          },
+          "provenance": "inferred",
+          "validation_question": "Which team would be a good first pilot, and who would sponsor it?"
+        }
+      ]
+    },
+    {
+      "id": "O-02",
+      "title": "Explore support for: Unified technology platform",
+      "owner": "shared",
+      "provenance": "inferred",
+      "linked_initiative_ids": [
+        "I-02"
+      ],
+      "capability_ids": [
+        "JIRA-WORKFLOWS",
+        "JIRA-PLANNING-ROADMAPS"
+      ],
+      "fit": "partial",
+      "labels": [
+        "partial fit: supports the work, does not deliver the outcome"
+      ],
+      "success_criteria": [
+        {
+          "id": "O-02-C1",
+          "text": "Track how many teams follow one shared workflow scheme across multiple spaces.",
+          "owner": "shared",
+          "provenance": "inferred",
+          "needs_baseline": true,
+          "validation_question": "Would a single shared process across spaces matter to your teams?",
+          "labels": [],
+          "citations": [
+            {
+              "source_type": "product_docs",
+              "title": "Customizable workflows and standardization",
+              "url": "https://support.atlassian.com/jira-cloud-administration/docs/configure-workflow-schemes/",
+              "date": "2026-10-12"
+            }
+          ],
+          "criterion_type": "product_usage",
+          "indicator_type": "leading",
+          "measure": "number of teams using one shared workflow scheme",
+          "proposed_target": "Increase: number of teams using one shared workflow scheme. Target: [CSM to complete: set after baseline]",
+          "baseline_question": "How many teams follow one shared workflow scheme today?"
+        },
+        {
+          "id": "O-02-C2",
+          "text": "Track how many plans combine work items from boards, spaces, and filters into one cross-team view.",
+          "owner": "shared",
+          "provenance": "inferred",
+          "needs_baseline": true,
+          "validation_question": "Do your teams need one view of work across boards and spaces?",
+          "labels": [],
+          "citations": [
+            {
+              "source_type": "product_docs",
+              "title": "Cross-team planning, roadmaps, and dependency tracking",
+              "url": "https://support.atlassian.com/jira-software-cloud/docs/what-is-advanced-roadmaps/",
+              "date": "2026-10-12"
+            }
+          ],
+          "criterion_type": "product_usage",
+          "indicator_type": "leading",
+          "measure": "number of plans combining work items from multiple sources into one view",
+          "proposed_target": "Increase: number of plans combining work items from multiple sources into one view. Target: [CSM to complete: set after baseline]",
+          "baseline_question": "How many cross-team plans combine work items from several sources today?"
+        },
+        {
+          "id": "O-02-C3",
+          "text": "Track how fast new capabilities and features ship.",
+          "owner": "shared",
+          "provenance": "inferred",
+          "needs_baseline": true,
+          "validation_question": "Is faster shipping of new features a measure your leaders track for the shared platform?",
+          "labels": [
+            "company measure; not attributable to the product"
+          ],
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 1 Business"
+            }
+          ],
+          "criterion_type": "business_outcome",
+          "indicator_type": "lagging",
+          "measure": "speed of shipping new capabilities and features",
+          "proposed_target": "Increase: speed of shipping new capabilities and features. Target: [CSM to complete: set after baseline]",
+          "baseline_question": "How long does it take today to ship new capabilities and features?"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "O-02-T1",
+          "text": "Review the current workflow behind 'Unified technology platform'.",
+          "responsible_role": "Customer admin",
+          "proposed_timeline": {
+            "window": "Day 0-30",
+            "is_proposed": true
+          },
+          "provenance": "inferred",
+          "validation_question": "Which steps in this workflow are manual or tracked outside a shared tool today?"
+        },
+        {
+          "id": "O-02-T2",
+          "text": "Demo shared workflow schemes and cross-team plans to the team.",
+          "responsible_role": "CSM",
+          "proposed_timeline": {
+            "window": "Day 31-60",
+            "is_proposed": true
+          },
+          "provenance": "inferred",
+          "validation_question": "How closely would shared workflow schemes and cross-team plans fit the way the team works today?"
+        },
+        {
+          "id": "O-02-T3",
+          "text": "Agree baselines for this objective's success criteria.",
+          "responsible_role": "CSM",
+          "proposed_timeline": {
+            "window": "Day 31-60",
+            "is_proposed": true
+          },
+          "provenance": "inferred",
+          "validation_question": "Which of these measures can the company already report, and from which system?"
+        },
+        {
+          "id": "O-02-T4",
+          "text": "Propose a pilot of shared workflow schemes and cross-team plans with one team.",
+          "responsible_role": "Customer engineering lead",
+          "proposed_timeline": {
+            "window": "Day 61-90",
+            "is_proposed": true
+          },
+          "provenance": "inferred",
+          "validation_question": "Which team would be a good first pilot, and who would sponsor it?"
+        }
+      ]
+    },
+    {
+      "id": "O-03",
+      "title": "Explore support for: Restructuring and cost efficiency",
+      "owner": "shared",
+      "provenance": "inferred",
+      "linked_initiative_ids": [
+        "I-08"
+      ],
+      "capability_ids": [
+        "JIRA-AUTOMATION",
+        "JIRA-WORKFLOWS"
+      ],
+      "fit": "partial",
+      "labels": [
+        "partial fit: supports the work, does not deliver the outcome"
+      ],
+      "success_criteria": [
+        {
+          "id": "O-03-C1",
+          "text": "Track how many automation rules that close parent work items or auto-assign work are active.",
+          "owner": "shared",
+          "provenance": "inferred",
+          "needs_baseline": true,
+          "validation_question": "Is closing parent items or assigning work by hand a task your teams spend time on?",
+          "labels": [],
+          "citations": [
+            {
+              "source_type": "product_docs",
+              "title": "Automation rules",
+              "url": "https://www.atlassian.com/software/jira/features/automation",
+              "date": "2026-10-12"
+            }
+          ],
+          "criterion_type": "product_usage",
+          "indicator_type": "leading",
+          "measure": "number of active automation rules that close parent work items or auto-assign work",
+          "proposed_target": "Increase: number of active automation rules that close parent work items or auto-assign work. Target: [CSM to complete: set after baseline]",
+          "baseline_question": "How many automation rules for closing parent work items or assigning work are active today?"
+        },
+        {
+          "id": "O-03-C2",
+          "text": "Track how many teams follow one process from a single workflow configuration.",
+          "owner": "shared",
+          "provenance": "inferred",
+          "needs_baseline": true,
+          "validation_question": "Would one configuration for many teams matter to how you run your work?",
+          "labels": [],
+          "citations": [
+            {
+              "source_type": "product_docs",
+              "title": "Customizable workflows and standardization",
+              "url": "https://support.atlassian.com/jira-cloud-administration/docs/configure-workflow-schemes/",
+              "date": "2026-10-12"
+            }
+          ],
+          "criterion_type": "product_usage",
+          "indicator_type": "leading",
+          "measure": "number of teams using one workflow scheme configuration",
+          "proposed_target": "Increase: number of teams using one workflow scheme configuration. Target: [CSM to complete: set after baseline]",
+          "baseline_question": "How many teams follow one process from a single configuration today?"
+        },
+        {
+          "id": "O-03-C3",
+          "text": "Track transactional efficiencies in payments and customer service.",
+          "owner": "shared",
+          "provenance": "inferred",
+          "needs_baseline": true,
+          "validation_question": "Are transactional efficiencies in payments and customer service a priority measure for your teams?",
+          "labels": [
+            "company measure; not attributable to the product"
+          ],
+          "citations": [
+            {
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "location": "Item 7 MD&A"
+            }
+          ],
+          "criterion_type": "business_outcome",
+          "indicator_type": "lagging",
+          "measure": "transactional efficiency in payments and customer service",
+          "proposed_target": "Increase: transactional efficiency in payments and customer service. Target: [CSM to complete: set after baseline]",
+          "baseline_question": "How do you measure transactional efficiency in payments and customer service today, and what is the current value?"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "O-03-T1",
+          "text": "Run a discovery call on the work behind 'Restructuring and cost efficiency'.",
+          "responsible_role": "CSM",
+          "proposed_timeline": {
+            "window": "Day 0-30",
+            "is_proposed": true
+          },
+          "provenance": "inferred",
+          "validation_question": "Who owns the work behind 'Restructuring and cost efficiency', and how is it tracked today?"
+        },
+        {
+          "id": "O-03-T2",
+          "text": "Demo automation rules and shared workflow schemes to the team.",
+          "responsible_role": "CSM",
+          "proposed_timeline": {
+            "window": "Day 31-60",
+            "is_proposed": true
+          },
+          "provenance": "inferred",
+          "validation_question": "How closely would automation rules and shared workflow schemes fit the way the team works today?"
+        },
+        {
+          "id": "O-03-T3",
+          "text": "Agree baselines for this objective's success criteria.",
+          "responsible_role": "CSM",
+          "proposed_timeline": {
+            "window": "Day 31-60",
+            "is_proposed": true
+          },
+          "provenance": "inferred",
+          "validation_question": "Which of these measures can the company already report, and from which system?"
+        },
+        {
+          "id": "O-03-T4",
+          "text": "Propose a pilot of automation rules and shared workflow schemes with one team.",
+          "responsible_role": "Customer admin",
+          "proposed_timeline": {
+            "window": "Day 61-90",
+            "is_proposed": true
+          },
+          "provenance": "inferred",
+          "validation_question": "Which team would be a good first pilot, and who would sponsor it?"
+        }
+      ]
+    }
+  ],
+  "objectives_csm_blank": {
+    "owner": "csm",
+    "provenance": "csm-input",
+    "placeholder": "[CSM to complete: add objectives for initiatives the tool did not map]"
+  },
+  "items_to_validate": [
+    {
+      "ref_id": "I-01",
+      "question": "Which AI use cases in products, engineering, and customer service are your highest priorities for the next year?"
+    },
+    {
+      "ref_id": "I-02",
+      "question": "What platform capabilities are you prioritizing next as the shared infrastructure matures?"
+    },
+    {
+      "ref_id": "I-08",
+      "question": "Which areas are in scope for the additional cost reduction efforts you are evaluating?"
+    },
+    {
+      "ref_id": "B-01",
+      "question": "Which internal teams would use AI search or agents over their work content, and is that in scope for this initiative?"
+    },
+    {
+      "ref_id": "B-01, B-02, B-08",
+      "question": "[CSM to confirm which plan includes these capabilities]"
+    },
+    {
+      "ref_id": "B-02",
+      "question": "How do engineering teams across the brands currently coordinate work and process on the shared platform?"
+    },
+    {
+      "ref_id": "B-08",
+      "question": "Which internal processes are manual and repetitive enough to be candidates for automation?"
+    },
+    {
+      "ref_id": "O-01-C1",
+      "question": "How many Jira work items are created from content with AI today?"
+    },
+    {
+      "ref_id": "O-01-C1",
+      "question": "Is creating work items from content a step your teams want to make faster?"
+    },
+    {
+      "ref_id": "O-01-C2",
+      "question": "How many people use AI search across your work tools today?"
+    },
+    {
+      "ref_id": "O-01-C2",
+      "question": "Do your teams currently struggle to find information across work tools?"
+    },
+    {
+      "ref_id": "O-01-C3",
+      "question": "What is your current speed of resolution in customer service teams?"
+    },
+    {
+      "ref_id": "O-01-C3",
+      "question": "Is speed of resolution a measure your leaders review for AI use in operations?"
+    },
+    {
+      "ref_id": "O-02-C1",
+      "question": "How many teams follow one shared workflow scheme today?"
+    },
+    {
+      "ref_id": "O-02-C1",
+      "question": "Would a single shared process across spaces matter to your teams?"
+    },
+    {
+      "ref_id": "O-02-C2",
+      "question": "How many cross-team plans combine work items from several sources today?"
+    },
+    {
+      "ref_id": "O-02-C2",
+      "question": "Do your teams need one view of work across boards and spaces?"
+    },
+    {
+      "ref_id": "O-02-C3",
+      "question": "How long does it take today to ship new capabilities and features?"
+    },
+    {
+      "ref_id": "O-02-C3",
+      "question": "Is faster shipping of new features a measure your leaders track for the shared platform?"
+    },
+    {
+      "ref_id": "O-03-C1",
+      "question": "How many automation rules for closing parent work items or assigning work are active today?"
+    },
+    {
+      "ref_id": "O-03-C1",
+      "question": "Is closing parent items or assigning work by hand a task your teams spend time on?"
+    },
+    {
+      "ref_id": "O-03-C2",
+      "question": "How many teams follow one process from a single configuration today?"
+    },
+    {
+      "ref_id": "O-03-C2",
+      "question": "Would one configuration for many teams matter to how you run your work?"
+    },
+    {
+      "ref_id": "O-03-C3",
+      "question": "How do you measure transactional efficiency in payments and customer service today, and what is the current value?"
+    },
+    {
+      "ref_id": "O-03-C3",
+      "question": "Are transactional efficiencies in payments and customer service a priority measure for your teams?"
+    },
+    {
+      "ref_id": "C-01",
+      "question": "How are you prioritizing investment to compete with AI-driven travel search and booking platforms?"
+    },
+    {
+      "ref_id": "C-02",
+      "question": "Which competitors are you most focused on as they broaden their travel offerings?"
+    },
+    {
+      "ref_id": "C-03",
+      "question": "How is the shift toward AI search changing your traffic acquisition mix and costs?"
+    },
+    {
+      "ref_id": "C-04",
+      "question": "Are any major supplier contract renegotiations affecting your compensation or inventory access this year?"
+    },
+    {
+      "ref_id": "C-05",
+      "question": "How are current macroeconomic and geopolitical conditions shaping your demand outlook and spending plans?"
+    },
+    {
+      "ref_id": "C-06",
+      "question": "[CSM to complete: validation question]"
+    },
+    {
+      "ref_id": "C-07",
+      "question": "How are you managing resilience and security risk during your cloud and legacy system migration?"
+    },
+    {
+      "ref_id": "C-08",
+      "question": "Are you planning to broaden fraud protections such as multi-factor authentication or identity verification?"
+    },
+    {
+      "ref_id": "C-09",
+      "question": "Which pending legal or tax proceedings are drawing the most management attention and resources?"
+    },
+    {
+      "ref_id": "C-10",
+      "question": "How much effort is going into meeting fee display and supplier disclosure requirements across markets?"
+    },
+    {
+      "ref_id": "C-11",
+      "question": "Do leverage covenants influence how you plan capital spending and investment this year?"
+    },
+    {
+      "ref_id": "C-12",
+      "question": "How are recent leadership transitions and AI hiring needs affecting team priorities?"
+    },
+    {
+      "ref_id": "S-01",
+      "question": "What finance priorities is the new Chief Financial Officer focusing on after the May 11, 2026 transition?"
+    },
+    {
+      "ref_id": "S-02",
+      "question": "How has the August 2026 leadership reorganization changed reporting lines and decision owners?"
+    },
+    {
+      "ref_id": "S-03",
+      "question": "Which teams were affected by the 2026 layoff rounds?"
+    },
+    {
+      "ref_id": "S-04",
+      "question": "How will the Layla acquisition be integrated into your products and teams?"
+    },
+    {
+      "ref_id": "S-05",
+      "question": "Has the March 2026 credit facility changed how you plan liquidity for upcoming initiatives?"
+    },
+    {
+      "ref_id": "S-06",
+      "question": "Did the release of subsidiary guarantees change any internal treasury or entity structure processes?"
+    },
+    {
+      "ref_id": "I-03",
+      "question": "How are you balancing wallet-share growth with existing B2B partners against new partner wins and new product launches?"
+    },
+    {
+      "ref_id": "I-04",
+      "question": "Which geographies or supply types are the focus of your current supply expansion efforts?"
+    },
+    {
+      "ref_id": "I-05",
+      "question": "Which markets are next for One Key, and when do you expect remaining Expedia Rewards members to migrate?"
+    },
+    {
+      "ref_id": "I-06",
+      "question": "How do brand general managers and the central marketing team share decisions on marketing allocation across markets?"
+    },
+    {
+      "ref_id": "I-07",
+      "question": "Which international markets are your top priorities for expansion investment?"
+    },
+    {
+      "ref_id": "I-09",
+      "question": "Which personalization features are you prioritizing to increase direct and repeat bookings?"
+    },
+    {
+      "ref_id": "I-10",
+      "question": "What self-service and AI capabilities are you adding to the customer service platform next?"
+    },
+    {
+      "ref_id": "I-11",
+      "question": "Which marketing and product investments are you making in Vrbo to increase monetization?"
+    },
+    {
+      "ref_id": "I-12",
+      "question": "[CSM to complete: validation question]"
+    },
+    {
+      "ref_id": "B-03",
+      "question": "Is there an internal delivery or planning challenge in the B2B teams that tracked work could address?"
+    },
+    {
+      "ref_id": "B-04",
+      "question": "Does the supply team track onboarding or contracting work in a tool where workflow tracking would help?"
+    },
+    {
+      "ref_id": "B-05",
+      "question": "How are cross-brand loyalty rollout tasks currently planned and tracked by internal teams?"
+    },
+    {
+      "ref_id": "B-06",
+      "question": "Do marketing teams need shared planning or documentation for campaign work across brands?"
+    },
+    {
+      "ref_id": "B-07",
+      "question": "Is there a program-management need for coordinating market launches across teams?"
+    },
+    {
+      "ref_id": "B-09",
+      "question": "Do product teams building personalization features need better requirements-to-delivery tracking?"
+    },
+    {
+      "ref_id": "B-10",
+      "question": "Which customer service platform is in use, and do its engineering teams track work separately?"
+    },
+    {
+      "ref_id": "B-11",
+      "question": "How is the delivery of Vrbo transactional product work planned and tracked today?"
+    },
+    {
+      "ref_id": "B-12",
+      "question": "Does the trivago marketing team need shared documentation or planning tools?"
+    }
+  ]
+}

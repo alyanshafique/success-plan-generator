@@ -1,0 +1,62 @@
+# Task catalog for the Draft stage.
+#
+# The model never writes task text. It picks a task id, a role, a relative window, and (when the template
+# names one) a capability from the objective's own mapping; code fills the template. Slots allowed:
+# {initiative} (the Extract initiative title) and {capability} (a short display name below). The role is shown
+# in its own column, never in the text. Templates avoid verb agreement with {capability}, which can be singular
+# or plural. Tasks are proposed CSM actions, not claims: no company facts, figures, plan names, or prices.
+# A task marked covers_all_capabilities names every capability mapped to the objective (code fills it; the
+# model's capability choice is ignored). A task marked added_by_code is added to every objective by code and is
+# not offered to the model.
+
+roles: [CSM, Customer admin, Customer engineering lead, Customer team lead, Services]
+
+# Short display names for task text, shortened from the capability names in
+# config/product_atlassian_jira_confluence.yaml (no wording the config does not use).
+display_names:
+  JIRA-WORK-TRACKING: boards, backlogs, and sprints
+  JIRA-WORKFLOWS: shared workflow schemes
+  JIRA-AUTOMATION: automation rules
+  JIRA-PLANNING-ROADMAPS: cross-team plans
+  JIRA-REPORTING: dashboards and reports
+  JIRA-ANALYTICS-ENTERPRISE: Atlassian Analytics
+  JIRA-INTEGRATIONS: developer-tool integrations
+  JIRA-ADMIN-GOVERNANCE: administration and governance controls
+  JIRA-AI-ROVO: Rovo AI search
+  CONF-KNOWLEDGE-BASE: Confluence pages and spaces
+  CONF-WHITEBOARDS: Confluence whiteboards
+  CONF-DATABASES: Confluence databases
+  CONF-AUTOMATION: Confluence automation rules
+  CONF-AI-ROVO: Rovo in Confluence
+  CONF-ADMIN-SECURITY: Confluence data protection and security controls
+  CONF-APPS-INTEGRATIONS: Confluence apps and integrations
+  XPROD-REQUIREMENTS-TO-WORK: documentation linked to tracked work
+
+tasks:
+  - id: T-DISCOVERY
+    text: "Run a discovery call on the work behind '{initiative}'."
+    question: "Who owns the work behind '{initiative}', and how is it tracked today?"
+  - id: T-WORKFLOW-REVIEW
+    text: "Review the current workflow behind '{initiative}'."
+    question: "Which steps in this workflow are manual or tracked outside a shared tool today?"
+  - id: T-DEMO
+    text: "Demo {capability} to the team."
+    question: "How closely would {capability} fit the way the team works today?"
+    covers_all_capabilities: true
+  - id: T-PILOT
+    text: "Propose a pilot of {capability} with one team."
+    question: "Which team would be a good first pilot, and who would sponsor it?"
+    covers_all_capabilities: true
+  - id: T-ENABLEMENT
+    text: "Share documentation and training on {capability}."
+    question: "Who needs training on {capability} first, and in what format?"
+  - id: T-BASELINES
+    text: "Agree baselines for this objective's success criteria."
+    question: "Which of these measures can the company already report, and from which system?"
+    added_by_code: {role: CSM, window: Day 31-60}
+  - id: T-PLAN-CONFIRM
+    text: "Confirm which plan includes the capabilities in this objective."
+    question: "Which plan would the capabilities in this objective require?"
+  - id: T-PROGRESS-REVIEW
+    text: "Review progress on this objective's success criteria."
+    question: "Are these success criteria still the right ones to track?"

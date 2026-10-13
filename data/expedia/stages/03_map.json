@@ -1,0 +1,518 @@
+{
+  "stage": "map",
+  "generated_at": "2026-10-13T21:51:18Z",
+  "company": "Expedia Group, Inc.",
+  "profile": "dev",
+  "extract_generated_at": "2026-10-12T22:52:48Z",
+  "config_file": "config/product_atlassian_jira_confluence.yaml",
+  "withheld_claims": [
+    {
+      "capability_id": "JIRA-AUTOMATION",
+      "text": "Step allowances depend on plan tier. Each trigger, condition, action, branch, or loop executed counts as a step.",
+      "reason": "plan-tier wording ('plan tier')"
+    },
+    {
+      "capability_id": "JIRA-PLANNING-ROADMAPS",
+      "text": "Lower plans have basic roadmaps only, not cross-team Plans",
+      "reason": "plan-tier wording ('Lower plans')"
+    },
+    {
+      "capability_id": "JIRA-ANALYTICS-ENTERPRISE",
+      "text": "Enterprise-tier capability; not available on lower plans",
+      "reason": "plan-tier wording ('Enterprise-tier')"
+    },
+    {
+      "capability_id": "JIRA-ADMIN-GOVERNANCE",
+      "text": "Admin controls that expand by plan:",
+      "reason": "plan-tier wording ('by plan')"
+    },
+    {
+      "capability_id": "JIRA-ADMIN-GOVERNANCE",
+      "text": "Enterprise allows up to 150 instances, compared with one on other plans.",
+      "reason": "plan-tier wording ('Enterprise')"
+    },
+    {
+      "capability_id": "JIRA-ADMIN-GOVERNANCE",
+      "text": "Specific controls and retention periods differ by plan; confirm on live plan comparison",
+      "reason": "plan-tier wording ('by plan')"
+    },
+    {
+      "capability_id": "JIRA-ADMIN-GOVERNANCE",
+      "text": "Guard Premium features (data classification, threat detection, extended audit logs) are a paid add-on",
+      "reason": "plan-tier wording ('Premium')"
+    },
+    {
+      "capability_id": "CONF-WHITEBOARDS",
+      "text": "Whiteboard limits vary by plan",
+      "reason": "plan-tier wording ('by plan')"
+    },
+    {
+      "capability_id": "CONF-AUTOMATION",
+      "text": "Step allowances depend on plan tier (Atlassian meters automation in steps, not rule runs)",
+      "reason": "plan-tier wording ('plan tier')"
+    },
+    {
+      "capability_id": "CONF-ADMIN-SECURITY",
+      "text": "Security controls that expand by plan:",
+      "reason": "plan-tier wording ('by plan')"
+    },
+    {
+      "capability_id": "CONF-ADMIN-SECURITY",
+      "text": "then Atlassian Guard Standard (SSO, SCIM) and up to 150 app instances in one plan.",
+      "reason": "plan-tier wording ('Standard')"
+    },
+    {
+      "capability_id": "CONF-ADMIN-SECURITY",
+      "text": "Specific controls differ by plan; confirm on live plan comparison",
+      "reason": "plan-tier wording ('by plan')"
+    }
+  ],
+  "key_benefits": [
+    {
+      "id": "B-01",
+      "initiative_id": "I-01",
+      "initiative_title": "AI across products and operations",
+      "initiative_provenance": "sourced",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "partial",
+      "capability_ids": [
+        "JIRA-AI-ROVO"
+      ],
+      "text": "Rovo offers AI search across Jira, Confluence, and connected apps. Content can be turned into Jira work items with AI.",
+      "sentences": [
+        {
+          "text": "Rovo offers AI search across Jira, Confluence, and connected apps.",
+          "citations": [
+            {
+              "claim_id": "JIRA-AI-ROVO#d2",
+              "capability_id": "JIRA-AI-ROVO",
+              "capability_name": "Rovo AI (search, chat, agents) in Jira",
+              "evidence": "It offers AI search across Jira, Confluence, and connected apps;",
+              "source_urls": [
+                "https://www.atlassian.com/software/jira",
+                "https://www.atlassian.com/software/confluence/ai",
+                "https://www.atlassian.com/software/confluence/create-and-edit-with-rovo"
+              ],
+              "verified_on": "2026-10-12",
+              "verified_by": "owner_manual_check",
+              "unconfirmed": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_claims": [],
+          "support_score": 0.889
+        },
+        {
+          "text": "Content can be turned into Jira work items with AI.",
+          "citations": [
+            {
+              "claim_id": "JIRA-AI-ROVO#d6",
+              "capability_id": "JIRA-AI-ROVO",
+              "capability_name": "Rovo AI (search, chat, agents) in Jira",
+              "evidence": "Content can be turned into Jira work items with AI.",
+              "source_urls": [
+                "https://www.atlassian.com/software/jira",
+                "https://www.atlassian.com/software/confluence/ai",
+                "https://www.atlassian.com/software/confluence/create-and-edit-with-rovo"
+              ],
+              "verified_on": "2026-10-12",
+              "verified_by": "owner_manual_check",
+              "unconfirmed": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_claims": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "no_fit_reason": null,
+      "gap_ids": [],
+      "fit_rationale": "Rovo supports AI use in internal work and team productivity but does not build AI into travel products.",
+      "fit_rationale_label": "inference",
+      "fit_rationale_support": 0.545,
+      "labels": [],
+      "flags": [],
+      "validation_question": "Which internal teams would use AI search or agents over their work content, and is that in scope for this initiative?",
+      "plan_confirmation": "[CSM to confirm which plan includes these capabilities]"
+    },
+    {
+      "id": "B-02",
+      "initiative_id": "I-02",
+      "initiative_title": "Unified technology platform",
+      "initiative_provenance": "sourced",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "partial",
+      "capability_ids": [
+        "JIRA-WORKFLOWS",
+        "JIRA-PLANNING-ROADMAPS"
+      ],
+      "text": "Workflow schemes can be shared across multiple spaces so many teams follow one process. Plans combine work items from boards, spaces, and filters into one view across teams.",
+      "sentences": [
+        {
+          "text": "Workflow schemes can be shared across multiple spaces so many teams follow one process.",
+          "citations": [
+            {
+              "claim_id": "JIRA-WORKFLOWS#d2",
+              "capability_id": "JIRA-WORKFLOWS",
+              "capability_name": "Customizable workflows and standardization",
+              "evidence": "one scheme can be shared across multiple spaces (projects), so many teams can follow",
+              "source_urls": [
+                "https://support.atlassian.com/jira-cloud-administration/docs/configure-workflow-schemes/",
+                "https://support.atlassian.com/jira-cloud-administration/docs/explore-jira-cloud-plans/"
+              ],
+              "verified_on": "2026-10-12",
+              "verified_by": "owner_manual_check",
+              "unconfirmed": false,
+              "evidence_truncated": true
+            }
+          ],
+          "rejected_claims": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "Plans combine work items from boards, spaces, and filters into one view across teams.",
+          "citations": [
+            {
+              "claim_id": "JIRA-PLANNING-ROADMAPS#d1",
+              "capability_id": "JIRA-PLANNING-ROADMAPS",
+              "capability_name": "Cross-team planning, roadmaps, and dependency tracking",
+              "evidence": "Plans combine work items from boards, spaces, and filters into one view for planning",
+              "source_urls": [
+                "https://support.atlassian.com/jira-software-cloud/docs/what-is-advanced-roadmaps/",
+                "https://support.atlassian.com/jira-cloud-administration/docs/explore-jira-cloud-plans/"
+              ],
+              "verified_on": "2026-10-12",
+              "verified_by": null,
+              "unconfirmed": false,
+              "evidence_truncated": true
+            }
+          ],
+          "rejected_claims": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "no_fit_reason": null,
+      "gap_ids": [],
+      "fit_rationale": "These capabilities support coordinating engineering work across teams but do not provide the shared technology platform itself.",
+      "fit_rationale_label": "inference",
+      "fit_rationale_support": 0.636,
+      "labels": [],
+      "flags": [],
+      "validation_question": "How do engineering teams across the brands currently coordinate work and process on the shared platform?",
+      "plan_confirmation": "[CSM to confirm which plan includes these capabilities]"
+    },
+    {
+      "id": "B-03",
+      "initiative_id": "I-03",
+      "initiative_title": "B2B segment growth",
+      "initiative_provenance": "sourced",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "no_fit",
+      "capability_ids": [],
+      "text": "",
+      "sentences": [],
+      "dropped_sentences": [],
+      "no_fit_reason": "B2B sales growth, partner contracts and APIs are commercial activities these work-management capabilities do not perform.",
+      "gap_ids": [
+        "GAP-CUSTOMER-FACING"
+      ],
+      "fit_rationale": "The initiative is about commercial growth with partners, not an activity these capabilities perform.",
+      "fit_rationale_label": "inference",
+      "fit_rationale_support": 0.143,
+      "labels": [],
+      "flags": [],
+      "validation_question": "Is there an internal delivery or planning challenge in the B2B teams that tracked work could address?",
+      "plan_confirmation": "[CSM to confirm which plan includes these capabilities]"
+    },
+    {
+      "id": "B-04",
+      "initiative_id": "I-04",
+      "initiative_title": "Global lodging supply expansion",
+      "initiative_provenance": "sourced",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "no_fit",
+      "capability_ids": [],
+      "text": "",
+      "sentences": [],
+      "dropped_sentences": [],
+      "no_fit_reason": "Expanding hotel supply and negotiating economics is a commercial activity; no capability covers it.",
+      "gap_ids": [
+        "GAP-CUSTOMER-FACING"
+      ],
+      "fit_rationale": "Supply expansion is a commercial and partner activity, not work tracking or documentation.",
+      "fit_rationale_label": "inference",
+      "fit_rationale_support": 0.125,
+      "labels": [],
+      "flags": [],
+      "validation_question": "Does the supply team track onboarding or contracting work in a tool where workflow tracking would help?",
+      "plan_confirmation": "[CSM to confirm which plan includes these capabilities]"
+    },
+    {
+      "id": "B-05",
+      "initiative_id": "I-05",
+      "initiative_title": "One Key loyalty program",
+      "initiative_provenance": "sourced",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "no_fit",
+      "capability_ids": [],
+      "text": "",
+      "sentences": [],
+      "dropped_sentences": [],
+      "no_fit_reason": "A consumer loyalty program is a customer-facing capability, which these products do not provide.",
+      "gap_ids": [
+        "GAP-CUSTOMER-FACING"
+      ],
+      "fit_rationale": "The loyalty program itself is customer-facing and outside these capabilities.",
+      "fit_rationale_label": "inference",
+      "fit_rationale_support": 0.333,
+      "labels": [],
+      "flags": [],
+      "validation_question": "How are cross-brand loyalty rollout tasks currently planned and tracked by internal teams?",
+      "plan_confirmation": "[CSM to confirm which plan includes these capabilities]"
+    },
+    {
+      "id": "B-06",
+      "initiative_id": "I-06",
+      "initiative_title": "Core brand focus and marketing management",
+      "initiative_provenance": "sourced",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "no_fit",
+      "capability_ids": [],
+      "text": "",
+      "sentences": [],
+      "dropped_sentences": [],
+      "no_fit_reason": "Marketing investment decisions and brand management are customer-facing marketing activities not covered by these capabilities.",
+      "gap_ids": [
+        "GAP-CUSTOMER-FACING"
+      ],
+      "fit_rationale": "The initiative is about marketing allocation, which no capability performs.",
+      "fit_rationale_label": "inference",
+      "fit_rationale_support": 0.2,
+      "labels": [],
+      "flags": [],
+      "validation_question": "Do marketing teams need shared planning or documentation for campaign work across brands?",
+      "plan_confirmation": "[CSM to confirm which plan includes these capabilities]"
+    },
+    {
+      "id": "B-07",
+      "initiative_id": "I-07",
+      "initiative_title": "International market expansion",
+      "initiative_provenance": "sourced",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "no_fit",
+      "capability_ids": [],
+      "text": "",
+      "sentences": [],
+      "dropped_sentences": [],
+      "no_fit_reason": "Market expansion and adding airline coverage are commercial activities, not work-tracking or documentation functions.",
+      "gap_ids": [
+        "GAP-CUSTOMER-FACING"
+      ],
+      "fit_rationale": "Entering new markets is a business expansion activity outside these capabilities.",
+      "fit_rationale_label": "inference",
+      "fit_rationale_support": 0.286,
+      "labels": [],
+      "flags": [],
+      "validation_question": "Is there a program-management need for coordinating market launches across teams?",
+      "plan_confirmation": "[CSM to confirm which plan includes these capabilities]"
+    },
+    {
+      "id": "B-08",
+      "initiative_id": "I-08",
+      "initiative_title": "Restructuring and cost efficiency",
+      "initiative_provenance": "sourced",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "partial",
+      "capability_ids": [
+        "JIRA-AUTOMATION",
+        "JIRA-WORKFLOWS"
+      ],
+      "text": "Automation rules can close parent work items and auto-assign work. Workflow schemes let many teams follow one process from a single configuration.",
+      "sentences": [
+        {
+          "text": "Automation rules can close parent work items and auto-assign work.",
+          "citations": [
+            {
+              "claim_id": "JIRA-AUTOMATION#d2",
+              "capability_id": "JIRA-AUTOMATION",
+              "capability_name": "Automation rules",
+              "evidence": "closing a parent work item when its last sub-task closes, auto-assigning work, syncing work",
+              "source_urls": [
+                "https://www.atlassian.com/software/jira/features/automation",
+                "https://support.atlassian.com/cloud-automation/docs/how-is-my-usage-calculated/",
+                "https://support.atlassian.com/jira-cloud-administration/docs/explore-jira-cloud-plans/"
+              ],
+              "verified_on": "2026-10-12",
+              "verified_by": null,
+              "unconfirmed": false,
+              "evidence_truncated": true
+            }
+          ],
+          "rejected_claims": [],
+          "support_score": 0.75
+        },
+        {
+          "text": "Workflow schemes let many teams follow one process from a single configuration.",
+          "citations": [
+            {
+              "claim_id": "JIRA-WORKFLOWS#d2",
+              "capability_id": "JIRA-WORKFLOWS",
+              "capability_name": "Customizable workflows and standardization",
+              "evidence": "so many teams can follow the same process from a single configuration",
+              "source_urls": [
+                "https://support.atlassian.com/jira-cloud-administration/docs/configure-workflow-schemes/",
+                "https://support.atlassian.com/jira-cloud-administration/docs/explore-jira-cloud-plans/"
+              ],
+              "verified_on": "2026-10-12",
+              "verified_by": "owner_manual_check",
+              "unconfirmed": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_claims": [],
+          "support_score": 0.9
+        }
+      ],
+      "dropped_sentences": [],
+      "no_fit_reason": null,
+      "gap_ids": [],
+      "fit_rationale": "Automation and standard workflows support efficiency in internal work processes but do not deliver restructuring or payment efficiencies.",
+      "fit_rationale_label": "inference",
+      "fit_rationale_support": 0.455,
+      "labels": [],
+      "flags": [],
+      "validation_question": "Which internal processes are manual and repetitive enough to be candidates for automation?",
+      "plan_confirmation": "[CSM to confirm which plan includes these capabilities]"
+    },
+    {
+      "id": "B-09",
+      "initiative_id": "I-09",
+      "initiative_title": "Personalization and direct customer relationships",
+      "initiative_provenance": "sourced",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "no_fit",
+      "capability_ids": [],
+      "text": "",
+      "sentences": [],
+      "dropped_sentences": [],
+      "no_fit_reason": "Personalized consumer experiences and direct customer relationships are customer-facing capabilities not provided here.",
+      "gap_ids": [
+        "GAP-CUSTOMER-FACING"
+      ],
+      "fit_rationale": "Consumer personalization is outside these internal work-management capabilities.",
+      "fit_rationale_label": "inference",
+      "fit_rationale_support": 0.333,
+      "labels": [],
+      "flags": [],
+      "validation_question": "Do product teams building personalization features need better requirements-to-delivery tracking?",
+      "plan_confirmation": "[CSM to confirm which plan includes these capabilities]"
+    },
+    {
+      "id": "B-10",
+      "initiative_id": "I-10",
+      "initiative_title": "Customer service technology",
+      "initiative_provenance": "sourced",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "no_fit",
+      "capability_ids": [],
+      "text": "",
+      "sentences": [],
+      "dropped_sentences": [],
+      "no_fit_reason": "Contact center and customer service platforms are service-management and customer-facing functions, which these capabilities do not cover.",
+      "gap_ids": [
+        "GAP-ITSM",
+        "GAP-CUSTOMER-FACING"
+      ],
+      "fit_rationale": "The initiative concerns a customer service platform, which is outside the listed capabilities.",
+      "fit_rationale_label": "inference",
+      "fit_rationale_support": 0.375,
+      "labels": [],
+      "flags": [],
+      "validation_question": "Which customer service platform is in use, and do its engineering teams track work separately?",
+      "plan_confirmation": "[CSM to confirm which plan includes these capabilities]"
+    },
+    {
+      "id": "B-11",
+      "initiative_id": "I-11",
+      "initiative_title": "Vrbo transactional model",
+      "initiative_provenance": "sourced",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "no_fit",
+      "capability_ids": [],
+      "text": "",
+      "sentences": [],
+      "dropped_sentences": [],
+      "no_fit_reason": "Moving Vrbo to a transactional e-commerce model is a customer-facing monetization change that no capability provides.",
+      "gap_ids": [
+        "GAP-CUSTOMER-FACING"
+      ],
+      "fit_rationale": "The business model change is commercial and e-commerce, not work tracking.",
+      "fit_rationale_label": "inference",
+      "fit_rationale_support": 0.143,
+      "labels": [],
+      "flags": [],
+      "validation_question": "How is the delivery of Vrbo transactional product work planned and tracked today?",
+      "plan_confirmation": "[CSM to confirm which plan includes these capabilities]"
+    },
+    {
+      "id": "B-12",
+      "initiative_id": "I-12",
+      "initiative_title": "trivago brand rejuvenation",
+      "initiative_provenance": "sourced",
+      "owner": "claude",
+      "provenance": "inferred",
+      "fit": "no_fit",
+      "capability_ids": [],
+      "text": "",
+      "sentences": [],
+      "dropped_sentences": [],
+      "no_fit_reason": "Brand rejuvenation, logo and marketing strategy are customer-facing marketing activities outside these capabilities.",
+      "gap_ids": [
+        "GAP-CUSTOMER-FACING"
+      ],
+      "fit_rationale": "Brand identity and marketing work is not something these capabilities perform.",
+      "fit_rationale_label": "inference",
+      "fit_rationale_support": 0.429,
+      "labels": [],
+      "flags": [],
+      "validation_question": "Does the trivago marketing team need shared documentation or planning tools?",
+      "plan_confirmation": "[CSM to confirm which plan includes these capabilities]"
+    }
+  ],
+  "fit_distribution": {
+    "full": 0,
+    "partial": 3,
+    "no_fit": 9
+  },
+  "usage": [
+    {
+      "call": "map",
+      "model": "claude-sonnet-5-5",
+      "effort": "medium",
+      "input_tokens": 10313,
+      "output_tokens": 2483,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "cost_usd": 0.0,
+      "estimated_input_tokens": 0,
+      "estimated_cost_usd": 0.0
+    }
+  ],
+  "total_cost_usd": 0.0,
+  "prices_as_of": "2026-10-06",
+  "warnings": [],
+  "replayed_from": "data/expedia/raw/llm/map-20261012T235845Z-dev"
+}

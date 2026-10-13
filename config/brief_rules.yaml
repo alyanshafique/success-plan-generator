@@ -1,0 +1,19 @@
+# Rules for the brief (output/<company>/plan_brief.md and .docx).
+#
+# Key Challenges / Potential Blockers are split in two. Items that could plausibly affect adoption or budget
+# approval of a work-management tool (decision-makers, organization or leadership changes, budget owners,
+# migrations, security requirements) keep their validation question under "Could affect this engagement".
+# Everything else is listed under "Company context" with no question. Anything not on a list below, including an
+# unknown or missing category or change type, is context. The lists match Extract's own category (challenges) and
+# change_type (changes) fields. This is a coarse filter, not a judgment about relevance; the CSM decides relevance,
+# and every item's question stays in the detailed plan (plan.md).
+
+challenge_categories_with_question:
+  - organizational
+  - security_technology
+
+change_types_with_question:
+  - leadership_change
+  - reorganization
+  - restructuring_layoffs
+  - acquisition

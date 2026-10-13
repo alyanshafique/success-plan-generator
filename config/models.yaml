@@ -1,0 +1,56 @@
+# Model selection, cost estimates, and the per-run spending limit.
+#
+# Profiles: choose with --profile.
+#   plumbing : Haiku 5.5, only to check that the pipeline runs end to end (quality not evaluated)
+#   dev      : Sonnet 5.5, for developing and evaluating prompts
+#   final    : Opus 5.5 at high effort, for final runs
+#
+# expected_output_tokens is used only for the pre-run cost estimate (output includes thinking).
+# Actual token usage and cost are logged after every call.
+
+max_cost_usd_per_run: 3.00  # A real run aborts before any API call if its estimate exceeds this.
+
+# Input token estimate. When ANTHROPIC_API_KEY is set, input tokens are counted exactly with Anthropic's
+# token-counting endpoint (free; same model, system prompt, messages, and output format as the real call).
+# Without a key, or if counting fails, the fallback below is used: tokens = characters / chars_per_token.
+token_estimate:
+  chars_per_token: 2.35
+  calibration: >
+    2026-10-12 Extract plumbing run (claude-haiku-5-5), as-of 2026-10-12 Expedia inputs:
+    initiatives 221,889 characters -> 84,383 input tokens (2.630 chars/token);
+    challenges_changes 221,023 characters -> 84,357 input tokens (2.620 chars/token).
+    Actual counts include the output-format schema the API adds. Fallback = 2.62 / 1.115 = 2.35,
+    an 11.5% safety margin (tokens overestimated). The earlier default of 3.5 chars/token
+    underestimated input by about a third. Token counts are model-specific; this calibration comes
+    from Haiku 5.5 and may differ slightly for Sonnet 5.5 and Opus 5.5. Re-calibrate if inputs change shape.
+
+profiles:
+  plumbing:
+    extract: {model: claude-haiku-5-5, effort: low, max_tokens: 32000, expected_output_tokens: 8000}
+    map: {model: claude-haiku-5-5, effort: low, max_tokens: 16000, expected_output_tokens: 4000}
+    draft: {model: claude-haiku-5-5, effort: low, max_tokens: 16000, expected_output_tokens: 4000}
+  dev:
+    extract: {model: claude-sonnet-5-5, effort: medium, max_tokens: 32000, expected_output_tokens: 12000}
+    map: {model: claude-sonnet-5-5, effort: medium, max_tokens: 24000, expected_output_tokens: 8000}
+    draft: {model: claude-sonnet-5-5, effort: medium, max_tokens: 24000, expected_output_tokens: 6000}
+  final:
+    extract: {model: claude-opus-5-5, effort: high, max_tokens: 48000, expected_output_tokens: 20000}
+    map: {model: claude-opus-5-5, effort: high, max_tokens: 32000, expected_output_tokens: 16000}
+    draft: {model: claude-opus-5-5, effort: high, max_tokens: 32000, expected_output_tokens: 12000}
+
+# Anthropic API prices in USD per million tokens. These are NOT product (Atlassian) prices.
+# Source: the Claude API reference table dated 2026-10-06. VERIFY against Anthropic's pricing page
+# (https://platform.claude.com/docs/en/about-claude/pricing) before relying on any cost figure.
+# cache_write is the 5-minute TTL rate (1.25x input). Haiku 5.5's cache_read is assumed at 0.1x input.
+prices_as_of: "2026-10-06"
+prices:
+  claude-opus-5-5:   {input: 4.00, output: 20.00, cache_read: 0.20, cache_write: 5.00}
+  claude-sonnet-5-5: {input: 2.00, output: 10.00, cache_read: 0.20, cache_write: 2.50}
+  claude-haiku-5-5:
+    input: 0.10
+    output: 0.50
+    cache_read: 0.01
+    cache_write: 0.125
+    # Prompts over 100K tokens are billed at the long-context rate.
+    long_context_threshold: 100000
+    long_context: {input: 0.50, output: 2.50, cache_read: 0.05, cache_write: 0.625}

@@ -1,0 +1,3758 @@
+{
+  "stage": "extract",
+  "generated_at": "2026-10-12T22:52:48Z",
+  "company": "Expedia Group, Inc.",
+  "profile": "final",
+  "retrieve_generated_at": "2026-10-12T19:31:01Z",
+  "prices_as_of": "2026-10-06",
+  "initiatives": [
+    {
+      "id": "I-01",
+      "kind": "initiative",
+      "title": "AI across products and operations",
+      "text": "The company has integrated AI into its products and technology. It also uses AI to improve developer productivity and the speed of resolution in customer service teams. In the second quarter 2026 release, the Chief Executive Officer described using AI to innovate faster and operate more efficiently. Management believes products improved by machine learning and AI will continue to drive greater retention, repeat and direct business.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [
+        {
+          "type": "unsupported_statement",
+          "detail": "sentence 3, support 70%: \"In the second quarter 2026 release, the Chief Executive Officer described using AI to innovate faster and operate more efficiently.\" (not in its cited chunks: second, described, using); found in 10k-item7-p016, 10k-item1-p007, 10k-item1-p008 (mis-cited)"
+        }
+      ],
+      "citations": [
+        {
+          "chunk_id": "8k-0001324424-26-000051-ex991-p002",
+          "source_id": "8k-0001324424-26-000051-ex991",
+          "evidence": "leveraging AI as a force multiplier to innovate faster and operate",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. earnings release (Form 8-K Ex. 99.1) filed 2026-08-05",
+          "location": "Form 8-K Exhibit 99.1",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000051/earningsrelease-q22026.htm",
+          "date": "2026-08-05",
+          "event_date": "2026-08-05",
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p005",
+          "source_id": "10k-item1",
+          "evidence": "leveraged AI by integrating it into our products and technology",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p005",
+          "source_id": "10k-item1",
+          "evidence": "enhancing developer productivity and improving resolution speed in our customer service teams",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p004",
+          "source_id": "10k-item1",
+          "evidence": "we will continue to drive greater retention, repeat and direct business",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "Which AI use cases in products, engineering, and customer service are your highest priorities for the next year?",
+      "extra_validation_questions": [],
+      "theme": "technology_ai",
+      "category": null,
+      "origin": null,
+      "change_type": null,
+      "event_date": null,
+      "sources_note": "Newer source preferred: earnings release filed 2026-08-05; also covered in the 10-K filed 2026-02-13.",
+      "sentences": [
+        {
+          "text": "The company has integrated AI into its products and technology.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p005",
+              "source_id": "10k-item1",
+              "evidence": "leveraged AI by integrating it into our products and technology",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "It also uses AI to improve developer productivity and the speed of resolution in customer service teams.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p005",
+              "source_id": "10k-item1",
+              "evidence": "enhancing developer productivity and improving resolution speed in our customer service teams",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.9
+        },
+        {
+          "text": "In the second quarter 2026 release, the Chief Executive Officer described using AI to innovate faster and operate more efficiently.",
+          "citations": [
+            {
+              "chunk_id": "8k-0001324424-26-000051-ex991-p002",
+              "source_id": "8k-0001324424-26-000051-ex991",
+              "evidence": "leveraging AI as a force multiplier to innovate faster and operate",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. earnings release (Form 8-K Ex. 99.1) filed 2026-08-05",
+              "location": "Form 8-K Exhibit 99.1",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000051/earningsrelease-q22026.htm",
+              "date": "2026-08-05",
+              "event_date": "2026-08-05",
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.7
+        },
+        {
+          "text": "Management believes products improved by machine learning and AI will continue to drive greater retention, repeat and direct business.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p004",
+              "source_id": "10k-item1",
+              "evidence": "we will continue to drive greater retention, repeat and direct business",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.923
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 0.5
+    },
+    {
+      "id": "I-02",
+      "kind": "initiative",
+      "title": "Unified technology platform",
+      "text": "In 2023, the company moved the Hotels.com and Vrbo front-end stacks onto the Brand Expedia stack. Its platform focus is on configurable technical capabilities that support various travel products on standard architecture. Management believes this strategy will enable it to ship new capabilities and features faster. All transaction-based businesses now run on the shared platform infrastructure.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "10k-item1-p004",
+          "source_id": "10k-item1",
+          "evidence": "Hotels.com and Vrbo front-end stacks onto the Brand Expedia stack",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p008",
+          "source_id": "10k-item1",
+          "evidence": "our focus is on developing configurable technical capabilities that support various travel products",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p008",
+          "source_id": "10k-item1",
+          "evidence": "ship new capabilities and features faster; create a foundation for more innovative",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p008",
+          "source_id": "10k-item1",
+          "evidence": "All of our transaction-based businesses now benefit from our shared platform infrastructure",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "What platform capabilities are you prioritizing next as the shared infrastructure matures?",
+      "extra_validation_questions": [],
+      "theme": "technology_ai",
+      "category": null,
+      "origin": null,
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "In 2023, the company moved the Hotels.com and Vrbo front-end stacks onto the Brand Expedia stack.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p004",
+              "source_id": "10k-item1",
+              "evidence": "Hotels.com and Vrbo front-end stacks onto the Brand Expedia stack",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.9
+        },
+        {
+          "text": "Its platform focus is on configurable technical capabilities that support various travel products on standard architecture.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p008",
+              "source_id": "10k-item1",
+              "evidence": "our focus is on developing configurable technical capabilities that support various travel products",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "Management believes this strategy will enable it to ship new capabilities and features faster.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p008",
+              "source_id": "10k-item1",
+              "evidence": "ship new capabilities and features faster; create a foundation for more innovative",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "All transaction-based businesses now run on the shared platform infrastructure.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p008",
+              "source_id": "10k-item1",
+              "evidence": "All of our transaction-based businesses now benefit from our shared platform infrastructure",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.857
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 0.333
+    },
+    {
+      "id": "I-03",
+      "kind": "initiative",
+      "title": "B2B segment growth",
+      "text": "The company intends to grow B2B by increasing wallet share with existing customers and winning new customer contracts. It also plans to grow B2B by introducing additional products and services. Management expects to continue to cement its B2B leadership as B2B benefits from B2C product and technology work. B2B partners can connect through the Rapid API or adopt customized white label or co-branded templates.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [
+        {
+          "type": "unsupported_statement",
+          "detail": "sentence 2, support 71%: \"It also plans to grow B2B by introducing additional products and services.\" (not in its cited chunks: plans, introducing); found in 10k-item1-p001, 10k-item1-p002, 10k-item1-p004 (mis-cited)"
+        }
+      ],
+      "citations": [
+        {
+          "chunk_id": "10k-item1-p018",
+          "source_id": "10k-item1",
+          "evidence": "increasing our wallet share with existing customers, winning contracts with new customers",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p018",
+          "source_id": "10k-item1",
+          "evidence": "as well as the introduction of additional products and services",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p008",
+          "source_id": "10k-item1",
+          "evidence": "we expect to continue to cement our leadership in the B2B segment",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p007",
+          "source_id": "10k-item1",
+          "evidence": "adopting one of our customized white label or co-branded ecommerce template solutions",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "How are you balancing wallet-share growth with existing B2B partners against new partner wins and new product launches?",
+      "extra_validation_questions": [],
+      "theme": "b2b_partnerships",
+      "category": null,
+      "origin": null,
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "The company intends to grow B2B by increasing wallet share with existing customers and winning new customer contracts.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p018",
+              "source_id": "10k-item1",
+              "evidence": "increasing our wallet share with existing customers, winning contracts with new customers",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "It also plans to grow B2B by introducing additional products and services.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p018",
+              "source_id": "10k-item1",
+              "evidence": "as well as the introduction of additional products and services",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.714
+        },
+        {
+          "text": "Management expects to continue to cement its B2B leadership as B2B benefits from B2C product and technology work.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p008",
+              "source_id": "10k-item1",
+              "evidence": "we expect to continue to cement our leadership in the B2B segment",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "B2B partners can connect through the Rapid API or adopt customized white label or co-branded templates.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p007",
+              "source_id": "10k-item1",
+              "evidence": "adopting one of our customized white label or co-branded ecommerce template solutions",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 0.333
+    },
+    {
+      "id": "I-04",
+      "kind": "initiative",
+      "title": "Global lodging supply expansion",
+      "text": "The company continues to expand the breadth and depth of its global hotel offering. Specific initiatives are intended to drive greater global size and scale through faster room night growth. In some cases, the company has reduced its economics in various geographies based on local market conditions. In the second quarter 2026 release, the Chief Executive Officer said the company expanded supply across its business.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "8k-0001324424-26-000051-ex991-p002",
+          "source_id": "8k-0001324424-26-000051-ex991",
+          "evidence": "and expanded supply across our business, while leveraging AI",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. earnings release (Form 8-K Ex. 99.1) filed 2026-08-05",
+          "location": "Form 8-K Exhibit 99.1",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000051/earningsrelease-q22026.htm",
+          "date": "2026-08-05",
+          "event_date": "2026-08-05",
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item7-p006",
+          "source_id": "10k-item7",
+          "evidence": "continue to expand the breadth and depth of our global hotel offering",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 7 MD&A",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item7-p006",
+          "source_id": "10k-item7",
+          "evidence": "specific initiatives intended to drive greater global size and scale",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 7 MD&A",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item7-p006",
+          "source_id": "10k-item7",
+          "evidence": "in some cases we have reduced our economics in various geographies",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 7 MD&A",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "Which geographies or supply types are the focus of your current supply expansion efforts?",
+      "extra_validation_questions": [],
+      "theme": "growth",
+      "category": null,
+      "origin": null,
+      "change_type": null,
+      "event_date": null,
+      "sources_note": "Newer source preferred: earnings release filed 2026-08-05; also covered in the 10-K filed 2026-02-13.",
+      "sentences": [
+        {
+          "text": "The company continues to expand the breadth and depth of its global hotel offering.",
+          "citations": [
+            {
+              "chunk_id": "10k-item7-p006",
+              "source_id": "10k-item7",
+              "evidence": "continue to expand the breadth and depth of our global hotel offering",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 7 MD&A",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "Specific initiatives are intended to drive greater global size and scale through faster room night growth.",
+          "citations": [
+            {
+              "chunk_id": "10k-item7-p006",
+              "source_id": "10k-item7",
+              "evidence": "specific initiatives intended to drive greater global size and scale",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 7 MD&A",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "In some cases, the company has reduced its economics in various geographies based on local market conditions.",
+          "citations": [
+            {
+              "chunk_id": "10k-item7-p006",
+              "source_id": "10k-item7",
+              "evidence": "in some cases we have reduced our economics in various geographies",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 7 MD&A",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "In the second quarter 2026 release, the Chief Executive Officer said the company expanded supply across its business.",
+          "citations": [
+            {
+              "chunk_id": "8k-0001324424-26-000051-ex991-p002",
+              "source_id": "8k-0001324424-26-000051-ex991",
+              "evidence": "and expanded supply across our business, while leveraging AI",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. earnings release (Form 8-K Ex. 99.1) filed 2026-08-05",
+              "location": "Form 8-K Exhibit 99.1",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000051/earningsrelease-q22026.htm",
+              "date": "2026-08-05",
+              "event_date": "2026-08-05",
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.857
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 0.5
+    },
+    {
+      "id": "I-05",
+      "kind": "initiative",
+      "title": "One Key loyalty program",
+      "text": "One Key is a unified loyalty program for Brand Expedia, Hotels.com and Vrbo with cross-earning and cross-redeeming. The program launched in the United States in 2023 and the United Kingdom in 2024. In 2025, One Key expanded to new Brand Expedia markets, with most Expedia Rewards members migrated.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "10k-item1-p009",
+          "source_id": "10k-item1",
+          "evidence": "enabling travelers to cross-earn and cross-redeem rewards across these brands",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p013",
+          "source_id": "10k-item1",
+          "evidence": "launched in the United States in 2023, United Kingdom in 2024",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p013",
+          "source_id": "10k-item1",
+          "evidence": "new markets across the globe on Brand Expedia in 2025",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p009",
+          "source_id": "10k-item1",
+          "evidence": "the majority of Expedia Rewards members now migrated to the program",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "Which markets are next for One Key, and when do you expect remaining Expedia Rewards members to migrate?",
+      "extra_validation_questions": [],
+      "theme": "product",
+      "category": null,
+      "origin": null,
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "One Key is a unified loyalty program for Brand Expedia, Hotels.com and Vrbo with cross-earning and cross-redeeming.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p009",
+              "source_id": "10k-item1",
+              "evidence": "enabling travelers to cross-earn and cross-redeem rewards across these brands",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "The program launched in the United States in 2023 and the United Kingdom in 2024.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p013",
+              "source_id": "10k-item1",
+              "evidence": "launched in the United States in 2023, United Kingdom in 2024",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "In 2025, One Key expanded to new Brand Expedia markets, with most Expedia Rewards members migrated.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p013",
+              "source_id": "10k-item1",
+              "evidence": "new markets across the globe on Brand Expedia in 2025",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            },
+            {
+              "chunk_id": "10k-item1-p009",
+              "source_id": "10k-item1",
+              "evidence": "the majority of Expedia Rewards members now migrated to the program",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 1.0
+    },
+    {
+      "id": "I-06",
+      "kind": "initiative",
+      "title": "Core brand focus and marketing management",
+      "text": "The company manages marketing investments holistically across its B2C brand portfolio. It makes marketing decisions market by market and by customer segment. Most marketing effort goes to the three core consumer brands: Expedia, Hotels.com and Vrbo. In 2024, the company introduced general managers to lead each core consumer brand.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "10k-item1-p013",
+          "source_id": "10k-item1",
+          "evidence": "We manage our marketing investments holistically across the brand portfolio",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p013",
+          "source_id": "10k-item1",
+          "evidence": "make decisions on a market by market and customer segment basis",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p013",
+          "source_id": "10k-item1",
+          "evidence": "the majority of our marketing efforts towards our three core",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p004",
+          "source_id": "10k-item1",
+          "evidence": "introduced general managers to lead each of our core consumer brands",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "How do brand general managers and the central marketing team share decisions on marketing allocation across markets?",
+      "extra_validation_questions": [],
+      "theme": "efficiency_cost",
+      "category": null,
+      "origin": null,
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "The company manages marketing investments holistically across its B2C brand portfolio.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p013",
+              "source_id": "10k-item1",
+              "evidence": "We manage our marketing investments holistically across the brand portfolio",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "It makes marketing decisions market by market and by customer segment.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p013",
+              "source_id": "10k-item1",
+              "evidence": "make decisions on a market by market and customer segment basis",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "Most marketing effort goes to the three core consumer brands: Expedia, Hotels.com and Vrbo.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p013",
+              "source_id": "10k-item1",
+              "evidence": "the majority of our marketing efforts towards our three core",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.9
+        },
+        {
+          "text": "In 2024, the company introduced general managers to lead each core consumer brand.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p004",
+              "source_id": "10k-item1",
+              "evidence": "introduced general managers to lead each of our core consumer brands",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 0.75
+    },
+    {
+      "id": "I-07",
+      "kind": "initiative",
+      "title": "International market expansion",
+      "text": "In 2025, the company continued investing in global market expansion beyond its core markets. Management believes international markets represent especially large opportunities. The company says emerging markets continue to present an attractive growth opportunity. It continues to add airlines to ensure local coverage in new markets.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "10k-item1-p005",
+          "source_id": "10k-item1",
+          "evidence": "we continued our investments in global market expansion beyond our core markets",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p016",
+          "source_id": "10k-item1",
+          "evidence": "We believe international markets represent especially large opportunities for Expedia Group",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item7-p004",
+          "source_id": "10k-item7",
+          "evidence": "Emerging markets continue to present an attractive growth opportunity for our business",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 7 MD&A",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item7-p009",
+          "source_id": "10k-item7",
+          "evidence": "continue to add airlines to ensure local coverage in new markets",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 7 MD&A",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "Which international markets are your top priorities for expansion investment?",
+      "extra_validation_questions": [],
+      "theme": "market_expansion",
+      "category": null,
+      "origin": null,
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "In 2025, the company continued investing in global market expansion beyond its core markets.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p005",
+              "source_id": "10k-item1",
+              "evidence": "we continued our investments in global market expansion beyond our core markets",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "Management believes international markets represent especially large opportunities.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p016",
+              "source_id": "10k-item1",
+              "evidence": "We believe international markets represent especially large opportunities for Expedia Group",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "The company says emerging markets continue to present an attractive growth opportunity.",
+          "citations": [
+            {
+              "chunk_id": "10k-item7-p004",
+              "source_id": "10k-item7",
+              "evidence": "Emerging markets continue to present an attractive growth opportunity for our business",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 7 MD&A",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "It continues to add airlines to ensure local coverage in new markets.",
+          "citations": [
+            {
+              "chunk_id": "10k-item7-p009",
+              "source_id": "10k-item7",
+              "evidence": "continue to add airlines to ensure local coverage in new markets",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 7 MD&A",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 1.0
+    },
+    {
+      "id": "I-08",
+      "kind": "initiative",
+      "title": "Restructuring and cost efficiency",
+      "text": "In February 2024, the company committed to restructuring actions to recalibrate resources, which reduced headcount. During 2025, the company decided to expand these restructuring actions. The company continues to evaluate additional cost reduction efforts. Ongoing initiatives target transactional efficiencies, particularly in payments and customer service.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "10k-item7-p036",
+          "source_id": "10k-item7",
+          "evidence": "we committed to restructuring actions to recalibrate resources",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 7 MD&A",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item7-p036",
+          "source_id": "10k-item7",
+          "evidence": "During 2025, we made the decision to expand these actions",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 7 MD&A",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item7-p036",
+          "source_id": "10k-item7",
+          "evidence": "We continue to evaluate additional cost reduction efforts",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 7 MD&A",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item7-p030",
+          "source_id": "10k-item7",
+          "evidence": "ongoing initiatives continued to drive transactional efficiencies, particularly in payments and customer service",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 7 MD&A",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "Which areas are in scope for the additional cost reduction efforts you are evaluating?",
+      "extra_validation_questions": [],
+      "theme": "efficiency_cost",
+      "category": null,
+      "origin": null,
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "In February 2024, the company committed to restructuring actions to recalibrate resources, which reduced headcount.",
+          "citations": [
+            {
+              "chunk_id": "10k-item7-p036",
+              "source_id": "10k-item7",
+              "evidence": "we committed to restructuring actions to recalibrate resources",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 7 MD&A",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.889
+        },
+        {
+          "text": "During 2025, the company decided to expand these restructuring actions.",
+          "citations": [
+            {
+              "chunk_id": "10k-item7-p036",
+              "source_id": "10k-item7",
+              "evidence": "During 2025, we made the decision to expand these actions",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 7 MD&A",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.8
+        },
+        {
+          "text": "The company continues to evaluate additional cost reduction efforts.",
+          "citations": [
+            {
+              "chunk_id": "10k-item7-p036",
+              "source_id": "10k-item7",
+              "evidence": "We continue to evaluate additional cost reduction efforts",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 7 MD&A",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "Ongoing initiatives target transactional efficiencies, particularly in payments and customer service.",
+          "citations": [
+            {
+              "chunk_id": "10k-item7-p030",
+              "source_id": "10k-item7",
+              "evidence": "ongoing initiatives continued to drive transactional efficiencies, particularly in payments and customer service",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 7 MD&A",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.889
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 1.0
+    },
+    {
+      "id": "I-09",
+      "kind": "initiative",
+      "title": "Personalization and direct customer relationships",
+      "text": "A stated focus is to build longer-lasting direct relationships with customers. In the second quarter 2026 release, the Chief Executive Officer cited more personalized consumer product experiences. The company describes itself as delivering predictive, personalized experiences.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "8k-0001324424-26-000051-ex991-p002",
+          "source_id": "8k-0001324424-26-000051-ex991",
+          "evidence": "continued to strengthen our marketplace through more personalized consumer product experiences",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. earnings release (Form 8-K Ex. 99.1) filed 2026-08-05",
+          "location": "Form 8-K Exhibit 99.1",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000051/earningsrelease-q22026.htm",
+          "date": "2026-08-05",
+          "event_date": "2026-08-05",
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "8k-0001324424-26-000051-ex991-p005",
+          "source_id": "8k-0001324424-26-000051-ex991",
+          "evidence": "delivering predictive, personalized experiences that shape the future of travel",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. earnings release (Form 8-K Ex. 99.1) filed 2026-08-05",
+          "location": "Form 8-K Exhibit 99.1",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000051/earningsrelease-q22026.htm",
+          "date": "2026-08-05",
+          "event_date": "2026-08-05",
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p005",
+          "source_id": "10k-item1",
+          "evidence": "and business partners, and build longer-lasting direct relationships with our customers",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p001",
+          "source_id": "10k-item1",
+          "evidence": "delivering predictive, personalized experiences that shape the future of travel",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "Which personalization features are you prioritizing to increase direct and repeat bookings?",
+      "extra_validation_questions": [],
+      "theme": "product",
+      "category": null,
+      "origin": null,
+      "change_type": null,
+      "event_date": null,
+      "sources_note": "Newer source preferred: earnings release filed 2026-08-05; also covered in the 10-K filed 2026-02-13.",
+      "sentences": [
+        {
+          "text": "A stated focus is to build longer-lasting direct relationships with customers.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p005",
+              "source_id": "10k-item1",
+              "evidence": "and business partners, and build longer-lasting direct relationships with our customers",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "In the second quarter 2026 release, the Chief Executive Officer cited more personalized consumer product experiences.",
+          "citations": [
+            {
+              "chunk_id": "8k-0001324424-26-000051-ex991-p002",
+              "source_id": "8k-0001324424-26-000051-ex991",
+              "evidence": "continued to strengthen our marketplace through more personalized consumer product experiences",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. earnings release (Form 8-K Ex. 99.1) filed 2026-08-05",
+              "location": "Form 8-K Exhibit 99.1",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000051/earningsrelease-q22026.htm",
+              "date": "2026-08-05",
+              "event_date": "2026-08-05",
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.857
+        },
+        {
+          "text": "The company describes itself as delivering predictive, personalized experiences.",
+          "citations": [
+            {
+              "chunk_id": "8k-0001324424-26-000051-ex991-p005",
+              "source_id": "8k-0001324424-26-000051-ex991",
+              "evidence": "delivering predictive, personalized experiences that shape the future of travel",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. earnings release (Form 8-K Ex. 99.1) filed 2026-08-05",
+              "location": "Form 8-K Exhibit 99.1",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000051/earningsrelease-q22026.htm",
+              "date": "2026-08-05",
+              "event_date": "2026-08-05",
+              "uncorroborated": false,
+              "evidence_truncated": false
+            },
+            {
+              "chunk_id": "10k-item1-p001",
+              "source_id": "10k-item1",
+              "evidence": "delivering predictive, personalized experiences that shape the future of travel",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.8
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 1.0
+    },
+    {
+      "id": "I-10",
+      "kind": "initiative",
+      "title": "Customer service technology",
+      "text": "The company invested significantly in contact center technologies to improve customer experience and agent efficiency. It expects to continue reaping the benefits of these investments. It continues to invest in a customer service platform that uses AI for online and self-service options.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "10k-item1-p009",
+          "source_id": "10k-item1",
+          "evidence": "We invested significantly in our contact center technologies, with the goal",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p009",
+          "source_id": "10k-item1",
+          "evidence": "we expect to continue reaping the benefits of these investments going forward",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1-p009",
+          "source_id": "10k-item1",
+          "evidence": "continued to invest in our customer service platform technology, which leverages",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1 Business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "What self-service and AI capabilities are you adding to the customer service platform next?",
+      "extra_validation_questions": [],
+      "theme": "technology_ai",
+      "category": null,
+      "origin": null,
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "The company invested significantly in contact center technologies to improve customer experience and agent efficiency.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p009",
+              "source_id": "10k-item1",
+              "evidence": "We invested significantly in our contact center technologies, with the goal",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "It expects to continue reaping the benefits of these investments.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p009",
+              "source_id": "10k-item1",
+              "evidence": "we expect to continue reaping the benefits of these investments going forward",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "It continues to invest in a customer service platform that uses AI for online and self-service options.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1-p009",
+              "source_id": "10k-item1",
+              "evidence": "continued to invest in our customer service platform technology, which leverages",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1 Business",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.9
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 1.0
+    },
+    {
+      "id": "I-11",
+      "kind": "initiative",
+      "title": "Vrbo transactional model",
+      "text": "Vrbo moved from a listings-based classified advertising model to an online transactional model. The goal is to increase monetization and drive growth through marketing and product and technology investments. The company views Vrbo as an attractive growth opportunity.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "10k-item7-p007",
+          "source_id": "10k-item7",
+          "evidence": "transitioned from a listings-based classified advertising model to an online transactional model",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 7 MD&A",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item7-p007",
+          "source_id": "10k-item7",
+          "evidence": "with a goal of increasing monetization and driving growth through investments in marketing",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 7 MD&A",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item7-p007",
+          "source_id": "10k-item7",
+          "evidence": "primarily in North American leisure markets, and represents an attractive growth opportunity",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 7 MD&A",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "Which marketing and product investments are you making in Vrbo to increase monetization?",
+      "extra_validation_questions": [],
+      "theme": "growth",
+      "category": null,
+      "origin": null,
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "Vrbo moved from a listings-based classified advertising model to an online transactional model.",
+          "citations": [
+            {
+              "chunk_id": "10k-item7-p007",
+              "source_id": "10k-item7",
+              "evidence": "transitioned from a listings-based classified advertising model to an online transactional model",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 7 MD&A",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.889
+        },
+        {
+          "text": "The goal is to increase monetization and drive growth through marketing and product and technology investments.",
+          "citations": [
+            {
+              "chunk_id": "10k-item7-p007",
+              "source_id": "10k-item7",
+              "evidence": "with a goal of increasing monetization and driving growth through investments in marketing",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 7 MD&A",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "The company views Vrbo as an attractive growth opportunity.",
+          "citations": [
+            {
+              "chunk_id": "10k-item7-p007",
+              "source_id": "10k-item7",
+              "evidence": "primarily in North American leisure markets, and represents an attractive growth opportunity",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 7 MD&A",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.8
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 1.0
+    },
+    {
+      "id": "I-12",
+      "kind": "initiative",
+      "title": "trivago brand rejuvenation",
+      "text": "In 2023, trivago adapted its marketing strategy and launched a new logo and visual identity. This was part of a push to rejuvenate the brand and drive long-term growth.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [
+        {
+          "type": "long_quote",
+          "detail": "sentence 1: copies 15+ consecutive words from a source"
+        }
+      ],
+      "citations": [
+        {
+          "chunk_id": "10k-item7-p008",
+          "source_id": "10k-item7",
+          "evidence": "adapted its marketing strategy and launched a new logo and visual identity",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 7 MD&A",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item7-p008",
+          "source_id": "10k-item7",
+          "evidence": "part of a push to rejuvenate its brand, demonstrate the relevance",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 7 MD&A",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "What are the next steps in trivago's brand strategy following the 2023 relaunch?",
+      "extra_validation_questions": [],
+      "theme": "other",
+      "category": null,
+      "origin": null,
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "In 2023, trivago adapted its marketing strategy and launched a new logo and visual identity.",
+          "citations": [
+            {
+              "chunk_id": "10k-item7-p008",
+              "source_id": "10k-item7",
+              "evidence": "adapted its marketing strategy and launched a new logo and visual identity",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 7 MD&A",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "This was part of a push to rejuvenate the brand and drive long-term growth.",
+          "citations": [
+            {
+              "chunk_id": "10k-item7-p008",
+              "source_id": "10k-item7",
+              "evidence": "part of a push to rejuvenate its brand, demonstrate the relevance",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 7 MD&A",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 0.667
+    }
+  ],
+  "challenges": [
+    {
+      "id": "C-01",
+      "kind": "challenge",
+      "title": "AI-driven competitive disruption",
+      "text": "The 10-K says generative and agentic AI is likely to further intensify competition for the company's services. If it cannot integrate advanced AI capabilities, the company may experience lost market share and reduced direct-booking rates.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "10k-item1a-p003",
+          "source_id": "10k-item1a",
+          "evidence": "adoption of generative and agentic AI is likely to further intensify competition",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p003",
+          "source_id": "10k-item1a",
+          "evidence": "we may experience a loss of market share, reduced direct-booking rates",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "How are you prioritizing investment to compete with AI-driven travel search and booking platforms?",
+      "extra_validation_questions": [],
+      "theme": null,
+      "category": "competition",
+      "origin": "risk_factor",
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "The 10-K says generative and agentic AI is likely to further intensify competition for the company's services.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p003",
+              "source_id": "10k-item1a",
+              "evidence": "adoption of generative and agentic AI is likely to further intensify competition",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "If it cannot integrate advanced AI capabilities, the company may experience lost market share and reduced direct-booking rates.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p003",
+              "source_id": "10k-item1a",
+              "evidence": "we may experience a loss of market share, reduced direct-booking rates",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.846
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 0.25
+    },
+    {
+      "id": "C-02",
+      "kind": "challenge",
+      "title": "Intense competition from OTAs and large platforms",
+      "text": "The company describes its market as intensely competitive and constantly evolving. The 10-K states that Google has used its search market position to promote its own travel services. Airbnb has expanded into tours, activities, and hotel bookings, according to the 10-K.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "10k-item1a-p001",
+          "source_id": "10k-item1a",
+          "evidence": "The market for the services we offer is intensely competitive",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p002",
+          "source_id": "10k-item1a",
+          "evidence": "has used its search market position to promote its own travel",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p004",
+          "source_id": "10k-item1a",
+          "evidence": "Airbnb has expanded into tours, activities, and hotel bookings",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "Which competitors are you most focused on as they broaden their travel offerings?",
+      "extra_validation_questions": [],
+      "theme": null,
+      "category": "competition",
+      "origin": "risk_factor",
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "The company describes its market as intensely competitive and constantly evolving.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p001",
+              "source_id": "10k-item1a",
+              "evidence": "The market for the services we offer is intensely competitive",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "The 10-K states that Google has used its search market position to promote its own travel services.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p002",
+              "source_id": "10k-item1a",
+              "evidence": "has used its search market position to promote its own travel",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "Airbnb has expanded into tours, activities, and hotel bookings, according to the 10-K.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p004",
+              "source_id": "10k-item1a",
+              "evidence": "Airbnb has expanded into tours, activities, and hotel bookings",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 0.0
+    },
+    {
+      "id": "C-03",
+      "kind": "challenge",
+      "title": "Dependence on search engine traffic",
+      "text": "The company generates a significant portion of its website traffic from internet search engines such as Google. Search providers have added their own travel search features, which may continue to reduce traffic to the company's sites. The 10-K says AI search platforms and changing consumer behavior adversely affect search traffic and margins.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "10k-item1a-p010",
+          "source_id": "10k-item1a",
+          "evidence": "We generate a significant portion of the traffic to our websites",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p011",
+          "source_id": "10k-item1a",
+          "evidence": "have increasingly added their own travel search functionality and content",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p011",
+          "source_id": "10k-item1a",
+          "evidence": "emergence of AI search platforms and changing consumer behavior adversely affect",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "How is the shift toward AI search changing your traffic acquisition mix and costs?",
+      "extra_validation_questions": [],
+      "theme": null,
+      "category": "competition",
+      "origin": "risk_factor",
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "The company generates a significant portion of its website traffic from internet search engines such as Google.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p010",
+              "source_id": "10k-item1a",
+              "evidence": "We generate a significant portion of the traffic to our websites",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "Search providers have added their own travel search features, which may continue to reduce traffic to the company's sites.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p011",
+              "source_id": "10k-item1a",
+              "evidence": "have increasingly added their own travel search functionality and content",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.8
+        },
+        {
+          "text": "The 10-K says AI search platforms and changing consumer behavior adversely affect search traffic and margins.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p011",
+              "source_id": "10k-item1a",
+              "evidence": "emergence of AI search platforms and changing consumer behavior adversely affect",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 0.75
+    },
+    {
+      "id": "C-04",
+      "kind": "challenge",
+      "title": "Reliance on supplier and B2B partner relationships",
+      "text": "A substantial portion of revenue comes from compensation negotiated with travel suppliers, especially lodging suppliers, airlines and GDS partners. The company says there is no assurance that travel suppliers will elect to participate in its platform.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "10k-item1a-p009",
+          "source_id": "10k-item1a",
+          "evidence": "A substantial portion of our revenue is derived from compensation negotiated",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p009",
+          "source_id": "10k-item1a",
+          "evidence": "No assurances can be given that travel suppliers will elect to participate",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "Are any major supplier contract renegotiations affecting your compensation or inventory access this year?",
+      "extra_validation_questions": [],
+      "theme": null,
+      "category": "other",
+      "origin": "risk_factor",
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "A substantial portion of revenue comes from compensation negotiated with travel suppliers, especially lodging suppliers, airlines and GDS partners.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p009",
+              "source_id": "10k-item1a",
+              "evidence": "A substantial portion of our revenue is derived from compensation negotiated",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.846
+        },
+        {
+          "text": "The company says there is no assurance that travel suppliers will elect to participate in its platform.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p009",
+              "source_id": "10k-item1a",
+              "evidence": "No assurances can be given that travel suppliers will elect to participate",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 0.4
+    },
+    {
+      "id": "C-05",
+      "kind": "challenge",
+      "title": "Travel industry disruption and macro conditions",
+      "text": "Adverse macroeconomic and geopolitical conditions, such as slow growth or recession, could adversely affect travel demand. Disruptive events could result in significant additional costs and lower revenues, particularly when travelers receive refunds. During 2024, Hurricanes Helene and Milton negatively impacted financial results for the third and fourth quarters.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "10k-item1a-p005",
+          "source_id": "10k-item1a",
+          "evidence": "adverse macroeconomic and geopolitical conditions, such as slow growth or recession",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p007",
+          "source_id": "10k-item1a",
+          "evidence": "could result in significant additional costs and decrease our revenues leading",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p008",
+          "source_id": "10k-item1a",
+          "evidence": "during 2024, Hurricanes Helene and Milton negatively impacted our financial results",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "How are current macroeconomic and geopolitical conditions shaping your demand outlook and spending plans?",
+      "extra_validation_questions": [],
+      "theme": null,
+      "category": "demand_macro",
+      "origin": "risk_factor",
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "Adverse macroeconomic and geopolitical conditions, such as slow growth or recession, could adversely affect travel demand.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p005",
+              "source_id": "10k-item1a",
+              "evidence": "adverse macroeconomic and geopolitical conditions, such as slow growth or recession",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "Disruptive events could result in significant additional costs and lower revenues, particularly when travelers receive refunds.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p007",
+              "source_id": "10k-item1a",
+              "evidence": "could result in significant additional costs and decrease our revenues leading",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.75
+        },
+        {
+          "text": "During 2024, Hurricanes Helene and Milton negatively impacted financial results for the third and fourth quarters.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p008",
+              "source_id": "10k-item1a",
+              "evidence": "during 2024, Hurricanes Helene and Milton negatively impacted our financial results",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 0.4
+    },
+    {
+      "id": "C-06",
+      "kind": "challenge",
+      "title": "Alternative accommodations regulation",
+      "text": "The company is subject to the EU Short-Term Rental Law, which comes into effect in May 2026. New and evolving regulatory schemes may decrease listings available on the company's sites.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [
+        {
+          "type": "long_quote",
+          "detail": "sentence 1: copies 15+ consecutive words from a source"
+        }
+      ],
+      "citations": [
+        {
+          "chunk_id": "10k-item1a-p037",
+          "source_id": "10k-item1a",
+          "evidence": "subject to the EU Short-Term Rental Law, which comes into effect",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p038",
+          "source_id": "10k-item1a",
+          "evidence": "new and evolving regulatory schemes may decrease listings available on our sites",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "What compliance work is underway for the EU Short-Term Rental Law registration requirements?",
+      "extra_validation_questions": [],
+      "theme": null,
+      "category": "regulatory_legal",
+      "origin": "risk_factor",
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "The company is subject to the EU Short-Term Rental Law, which comes into effect in May 2026.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p037",
+              "source_id": "10k-item1a",
+              "evidence": "subject to the EU Short-Term Rental Law, which comes into effect",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "New and evolving regulatory schemes may decrease listings available on the company's sites.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p038",
+              "source_id": "10k-item1a",
+              "evidence": "new and evolving regulatory schemes may decrease listings available on our sites",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 0.0
+    },
+    {
+      "id": "C-07",
+      "kind": "challenge",
+      "title": "Cybersecurity and system availability",
+      "text": "Some attackers are using AI to launch more sophisticated, automated and targeted attacks that are harder to detect. Migrating legacy systems to newer technology increases the risk of system interruptions. Incidents affecting AWS could adversely affect the availability of the company's platform.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "10k-item1a-p032",
+          "source_id": "10k-item1a",
+          "evidence": "some actors are using AI technology to launch more sophisticated, automated",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p033",
+          "source_id": "10k-item1a",
+          "evidence": "migrate legacy systems to newer information technology systems, we increase the",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p019",
+          "source_id": "10k-item1a",
+          "evidence": "could adversely affect the availability of our platform and our ability",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "How are you managing resilience and security risk during your cloud and legacy system migration?",
+      "extra_validation_questions": [],
+      "theme": null,
+      "category": "security_technology",
+      "origin": "risk_factor",
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "Some attackers are using AI to launch more sophisticated, automated and targeted attacks that are harder to detect.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p032",
+              "source_id": "10k-item1a",
+              "evidence": "some actors are using AI technology to launch more sophisticated, automated",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.778
+        },
+        {
+          "text": "Migrating legacy systems to newer technology increases the risk of system interruptions.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p033",
+              "source_id": "10k-item1a",
+              "evidence": "migrate legacy systems to newer information technology systems, we increase the",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "Incidents affecting AWS could adversely affect the availability of the company's platform.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p019",
+              "source_id": "10k-item1a",
+              "evidence": "could adversely affect the availability of our platform and our ability",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.857
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 0.667
+    },
+    {
+      "id": "C-08",
+      "kind": "challenge",
+      "title": "Fraud exposure",
+      "text": "Fraudulent schemes have become increasingly common and sophisticated, according to the 10-K. The company has not broadly adopted protections such as app-based multi-factor authentication or third-party identity verification. Agentic booking capabilities that may lack strong consent controls may significantly increase fraud risks.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "10k-item1a-p016",
+          "source_id": "10k-item1a",
+          "evidence": "fraudulent schemes, which have become increasingly common and sophisticated",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p016",
+          "source_id": "10k-item1a",
+          "evidence": "we have not broadly adopted certain protective capabilities across our platform",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p018",
+          "source_id": "10k-item1a",
+          "evidence": "agentic booking capabilities that may lack strong consent controls, may significantly",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "Are you planning to broaden fraud protections such as multi-factor authentication or identity verification?",
+      "extra_validation_questions": [],
+      "theme": null,
+      "category": "security_technology",
+      "origin": "risk_factor",
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "Fraudulent schemes have become increasingly common and sophisticated, according to the 10-K.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p016",
+              "source_id": "10k-item1a",
+              "evidence": "fraudulent schemes, which have become increasingly common and sophisticated",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "The company has not broadly adopted protections such as app-based multi-factor authentication or third-party identity verification.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p016",
+              "source_id": "10k-item1a",
+              "evidence": "we have not broadly adopted certain protective capabilities across our platform",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.75
+        },
+        {
+          "text": "Agentic booking capabilities that may lack strong consent controls may significantly increase fraud risks.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p018",
+              "source_id": "10k-item1a",
+              "evidence": "agentic booking capabilities that may lack strong consent controls, may significantly",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": null
+    },
+    {
+      "id": "C-09",
+      "kind": "challenge",
+      "title": "Litigation and tax disputes",
+      "text": "The 10-K says defending legal actions has been, and will likely continue to be, time consuming and expensive. Taxing authorities have made inquiries, filed lawsuits, and levied assessments over transactional taxes on travel facilitation services. A September 1, 2026 headline reported the company fighting a damages claim by Cuban exile families.",
+      "provenance": "sourced",
+      "labels": [
+        "uncorroborated headline"
+      ],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "news-gdelt-008",
+          "source_id": "news-gdelt-008",
+          "evidence": "Expedia fights off claim for damages by Cuban exile families",
+          "source_type": "news",
+          "title": "Expedia fights off claim for damages by Cuban exile families",
+          "location": "sun-sentinel.com",
+          "url": "https://www.sun-sentinel.com/2026/09/01/expedia-fights-off-claim-for-damages-by-cuban-exile-families-2/",
+          "date": "2026-09-01",
+          "event_date": null,
+          "uncorroborated": true,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p047",
+          "source_id": "10k-item1a",
+          "evidence": "defense of these actions has been, and will likely continue to be",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p044",
+          "source_id": "10k-item1a",
+          "evidence": "Taxing authorities have made inquiries, filed lawsuits, and levied assessments",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "Which pending legal or tax proceedings are drawing the most management attention and resources?",
+      "extra_validation_questions": [
+        "Confirm the news headline \"Expedia fights off claim for damages by Cuban exile families\" (sun-sentinel.com, 2026-09-01); no filing in the sources corroborates it."
+      ],
+      "theme": null,
+      "category": "regulatory_legal",
+      "origin": "risk_factor",
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "The 10-K says defending legal actions has been, and will likely continue to be, time consuming and expensive.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p047",
+              "source_id": "10k-item1a",
+              "evidence": "defense of these actions has been, and will likely continue to be",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.875
+        },
+        {
+          "text": "Taxing authorities have made inquiries, filed lawsuits, and levied assessments over transactional taxes on travel facilitation services.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p044",
+              "source_id": "10k-item1a",
+              "evidence": "Taxing authorities have made inquiries, filed lawsuits, and levied assessments",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "A September 1, 2026 headline reported the company fighting a damages claim by Cuban exile families.",
+          "citations": [
+            {
+              "chunk_id": "news-gdelt-008",
+              "source_id": "news-gdelt-008",
+              "evidence": "Expedia fights off claim for damages by Cuban exile families",
+              "source_type": "news",
+              "title": "Expedia fights off claim for damages by Cuban exile families",
+              "location": "sun-sentinel.com",
+              "url": "https://www.sun-sentinel.com/2026/09/01/expedia-fights-off-claim-for-damages-by-cuban-exile-families-2/",
+              "date": "2026-09-01",
+              "event_date": null,
+              "uncorroborated": true,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 0.333
+    },
+    {
+      "id": "C-10",
+      "kind": "challenge",
+      "title": "Website display and fee disclosure rules",
+      "text": "The 10-K cites the Federal Trade Commission Rule on Unfair or Deceptive Fees, effective May 2025, as a new display rule. The EU Digital Services Act requires the company to display a variety of supplier-related information. Such laws may be costly and time consuming to implement.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "10k-item1a-p041",
+          "source_id": "10k-item1a",
+          "evidence": "Federal Trade Commission Rule on Unfair or Deceptive Fees, effective May 2025",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p041",
+          "source_id": "10k-item1a",
+          "evidence": "EU Digital Services Act requires us to display a variety of",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p042",
+          "source_id": "10k-item1a",
+          "evidence": "laws and regulations may be costly and time consuming to implement",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "How much effort is going into meeting fee display and supplier disclosure requirements across markets?",
+      "extra_validation_questions": [],
+      "theme": null,
+      "category": "regulatory_legal",
+      "origin": "risk_factor",
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "The 10-K cites the Federal Trade Commission Rule on Unfair or Deceptive Fees, effective May 2025, as a new display rule.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p041",
+              "source_id": "10k-item1a",
+              "evidence": "Federal Trade Commission Rule on Unfair or Deceptive Fees, effective May 2025",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.909
+        },
+        {
+          "text": "The EU Digital Services Act requires the company to display a variety of supplier-related information.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p041",
+              "source_id": "10k-item1a",
+              "evidence": "EU Digital Services Act requires us to display a variety of",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "Such laws may be costly and time consuming to implement.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p042",
+              "source_id": "10k-item1a",
+              "evidence": "laws and regulations may be costly and time consuming to implement",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 0.6
+    },
+    {
+      "id": "C-11",
+      "kind": "challenge",
+      "title": "Indebtedness and covenants",
+      "text": "As of December 31, 2025, long-term indebtedness, including current maturities, had a face value of $6.3 billion. The revolving credit facility requires the company not to exceed a specified maximum consolidated leverage ratio.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "8k-0001104659-26-036875-main-p005",
+          "source_id": "8k-0001104659-26-036875",
+          "evidence": "require the Company to not exceed a specified maximum consolidated leverage ratio",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+          "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+          "date": "2026-03-30",
+          "event_date": "2026-03-27",
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p051",
+          "source_id": "10k-item1a",
+          "evidence": "including current maturities, with a face value of $6.3 billion",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p052",
+          "source_id": "10k-item1a",
+          "evidence": "our revolving credit facility contains a leverage ratio covenant, which effectively limits",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "Do leverage covenants influence how you plan capital spending and investment this year?",
+      "extra_validation_questions": [],
+      "theme": null,
+      "category": "other",
+      "origin": "risk_factor",
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "As of December 31, 2025, long-term indebtedness, including current maturities, had a face value of $6.3 billion.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p051",
+              "source_id": "10k-item1a",
+              "evidence": "including current maturities, with a face value of $6.3 billion",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "The revolving credit facility requires the company not to exceed a specified maximum consolidated leverage ratio.",
+          "citations": [
+            {
+              "chunk_id": "8k-0001104659-26-036875-main-p005",
+              "source_id": "8k-0001104659-26-036875",
+              "evidence": "require the Company to not exceed a specified maximum consolidated leverage ratio",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+              "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+              "date": "2026-03-30",
+              "event_date": "2026-03-27",
+              "uncorroborated": false,
+              "evidence_truncated": false
+            },
+            {
+              "chunk_id": "10k-item1a-p052",
+              "source_id": "10k-item1a",
+              "evidence": "our revolving credit facility contains a leverage ratio covenant, which effectively limits",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": null
+    },
+    {
+      "id": "C-12",
+      "kind": "challenge",
+      "title": "Talent competition and leadership transitions",
+      "text": "The labor market is highly competitive, particularly in AI and machine learning specialties. The company has experienced a number of leadership transitions, which it says can be difficult to manage.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "10k-item1a-p025",
+          "source_id": "10k-item1a",
+          "evidence": "particularly so in high-demand specialties such as AI and machine learning disciplines",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "10k-item1a-p026",
+          "source_id": "10k-item1a",
+          "evidence": "we have experienced a number of leadership transitions, which can be difficult",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+          "location": "Item 1A Risk Factors",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+          "date": "2026-02-13",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "How are recent leadership transitions and AI hiring needs affecting team priorities?",
+      "extra_validation_questions": [],
+      "theme": null,
+      "category": "organizational",
+      "origin": "risk_factor",
+      "change_type": null,
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "The labor market is highly competitive, particularly in AI and machine learning specialties.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p025",
+              "source_id": "10k-item1a",
+              "evidence": "particularly so in high-demand specialties such as AI and machine learning disciplines",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "The company has experienced a number of leadership transitions, which it says can be difficult to manage.",
+          "citations": [
+            {
+              "chunk_id": "10k-item1a-p026",
+              "source_id": "10k-item1a",
+              "evidence": "we have experienced a number of leadership transitions, which can be difficult",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 10-K for fiscal year 2025",
+              "location": "Item 1A Risk Factors",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm",
+              "date": "2026-02-13",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 0.5
+    }
+  ],
+  "changes": [
+    {
+      "id": "S-01",
+      "kind": "change",
+      "title": "Chief Financial Officer transition",
+      "text": "On April 17, 2026, the company and the Chief Financial Officer agreed he would step down effective May 11, 2026. The filing states the departure is not the result of any disagreement with the company. On April 23, 2026, the company announced a new Chief Financial Officer, succeeding in the role on May 11, 2026.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "8k-0001324424-26-000016-main-p003",
+          "source_id": "8k-0001324424-26-000016",
+          "evidence": "Chief Financial Officer, effective as of May 11, 2026",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 8-K filed 2026-04-23 (Departure or appointment of directors or certain officers)",
+          "location": "Form 8-K Items 5.02, 7.01, 9.01",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000016/expe-20260417.htm",
+          "date": "2026-04-23",
+          "event_date": "2026-04-17",
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "8k-0001324424-26-000016-main-p003",
+          "source_id": "8k-0001324424-26-000016",
+          "evidence": "departure is not the result of any disagreement with the Company",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 8-K filed 2026-04-23 (Departure or appointment of directors or certain officers)",
+          "location": "Form 8-K Items 5.02, 7.01, 9.01",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000016/expe-20260417.htm",
+          "date": "2026-04-23",
+          "event_date": "2026-04-17",
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "8k-0001324424-26-000016-main-p003",
+          "source_id": "8k-0001324424-26-000016",
+          "evidence": "On April 23, 2026, Expedia Group announced the appointment of",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 8-K filed 2026-04-23 (Departure or appointment of directors or certain officers)",
+          "location": "Form 8-K Items 5.02, 7.01, 9.01",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000016/expe-20260417.htm",
+          "date": "2026-04-23",
+          "event_date": "2026-04-17",
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "What finance priorities is the new Chief Financial Officer focusing on after the May 11, 2026 transition?",
+      "extra_validation_questions": [],
+      "theme": null,
+      "category": null,
+      "origin": null,
+      "change_type": "leadership_change",
+      "event_date": "2026-04-17",
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "On April 17, 2026, the company and the Chief Financial Officer agreed he would step down effective May 11, 2026.",
+          "citations": [
+            {
+              "chunk_id": "8k-0001324424-26-000016-main-p003",
+              "source_id": "8k-0001324424-26-000016",
+              "evidence": "Chief Financial Officer, effective as of May 11, 2026",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 8-K filed 2026-04-23 (Departure or appointment of directors or certain officers)",
+              "location": "Form 8-K Items 5.02, 7.01, 9.01",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000016/expe-20260417.htm",
+              "date": "2026-04-23",
+              "event_date": "2026-04-17",
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "The filing states the departure is not the result of any disagreement with the company.",
+          "citations": [
+            {
+              "chunk_id": "8k-0001324424-26-000016-main-p003",
+              "source_id": "8k-0001324424-26-000016",
+              "evidence": "departure is not the result of any disagreement with the Company",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 8-K filed 2026-04-23 (Departure or appointment of directors or certain officers)",
+              "location": "Form 8-K Items 5.02, 7.01, 9.01",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000016/expe-20260417.htm",
+              "date": "2026-04-23",
+              "event_date": "2026-04-17",
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "On April 23, 2026, the company announced a new Chief Financial Officer, succeeding in the role on May 11, 2026.",
+          "citations": [
+            {
+              "chunk_id": "8k-0001324424-26-000016-main-p003",
+              "source_id": "8k-0001324424-26-000016",
+              "evidence": "On April 23, 2026, Expedia Group announced the appointment of",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 8-K filed 2026-04-23 (Departure or appointment of directors or certain officers)",
+              "location": "Form 8-K Items 5.02, 7.01, 9.01",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000016/expe-20260417.htm",
+              "date": "2026-04-23",
+              "event_date": "2026-04-17",
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": null
+    },
+    {
+      "id": "S-02",
+      "kind": "change",
+      "title": "Executive reorganization",
+      "text": "News headlines in August 2026 reported eight executives leaving the company in an AI-focused reorganization.",
+      "provenance": "inferred",
+      "labels": [
+        "news headline only"
+      ],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "news-gdelt-012",
+          "source_id": "news-gdelt-012",
+          "evidence": "Expedia Cuts Eight Executives in AI - Focused Reorganization",
+          "source_type": "news",
+          "title": "Expedia Cuts Eight Executives in AI - Focused Reorganization",
+          "location": "skift.com",
+          "url": "https://skift.com/2026/08/20/expedia-cuts-eight-executives-as-it-reorganizes-around-ai/",
+          "date": "2026-08-21",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "news-gdelt-013",
+          "source_id": "news-gdelt-013",
+          "evidence": "Eight execs out at Expedia Group in AI - driven shakeup",
+          "source_type": "news",
+          "title": "Internal memo : Eight execs out at Expedia Group in AI - driven shakeup",
+          "location": "geekwire.com",
+          "url": "https://www.geekwire.com/2026/internal-memo-eight-execs-out-at-expedia-group-in-ai-driven-shakeup/",
+          "date": "2026-08-19",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "How has the August 2026 leadership reorganization changed reporting lines and decision owners?",
+      "extra_validation_questions": [],
+      "theme": null,
+      "category": null,
+      "origin": null,
+      "change_type": "reorganization",
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "News headlines in August 2026 reported eight executives leaving the company in an AI-focused reorganization.",
+          "citations": [
+            {
+              "chunk_id": "news-gdelt-012",
+              "source_id": "news-gdelt-012",
+              "evidence": "Expedia Cuts Eight Executives in AI - Focused Reorganization",
+              "source_type": "news",
+              "title": "Expedia Cuts Eight Executives in AI - Focused Reorganization",
+              "location": "skift.com",
+              "url": "https://skift.com/2026/08/20/expedia-cuts-eight-executives-as-it-reorganizes-around-ai/",
+              "date": "2026-08-21",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            },
+            {
+              "chunk_id": "news-gdelt-013",
+              "source_id": "news-gdelt-013",
+              "evidence": "Eight execs out at Expedia Group in AI - driven shakeup",
+              "source_type": "news",
+              "title": "Internal memo : Eight execs out at Expedia Group in AI - driven shakeup",
+              "location": "geekwire.com",
+              "url": "https://www.geekwire.com/2026/internal-memo-eight-execs-out-at-expedia-group-in-ai-driven-shakeup/",
+              "date": "2026-08-19",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.875
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": null
+    },
+    {
+      "id": "S-03",
+      "kind": "change",
+      "title": "Seattle layoffs",
+      "text": "A September 23, 2026 headline reported 58 Seattle job cuts in a second round of layoffs in 2026.",
+      "provenance": "inferred",
+      "labels": [
+        "news headline only"
+      ],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "news-gdelt-003",
+          "source_id": "news-gdelt-003",
+          "evidence": "Expedia cuts 58 Seattle jobs in second round of layoffs this year",
+          "source_type": "news",
+          "title": "Expedia cuts 58 Seattle jobs in second round of layoffs this year",
+          "location": "kiro7.com",
+          "url": "https://www.kiro7.com/news/local/expedia-cuts-58-seattle-jobs-second-round-layoffs-this-year/6F7KLLQL3BHPTJPWQ3CA4MLPOI/",
+          "date": "2026-09-23",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "Which teams were affected by the 2026 layoff rounds?",
+      "extra_validation_questions": [],
+      "theme": null,
+      "category": null,
+      "origin": null,
+      "change_type": "restructuring_layoffs",
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "A September 23, 2026 headline reported 58 Seattle job cuts in a second round of layoffs in 2026.",
+          "citations": [
+            {
+              "chunk_id": "news-gdelt-003",
+              "source_id": "news-gdelt-003",
+              "evidence": "Expedia cuts 58 Seattle jobs in second round of layoffs this year",
+              "source_type": "news",
+              "title": "Expedia cuts 58 Seattle jobs in second round of layoffs this year",
+              "location": "kiro7.com",
+              "url": "https://www.kiro7.com/news/local/expedia-cuts-58-seattle-jobs-second-round-layoffs-this-year/6F7KLLQL3BHPTJPWQ3CA4MLPOI/",
+              "date": "2026-09-23",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": null
+    },
+    {
+      "id": "S-04",
+      "kind": "change",
+      "title": "Acquisition of AI trip planner Layla",
+      "text": "Headlines in late July and early August 2026 reported the company acquired AI trip planner Layla.",
+      "provenance": "inferred",
+      "labels": [
+        "news headline only"
+      ],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "news-gdelt-018",
+          "source_id": "news-gdelt-018",
+          "evidence": "Expedia Buys Layla : What the AI Trip Planner Deal",
+          "source_type": "news",
+          "title": "Expedia Buys Layla : What the AI Trip Planner Deal Changes for Travelers",
+          "location": "travelerstoday.com",
+          "url": "https://www.travelerstoday.com/articles/60678/20260801/expedia-buys-layla-what-ai-trip-planner-deal-changes-travelers.htm",
+          "date": "2026-08-01",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "news-gdelt-019",
+          "source_id": "news-gdelt-019",
+          "evidence": "Expedia Acquired AI Trip - Planner Layla : Exclusive",
+          "source_type": "news",
+          "title": "Expedia Acquired AI Trip - Planner Layla : Exclusive",
+          "location": "skift.com",
+          "url": "https://skift.com/2026/07/31/expedia-acquired-ai-trip-planner-layla-exclusive/",
+          "date": "2026-07-31",
+          "event_date": null,
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "How will the Layla acquisition be integrated into your products and teams?",
+      "extra_validation_questions": [],
+      "theme": null,
+      "category": null,
+      "origin": null,
+      "change_type": "acquisition",
+      "event_date": null,
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "Headlines in late July and early August 2026 reported the company acquired AI trip planner Layla.",
+          "citations": [
+            {
+              "chunk_id": "news-gdelt-018",
+              "source_id": "news-gdelt-018",
+              "evidence": "Expedia Buys Layla : What the AI Trip Planner Deal",
+              "source_type": "news",
+              "title": "Expedia Buys Layla : What the AI Trip Planner Deal Changes for Travelers",
+              "location": "travelerstoday.com",
+              "url": "https://www.travelerstoday.com/articles/60678/20260801/expedia-buys-layla-what-ai-trip-planner-deal-changes-travelers.htm",
+              "date": "2026-08-01",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            },
+            {
+              "chunk_id": "news-gdelt-019",
+              "source_id": "news-gdelt-019",
+              "evidence": "Expedia Acquired AI Trip - Planner Layla : Exclusive",
+              "source_type": "news",
+              "title": "Expedia Acquired AI Trip - Planner Layla : Exclusive",
+              "location": "skift.com",
+              "url": "https://skift.com/2026/07/31/expedia-acquired-ai-trip-planner-layla-exclusive/",
+              "date": "2026-07-31",
+              "event_date": null,
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 0.8
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 0.8
+    },
+    {
+      "id": "S-05",
+      "kind": "change",
+      "title": "New revolving credit facility",
+      "text": "On March 27, 2026, the company entered a new revolving credit facility that is unsecured and not guaranteed by subsidiaries. Aggregate commitments total $2.5 billion, with a $120 million letter of credit sublimit. The facility matures on March 27, 2031. The company terminated commitments and repaid obligations under its April 14, 2022 credit agreement.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "8k-0001104659-26-036875-main-p003",
+          "source_id": "8k-0001104659-26-036875",
+          "evidence": "are unsecured and are not guaranteed by any of the",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+          "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+          "date": "2026-03-30",
+          "event_date": "2026-03-27",
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "8k-0001104659-26-036875-main-p003",
+          "source_id": "8k-0001104659-26-036875",
+          "evidence": "$2.5 billion (with a $120 million letter of credit sublimit)",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+          "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+          "date": "2026-03-30",
+          "event_date": "2026-03-27",
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "8k-0001104659-26-036875-main-p003",
+          "source_id": "8k-0001104659-26-036875",
+          "evidence": "The Revolving Credit Facility matures on March 27, 2031.",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+          "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+          "date": "2026-03-30",
+          "event_date": "2026-03-27",
+          "uncorroborated": false,
+          "evidence_truncated": false
+        },
+        {
+          "chunk_id": "8k-0001104659-26-036875-main-p006",
+          "source_id": "8k-0001104659-26-036875",
+          "evidence": "the Company terminated all outstanding commitments and repaid all outstanding obligations",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+          "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+          "date": "2026-03-30",
+          "event_date": "2026-03-27",
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "Has the March 2026 credit facility changed how you plan liquidity for upcoming initiatives?",
+      "extra_validation_questions": [],
+      "theme": null,
+      "category": null,
+      "origin": null,
+      "change_type": "financing",
+      "event_date": "2026-03-27",
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "On March 27, 2026, the company entered a new revolving credit facility that is unsecured and not guaranteed by subsidiaries.",
+          "citations": [
+            {
+              "chunk_id": "8k-0001104659-26-036875-main-p003",
+              "source_id": "8k-0001104659-26-036875",
+              "evidence": "are unsecured and are not guaranteed by any of the",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+              "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+              "date": "2026-03-30",
+              "event_date": "2026-03-27",
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "Aggregate commitments total $2.5 billion, with a $120 million letter of credit sublimit.",
+          "citations": [
+            {
+              "chunk_id": "8k-0001104659-26-036875-main-p003",
+              "source_id": "8k-0001104659-26-036875",
+              "evidence": "$2.5 billion (with a $120 million letter of credit sublimit)",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+              "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+              "date": "2026-03-30",
+              "event_date": "2026-03-27",
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "The facility matures on March 27, 2031.",
+          "citations": [
+            {
+              "chunk_id": "8k-0001104659-26-036875-main-p003",
+              "source_id": "8k-0001104659-26-036875",
+              "evidence": "The Revolving Credit Facility matures on March 27, 2031.",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+              "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+              "date": "2026-03-30",
+              "event_date": "2026-03-27",
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        },
+        {
+          "text": "The company terminated commitments and repaid obligations under its April 14, 2022 credit agreement.",
+          "citations": [
+            {
+              "chunk_id": "8k-0001104659-26-036875-main-p006",
+              "source_id": "8k-0001104659-26-036875",
+              "evidence": "the Company terminated all outstanding commitments and repaid all outstanding obligations",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+              "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+              "date": "2026-03-30",
+              "event_date": "2026-03-27",
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": 1.0
+    },
+    {
+      "id": "S-06",
+      "kind": "change",
+      "title": "Release of subsidiary note guarantees",
+      "text": "With the new facility, subsidiary guarantors were automatically released from their guarantees under each series of senior notes.",
+      "provenance": "sourced",
+      "labels": [],
+      "flags": [],
+      "citations": [
+        {
+          "chunk_id": "8k-0001104659-26-036875-main-p008",
+          "source_id": "8k-0001104659-26-036875",
+          "evidence": "the Subsidiary Guarantors were automatically released from their guarantees under",
+          "source_type": "filing",
+          "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+          "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+          "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+          "date": "2026-03-30",
+          "event_date": "2026-03-27",
+          "uncorroborated": false,
+          "evidence_truncated": false
+        }
+      ],
+      "rejected_citations": [],
+      "model_inference": false,
+      "validation_question": "Did the release of subsidiary guarantees change any internal treasury or entity structure processes?",
+      "extra_validation_questions": [],
+      "theme": null,
+      "category": null,
+      "origin": null,
+      "change_type": "financing",
+      "event_date": "2026-03-27",
+      "sources_note": null,
+      "sentences": [
+        {
+          "text": "With the new facility, subsidiary guarantors were automatically released from their guarantees under each series of senior notes.",
+          "citations": [
+            {
+              "chunk_id": "8k-0001104659-26-036875-main-p008",
+              "source_id": "8k-0001104659-26-036875",
+              "evidence": "the Subsidiary Guarantors were automatically released from their guarantees under",
+              "source_type": "filing",
+              "title": "Expedia Group, Inc. Form 8-K filed 2026-03-30 (Entry into a material definitive agreement)",
+              "location": "Form 8-K Items 1.01, 1.02, 2.03, 8.01, 9.01",
+              "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465926036875/tm269986d1_8k.htm",
+              "date": "2026-03-30",
+              "event_date": "2026-03-27",
+              "uncorroborated": false,
+              "evidence_truncated": false
+            }
+          ],
+          "rejected_citations": [],
+          "support_score": 1.0
+        }
+      ],
+      "dropped_sentences": [],
+      "legacy": false,
+      "title_support_score": null
+    }
+  ],
+  "usage": [
+    {
+      "call": "initiatives",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "input_tokens": 85188,
+      "output_tokens": 10671,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "cost_usd": 0.554172,
+      "estimated_input_tokens": 85188,
+      "estimated_cost_usd": 0.740752
+    },
+    {
+      "call": "challenges_changes",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "input_tokens": 84873,
+      "output_tokens": 13275,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "cost_usd": 0.604992,
+      "estimated_input_tokens": 84873,
+      "estimated_cost_usd": 0.739492
+    }
+  ],
+  "total_cost_usd": 1.159164,
+  "warnings": [
+    "4 flagged items; see 02_extract_guard_report.json."
+  ],
+  "replayed_from": null,
+  "response_format": "sentences"
+}

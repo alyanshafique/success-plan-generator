@@ -1,0 +1,29 @@
+{
+  "stage": "draft",
+  "generated_at": "2026-10-13T21:51:19Z",
+  "dropped_criteria": [],
+  "rejected_refs": [],
+  "flagged": [
+    {
+      "item_id": "I-01",
+      "kind": "criterion",
+      "title": "AI across products and operations",
+      "reason": "unsupported_statement: support 56%: not in its references: Track, many, created, using"
+    },
+    {
+      "item_id": "I-01",
+      "kind": "criterion",
+      "title": "AI across products and operations",
+      "reason": "unsupported_statement: support 64%: not in its references: Track, many, people, run"
+    },
+    {
+      "item_id": "I-08",
+      "kind": "criterion",
+      "title": "Restructuring and cost efficiency",
+      "reason": "unsupported_statement: support 73%: not in its references: Track, many, active"
+    }
+  ],
+  "rejected_tasks": [],
+  "fallbacks": [],
+  "skipped_initiatives": []
+}

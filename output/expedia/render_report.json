@@ -1,0 +1,45 @@
+{
+  "stage": "render",
+  "generated_at": "2026-10-13T22:29:57+00:00",
+  "warnings": [
+    "key_challenges.public_signals[10].text: currency amount or plan wording in source-derived text (check it is not a price)",
+    "key_challenges.public_signals[10].sentences[0].text: currency amount or plan wording in source-derived text (check it is not a price)",
+    "key_challenges.public_signals[16].text: currency amount or plan wording in source-derived text (check it is not a price)",
+    "key_challenges.public_signals[16].sentences[1].text: currency amount or plan wording in source-derived text (check it is not a price)"
+  ],
+  "omitted_sentences": [
+    {
+      "id": "I-12.s1",
+      "reason": "verbatim run of 15+ words from source chunk 10k-item7-p008"
+    },
+    {
+      "id": "I-12.s2",
+      "reason": "refers back to the omitted sentence before it"
+    },
+    {
+      "id": "I-12 validation question",
+      "reason": "relied on omitted content (strategy, 2023); replaced with a CSM blank"
+    },
+    {
+      "id": "C-06.s1",
+      "reason": "verbatim run of 15+ words from source chunk 10k-item1a-p037"
+    },
+    {
+      "id": "C-06 validation question",
+      "reason": "relied on omitted content (EU, Short, Term, Rental, Law); replaced with a CSM blank"
+    }
+  ],
+  "unmapped_objectives_note": "[CSM to complete: add objectives for initiatives the tool did not map]",
+  "not_drafted": [
+    "I-03",
+    "I-04",
+    "I-05",
+    "I-06",
+    "I-07",
+    "I-09",
+    "I-10",
+    "I-11",
+    "I-12"
+  ],
+  "evidence_checks": "passed: no evidence field; no news headline; no run of 15+ words from 277 source chunks"
+}

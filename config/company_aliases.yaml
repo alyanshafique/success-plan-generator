@@ -1,0 +1,17 @@
+# Company aliases for headline relevance matching (Retrieve stage).
+#
+# A GDELT headline is eligible for Extract only if it names the company, its ticker, or one of the
+# brands listed here. The company name and ticker are added automatically from EDGAR; list only
+# brand names stated in Item 1 (Business) of the company's latest 10-K. Retrieve warns if a listed
+# brand no longer appears in Item 1 of the filing it uses.
+#
+# Keyed by SEC CIK (stable even if the name or ticker changes).
+
+companies:
+  "1324424":
+    name: Expedia Group, Inc.
+    ticker: EXPE
+    source: Form 10-K for fiscal year 2025, Item 1 Business (accession 0001324424-26-000008)
+    brands: [Expedia, Hotels.com, Vrbo, Orbitz, Travelocity, ebookers, Wotif, trivago]
+    # Named in Item 1 but left out as too generic to match headlines reliably:
+    #   One Key (loyalty program), Rapid (B2B API), TAAP (agent booking tool).

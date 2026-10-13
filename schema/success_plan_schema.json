@@ -1,0 +1,327 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "success_plan_schema.json",
+  "title": "Hypothetical Customer Success Plan",
+  "description": "Draft success plan generated from public information. Every item carries an owner, a provenance tag, and citations where sourced.",
+  "type": "object",
+  "required": ["metadata", "company_highlights", "key_business_initiatives", "key_benefits", "renewal", "success_criteria", "key_challenges", "objectives", "items_to_validate"],
+  "additionalProperties": false,
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["company", "product", "generated_at", "filing", "disclaimer"],
+      "additionalProperties": false,
+      "properties": {
+        "company": { "type": "string" },
+        "ticker": { "type": "string" },
+        "product": { "type": "string", "description": "Product or product family from the capability config" },
+        "generated_at": { "type": "string", "format": "date-time" },
+        "filing": {
+          "type": "object",
+          "required": ["form", "fiscal_year", "filing_date", "url"],
+          "additionalProperties": false,
+          "properties": {
+            "form": { "type": "string", "examples": ["10-K"] },
+            "fiscal_year": { "type": "string" },
+            "filing_date": { "type": "string", "format": "date" },
+            "url": { "type": "string", "format": "uri" }
+          }
+        },
+        "news_window": {
+          "type": "object",
+          "properties": {
+            "from": { "type": "string", "format": "date" },
+            "to": { "type": "string", "format": "date" }
+          }
+        },
+        "notice": { "type": "string", "const": "First-draft hypothesis for a CSM to review and edit." },
+        "stages": {
+          "type": "object",
+          "description": "Per stage: profile, model, and cost. A replayed stage names the saved real run it replays; its real cost comes from the usage log.",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["profile", "model", "replayed_from", "cost_usd", "cost_note"],
+            "additionalProperties": false,
+            "properties": {
+              "profile": { "type": "string" },
+              "model": { "type": "string" },
+              "replayed_from": { "type": ["string", "null"] },
+              "cost_usd": { "type": ["number", "null"] },
+              "cost_note": { "type": "string" }
+            }
+          }
+        },
+        "csm_selection": { "type": "string", "description": "Whether an optional CSM selection file was applied at Render." },
+        "omitted_sentences": { "type": "string", "description": "How many sentences Render left out because they copy 15 or more consecutive words from a source chunk." },
+        "disclaimer": {
+          "type": "string",
+          "const": "All inputs are publicly available. This tool does not use proprietary or customer data. This output is a hypothesis generated from public information and has not been validated with the company."
+        }
+      }
+    },
+
+    "company_highlights": {
+      "type": "object",
+      "required": ["overview", "account_history"],
+      "additionalProperties": false,
+      "properties": {
+        "overview": { "$ref": "#/$defs/item" },
+        "account_history": { "$ref": "#/$defs/csm_blank" }
+      }
+    },
+
+    "key_business_initiatives": {
+      "type": "array",
+      "description": "Sourced from Business section, MD&A, earnings commentary, and news. Not from Risk Factors.",
+      "items": {
+        "allOf": [
+          { "$ref": "#/$defs/item" },
+          {
+            "type": "object",
+            "properties": {
+              "csm_selected": { "type": ["boolean", "null"], "description": "CSM marks relevant initiatives. Null until reviewed." }
+            }
+          }
+        ]
+      }
+    },
+
+    "key_benefits": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          { "$ref": "#/$defs/item" },
+          {
+            "type": "object",
+            "required": ["initiative_id", "fit"],
+            "properties": {
+              "initiative_id": { "type": "string" },
+              "fit": { "$ref": "#/$defs/fit" },
+              "capability_ids": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "IDs from the product capability config. Empty if fit is no_fit."
+              },
+              "no_fit_reason": { "type": "string" },
+              "fit_rationale": {
+                "type": "string",
+                "description": "Optional. One sentence explaining the fit judgment. Always an inference, never presented as fact."
+              },
+              "plan_confirmation": {
+                "type": "string",
+                "const": "[CSM to confirm which plan includes these capabilities]",
+                "description": "Optional labeled blank for the CSM. Plan availability is never stated in the plan."
+              }
+            },
+            "allOf": [
+              {
+                "if": { "properties": { "fit": { "const": "no_fit" } } },
+                "then": { "required": ["no_fit_reason"] }
+              },
+              {
+                "if": { "properties": { "fit": { "enum": ["full", "partial"] } } },
+                "then": { "required": ["capability_ids"], "properties": { "capability_ids": { "minItems": 1 } } }
+              }
+            ]
+          }
+        ]
+      }
+    },
+
+    "renewal": { "$ref": "#/$defs/csm_blank" },
+
+    "success_criteria": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/success_criterion" }
+    },
+
+    "key_challenges": {
+      "type": "object",
+      "required": ["public_signals", "customer_raised"],
+      "additionalProperties": false,
+      "properties": {
+        "public_signals": {
+          "type": "array",
+          "description": "From Risk Factors and recent news: leadership changes, restructurings, acquisitions, incidents.",
+          "items": { "$ref": "#/$defs/item" }
+        },
+        "customer_raised": { "$ref": "#/$defs/csm_blank" }
+      }
+    },
+
+    "objectives": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "owner", "provenance", "linked_initiative_ids", "success_criteria", "tasks"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "owner": { "$ref": "#/$defs/owner" },
+          "provenance": { "$ref": "#/$defs/provenance" },
+          "linked_initiative_ids": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "capability_ids": { "type": "array", "items": { "type": "string" } },
+          "fit": { "$ref": "#/$defs/fit" },
+          "labels": { "type": "array", "items": { "type": "string" }, "description": "Carried from Extract and Map (e.g. inferred, news headline only, partial fit)." },
+          "success_criteria": { "type": "array", "items": { "$ref": "#/$defs/success_criterion" }, "minItems": 1 },
+          "tasks": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["id", "text", "proposed_timeline", "provenance", "validation_question"],
+              "additionalProperties": false,
+              "properties": {
+                "id": { "type": "string" },
+                "text": { "type": "string" },
+                "responsible_role": { "type": "string", "examples": ["CSM", "Customer admin", "Customer engineering lead", "Services"] },
+                "proposed_timeline": {
+                  "type": "object",
+                  "required": ["window", "is_proposed"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "window": { "type": "string", "description": "Relative only, e.g. 'Day 0-30' or 'Week 3'" },
+                    "is_proposed": { "type": "boolean", "const": true }
+                  }
+                },
+                "provenance": { "$ref": "#/$defs/provenance" },
+                "validation_question": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "objectives_csm_blank": {
+      "$ref": "#/$defs/csm_blank",
+      "description": "Objectives for initiatives the tool did not map (no_fit) are left to the CSM."
+    },
+
+    "items_to_validate": {
+      "type": "array",
+      "description": "Consolidated list of assumptions and open questions for the CSM to confirm with the customer.",
+      "items": {
+        "type": "object",
+        "required": ["ref_id", "question"],
+        "additionalProperties": false,
+        "properties": {
+          "ref_id": { "type": "string", "description": "ID of the item this question relates to" },
+          "question": { "type": "string" }
+        }
+      }
+    }
+  },
+
+  "$defs": {
+    "owner": {
+      "type": "string",
+      "enum": ["claude", "csm", "shared"],
+      "description": "claude = generated; csm = labeled blank; shared = Claude drafts, CSM validates"
+    },
+    "provenance": {
+      "type": "string",
+      "enum": ["sourced", "inferred", "csm-input"]
+    },
+    "fit": {
+      "type": "string",
+      "enum": ["full", "partial", "no_fit"]
+    },
+    "citation": {
+      "type": "object",
+      "required": ["source_type", "title"],
+      "additionalProperties": false,
+      "properties": {
+        "source_type": {
+          "type": "string",
+          "enum": ["filing", "earnings_call", "news", "company_site", "product_docs"]
+        },
+        "title": { "type": "string" },
+        "location": { "type": "string", "description": "Filing section (e.g. 'Item 7 MD&A') or page reference" },
+        "url": { "type": "string", "format": "uri" },
+        "date": { "type": "string", "format": "date", "description": "Filing or publication date" },
+        "event_date": { "type": "string", "format": "date", "description": "8-Ks only: EDGAR report date (date of the earliest event reported). Can precede the filing date." }
+      }
+    },
+    "item": {
+      "type": "object",
+      "required": ["id", "text", "owner", "provenance"],
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "text": { "type": "string" },
+        "owner": { "$ref": "#/$defs/owner" },
+        "provenance": { "$ref": "#/$defs/provenance" },
+        "citations": { "type": "array", "items": { "$ref": "#/$defs/citation" } },
+        "validation_question": { "type": "string" },
+        "labels": { "type": "array", "items": { "type": "string" } },
+        "sentences": {
+          "type": "array",
+          "description": "Optional sentence-level citations. When present, text is the join of these sentences in order, and each sentence carries its own 1-2 verified citations.",
+          "items": {
+            "type": "object",
+            "required": ["text", "citations"],
+            "additionalProperties": false,
+            "properties": {
+              "text": { "type": "string" },
+              "citations": { "type": "array", "minItems": 1, "maxItems": 2, "items": { "$ref": "#/$defs/citation" } }
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "provenance": { "const": "sourced" } } },
+          "then": { "required": ["citations"], "properties": { "citations": { "minItems": 1 } } }
+        }
+      ]
+    },
+    "csm_blank": {
+      "type": "object",
+      "description": "Section only the CSM can fill. Claude outputs a labeled placeholder and never invents content.",
+      "required": ["owner", "provenance", "placeholder"],
+      "additionalProperties": false,
+      "properties": {
+        "owner": { "type": "string", "const": "csm" },
+        "provenance": { "type": "string", "const": "csm-input" },
+        "placeholder": {
+          "type": "string",
+          "pattern": "^\\[CSM to complete:",
+          "examples": ["[CSM to complete: renewal date, ARR, status, next steps]"]
+        }
+      }
+    },
+    "success_criterion": {
+      "type": "object",
+      "required": ["id", "text", "owner", "provenance", "needs_baseline", "validation_question"],
+      "properties": {
+        "id": { "type": "string" },
+        "text": { "type": "string" },
+        "owner": { "$ref": "#/$defs/owner" },
+        "provenance": { "$ref": "#/$defs/provenance" },
+        "citations": { "type": "array", "items": { "$ref": "#/$defs/citation" } },
+        "criterion_type": { "type": "string", "enum": ["business_outcome", "product_usage"] },
+        "indicator_type": { "type": "string", "enum": ["leading", "lagging"] },
+        "proposed_target": { "type": "string", "description": "e.g. 'Reduce MTTR by 20%'. A proposal, not a commitment." },
+        "needs_baseline": { "type": "boolean" },
+        "baseline_question": { "type": "string" },
+        "validation_question": { "type": "string" }
+      },
+      "allOf": [
+        {
+          "if": { "required": ["proposed_target"] },
+          "then": { "required": ["needs_baseline"] }
+        },
+        {
+          "if": { "properties": { "needs_baseline": { "const": true } }, "required": ["needs_baseline"] },
+          "then": { "required": ["baseline_question"] }
+        },
+        {
+          "if": { "properties": { "provenance": { "const": "sourced" } } },
+          "then": { "required": ["citations"], "properties": { "citations": { "minItems": 1 } } }
+        }
+      ]
+    }
+  }
+}
