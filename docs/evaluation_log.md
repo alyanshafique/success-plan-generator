@@ -1150,3 +1150,46 @@ still equal EDGAR's report period. Etsy's Retrieve has not been re-run yet.
 - **Procedure:** `spg retrieve` for each candidate (SEC EDGAR and GDELT only, no model call); if GDELT stays throttled
   after its retries, Retrieve continues without news. The step A section check (each Item 1 and Item 7 ends at the next
   Item's body heading) is applied to each candidate.
+
+### 2026-10-14 · Second pre-screen: results and the company the choice rule selects
+
+`spg retrieve --as-of 2026-10-14` for each candidate (no model call). Counts per 10,000 words of Items 1 and 7, fixed
+second keyword list (case-insensitive substrings; "AI" whole-word and case-sensitive):
+
+| Company | Words (Items 1+7) | digital transformation | legacy | moderniz | migrat | agile | automat | artificial intelligence | machine learning | developer | engineering | productivity | operating model | simplif | cloud | workflow | technology investment | AI | Total per 10k |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Cigna Group | 23,595 | 0.0 | 0.0 | 0.4 | 0.0 | 0.0 | 0.4 | 0.8 | 0.4 | 0.0 | 0.0 | 0.0 | 0.4 | 0.4 | 0.0 | 0.0 | 0.0 | 10.2 | **13.1** |
+| CVS Health | 39,843 | 0.0 | 1.3 | 0.5 | 0.0 | 0.0 | 1.5 | 1.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 2.3 | 0.5 | 1.3 | 0.0 | 1.8 | **10.0** |
+| Etsy | 15,874 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.6 | 0.0 | 1.9 | 0.0 | 6.9 | 0.0 | 1.3 | 0.0 | 6.9 | 0.0 | 0.6 | 7.6 | **25.8** |
+
+| Company | Fiscal year end | 10-K filed | 10-K/A | Headline ambiguity | 8-Ks retrieved | Section check | Ranking |
+|---|---|---|---|---|---|---|---|
+| Cigna Group | 2025-12-31 | 2026-02-26 | none | not assessed (GDELT HTTP 429 after retries) | 5 (3 events, 2 earnings) | Item 1 12,858 and Item 7 10,737 words; each ends at the next Item heading | ranked, flagged |
+| CVS Health | 2025-12-31 | 2026-02-10 | none | 0 of 50 headlines (0%) do not name the company | 5 (3 events, 2 earnings) | Item 1 23,752 and Item 7 16,091 words; each ends at the next Item heading | ranked |
+| Etsy | 2025-12-31 | 2026-02-19 | none | not assessed (GDELT HTTP 429 after retries) | 8 (6 events, 2 earnings) | Item 1 9,481 and Item 7 6,393 words; each ends at the next Item heading | ranked, flagged |
+| ExxonMobil | - | - | - | - | - | - | **excluded: Retrieve failed** |
+| Wells Fargo | - | - | - | - | - | - | **excluded: Retrieve failed (stub)** |
+| Ford Motor Company | - | - | - | - | - | - | **excluded: Retrieve failed** |
+| McDonald's | - | - | - | - | - | - | **excluded: Retrieve failed** |
+
+Why Retrieve failed (diagnosed from cached files and SEC data; nothing was changed):
+- **ExxonMobil:** "No 10-K found". SEC's ticker list now maps both the name and the ticker XOM to a newly registered
+  "ExxonMobil Holdings Corp" (CIK 2115436), which has no 10-K. The FY2025 10-K (filed 2026-02-18) is under Exxon Mobil
+  Corp (CIK 34088), which the ticker list no longer maps; Retrieve has no option to choose a CIK.
+- **Wells Fargo:** Item 1A has 39 words and Item 7 has 29: the 10-K says the information is in the 2025 Annual Report
+  to Shareholders and "is incorporated into this item by reference". A stub under the method's rule. The tool's
+  incorporated-by-reference check matches "incorporated (herein) by reference", not this wording.
+- **Ford Motor Company:** "Item 1. Business: found only 844 words". Ford repeats "Item 1. Business (Continued)" (and
+  likewise for Items 1A and 7) at the top of each page; the splitter treats each repeat as a new heading and keeps the
+  longest single page. A splitter limitation, not a short filing.
+- **McDonald's:** the name with an apostrophe matched no registrant; with `--ticker MCD` it resolved to McDonald's
+  Corp, but the splitter found 0 words for Item 1. The 10-K's body uses its own section titles ("Business Summary",
+  "Description of the Business") and lists the Item numbers only in a cross-reference index near the end.
+
+Other warnings: no candidate has a `config/company_aliases.yaml` entry (headline matching used the name and ticker);
+CVS Health's GDELT results included one headline naming a person on the private list, which Retrieve redacted.
+
+**Choice rule result: Etsy** (25.8 per 10,000 words, the highest among the three companies not excluded). Etsy is
+flagged: its headline ambiguity is not assessed because GDELT stayed rate-limited. Caveat for the owner: most of
+Etsy's total comes from "engineering" (11), "cloud" (11), and "AI" (12); in a 10-K, "engineering" and "cloud" can
+describe cost lines rather than initiatives, as noted for the first pre-screen. Not run.
