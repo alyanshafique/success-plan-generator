@@ -369,3 +369,36 @@ def test_same_as_of_dry_run_has_no_date_notice(env):
     spg("--yes")
     dry = spg("--dry-run")
     assert "The saved Retrieve output is as of" not in dry.output
+
+
+# ---------------------------------------------------------------- --require-news
+
+def test_require_news_stops_before_any_model_call_when_gdelt_returns_nothing(env, monkeypatch):
+    monkeypatch.setitem(GDELT, "response", lambda: httpx.Response(429))
+    result = spg("--yes", "--require-news")
+    assert result.exit_code == 1 and "Stopped at retrieve" in result.output
+    assert "GDELT returned no headlines (GDELT throttled) and --require-news is set, so no model call was made" in result.output
+    assert 'spg run "Test Co" --as-of 2026-10-12 --refresh-sources --require-news' in result.output
+    assert env["model"].calls == [] and not out_dir(env).exists()
+    monkeypatch.setitem(GDELT, "response", gdelt_ok)  # GDELT responds: the resume command completes the run
+    resumed = CliRunner().invoke(cli.app, ["run", "Test Co", "--as-of", AS_OF, "--refresh-sources", "--require-news", "--yes"])
+    assert resumed.exit_code == 0, resumed.output
+    assert "1 headlines retrieved" in retrieve_line(resumed.output)
+
+
+def test_require_news_also_stops_a_dry_run(env, monkeypatch):
+    monkeypatch.setitem(GDELT, "response", lambda: httpx.Response(429))
+    result = spg("--dry-run", "--require-news")
+    assert result.exit_code == 1 and "--require-news is set" in result.output and "Estimated cost" not in result.output
+
+
+def test_require_news_is_ignored_with_skip_news(env):
+    result = spg("--yes", "--require-news", "--skip-news")
+    assert result.exit_code == 0, result.output
+    assert "GDELT skipped" in retrieve_line(result.output)
+
+
+def test_without_require_news_a_gdelt_failure_is_a_warning(env, monkeypatch):
+    monkeypatch.setitem(GDELT, "response", lambda: httpx.Response(429))
+    result = spg("--yes")
+    assert result.exit_code == 0 and "GDELT request failed" in result.output

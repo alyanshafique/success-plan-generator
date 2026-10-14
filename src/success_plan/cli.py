@@ -294,6 +294,7 @@ def run_cmd(
     refresh_sources: bool = typer.Option(False, "--refresh-sources", help="Re-download EDGAR documents and refresh the GDELT cache"),
     from_stage: Optional[str] = typer.Option(None, "--from", help="Re-run from this stage: extract, map, draft, or render"),
     skip_news: bool = typer.Option(False, "--skip-news", help="Do not call GDELT (8-Ks and the 10-K only)"),
+    require_news: bool = typer.Option(False, "--require-news", help="Stop before any model call if GDELT returns no headlines"),
 ) -> None:
     """Run every stage for a company: Retrieve, Extract, Map, Draft, Render."""
     from .run import RunOptions, run_pipeline
@@ -305,7 +306,7 @@ def run_cmd(
         raise typer.Exit(1)
     opts = RunOptions(company=company, ticker=ticker, profile=profile, product=product, as_of=as_of_date, dry_run=dry_run,
                       yes=yes, max_cost=max_cost, force=force, refresh_sources=refresh_sources, from_stage=from_stage,
-                      skip_news=skip_news)
+                      skip_news=skip_news, require_news=require_news)
     result = run_pipeline(opts, models_config=load_models_config(), llm=make_model_client(), http_factory=make_http_client,
                           echo=typer.echo, confirm=lambda message: typer.confirm(message, default=False))
     for notice in result.notices:

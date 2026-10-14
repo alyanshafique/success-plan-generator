@@ -50,6 +50,7 @@ class RunOptions:
     refresh_sources: bool = False
     from_stage: str | None = None
     skip_news: bool = False
+    require_news: bool = False
 
 
 class RunStop(Exception):
@@ -354,6 +355,7 @@ def run_pipeline(opts: RunOptions, *, models_config: ModelsConfig, llm, http_fac
                           f"will re-run Retrieve as of {opts.as_of}; this dry-run estimate uses the saved output.")
                 result.notices.append(notice)
                 echo(notice)
+        check_news(opts, paths)
         to_run = [st for st in MODEL_STAGES if plan[st] == "run"]
         result.estimate = estimate_run(paths, models_config, opts.profile, counter, config, to_run) if to_run else []
         _gate(opts, result, limit, models_config, echo, confirm)
@@ -410,6 +412,19 @@ def _reused(paths: CompanyPaths, stage: str, model, result: RunResult, echo, opt
         detail += f"; {retrieve_detail(saved)}"
     result.stages.append(StageReport(stage, "reused", 0.0, 0.0, detail))
     echo(f"{stage.capitalize()}: {detail}")
+
+
+def check_news(opts: RunOptions, paths: CompanyPaths) -> None:
+    """With --require-news (and without --skip-news), no GDELT headlines stops the run before any model call."""
+    if not opts.require_news or opts.skip_news:
+        return
+    manifest = RetrieveManifest.model_validate_json((paths.stages / STAGE_FILES["retrieve"]).read_text())
+    if manifest.news.headlines:
+        return
+    profile = f" --profile {opts.profile}" if opts.profile != "dev" else ""
+    raise RunStop("retrieve", f"GDELT returned no headlines (GDELT {news_status(manifest.news)}) and --require-news is "
+                              f"set, so no model call was made. When GDELT responds, resume with: spg run "
+                              f'"{opts.company}" --as-of {manifest.as_of}{profile} --refresh-sources --require-news')
 
 
 def news_status(news) -> str:

@@ -125,7 +125,7 @@ fiscal year, when Extract keeps no initiatives or drops more than half of its pr
 no criteria. If no initiative fits the product, it writes a plan with every initiative marked no fit and exits
 normally. Afterwards it lists possible personal names found in the stage outputs, to add to
 `config/private_names.txt` before committing anything. Seconds and cost per stage go to the usage log. Other options:
-`--as-of`, `--refresh-sources` (re-download EDGAR and GDELT), `--skip-news` (no GDELT).
+`--as-of`, `--refresh-sources` (re-download EDGAR and GDELT), `--skip-news` (no GDELT), `--require-news` (stop before any model call if GDELT returns no headlines).
 
 **One stage at a time:**
 
