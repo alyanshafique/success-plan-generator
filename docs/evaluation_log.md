@@ -1193,3 +1193,27 @@ CVS Health's GDELT results included one headline naming a person on the private 
 flagged: its headline ambiguity is not assessed because GDELT stayed rate-limited. Caveat for the owner: most of
 Etsy's total comes from "engineering" (11), "cloud" (11), and "AI" (12); in a 10-K, "engineering" and "cloud" can
 describe cost lines rather than initiatives, as noted for the first pre-screen. Not run.
+
+### 2026-10-14 · Etsy: expectations and review standard (recorded before any Etsy run)
+
+Etsy is the company the second pre-screen's choice rule selected. Recorded before running any model stage on it:
+
+- **This is the first run on a company the pipeline was not tuned on.** Every prompt and rule change so far was made
+  after reading Expedia runs.
+- **Expected issue: Depop staleness.** Item 1 of Etsy's FY2025 10-K (filed 2026-02-19) describes Depop as part of
+  Etsy, with the sale to eBay pending (expected to close in the second quarter of 2026). The sale completed on
+  2026-07-30 (Form 8-K Item 2.01, filed 2026-07-30). Any Etsy sentence about Depop must be checked for staleness: an
+  initiative, challenge, benefit, or criterion that treats Depop as a current business is a finding.
+- **Review standard:** the owner will read every Extract item against its cited passage, as for the Opus run. The
+  count of items with an unsupported or meaning-shifted statement will be recorded here, whatever it is.
+- **Drop rate:** the share of proposed sentences dropped by the guards will be recorded. `spg run` stops above 50%
+  (a new threshold); the Expedia sentence-level evaluation runs used a stricter stop condition of at most 25% dropped,
+  and the result will be compared with that too.
+- **Pipeline changes since the Expedia sample that could affect the result:** the cover-page fix in Retrieve (the
+  fiscal-year date split across table cells, found by this pre-screen), and the `spg run` changes (orchestration,
+  cost gate, resume, stop conditions, the zero-fit path, atomic writes, the Retrieve line in the summary, the dry-run
+  as-of notice, and `--require-news`).
+- **Aliases:** `config/company_aliases.yaml` has an Etsy entry with no brand aliases (Depop, Reverb, and Elo7 are
+  sold; Etsy Ads, Etsy Insider, and the Etsy app are already matched by "Etsy"), so headline matching uses the name and
+  ticker only.
+- **Dates:** every Etsy command uses `--as-of 2026-10-14`.
