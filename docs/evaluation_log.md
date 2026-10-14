@@ -1116,3 +1116,11 @@ learning" whole-phrase, any case):
 | Zillow | 4.5 (7) | 0.6 (1) |
 | Uber | 0.0 (0) | 0.0 (0) |
 | DoorDash | 0.0 (0) | 0.0 (0) |
+
+### 2026-10-14 · Fix found by the pre-screen: cover-page date split across table cells
+
+The first pre-screen found that Retrieve stopped on Etsy's FY2025 10-K because the cover page reads "For the fiscal
+year ended | December 31 , 2025" (the date in its own table cell). The cover-page pattern now allows "|" between
+"ended" and the date and inside the date (commit "Retrieve: cover-page fiscal year can be split by "|" across table
+cells"), with regression tests on synthetic cover text. The fiscal-year check itself is unchanged: the cover date must
+still equal EDGAR's report period. Etsy's Retrieve has not been re-run yet.
