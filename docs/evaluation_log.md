@@ -1089,3 +1089,30 @@ Notes:
 - "integrat" mostly counts commercial integrations (partner and product integrations), and "engineering" and "cloud"
   can describe cost lines; the density is a proxy, as stated above. No candidate uses "workflow", "agile", or
   "artificial intelligence" in Items 1 and 7.
+
+### 2026-10-14 · Addendum: section check for the first pre-screen
+
+Checked after the results above (the earlier entry is not edited). For each 10-K, every Item heading was located in
+the raw filing text, and the span the splitter uses for Item 1 and Item 7 was compared with the next heading.
+
+| Company | Item 1 words | Item 1 ends at | Item 7 words | Item 7 ends at | Truncated? |
+|---|---|---|---|---|---|
+| Etsy | 9,481 | Item 1A heading ("Item 1A. Risk Factors.") | 6,393 | Item 7A heading | No |
+| Zillow | 5,274 | Item 1A heading | 10,139 | Item 7A heading | No |
+| Uber | 4,498 | Item 1A heading ("ITEM 1A. RISK FACTORS") | 12,459 | Item 7A heading | No |
+| DoorDash | 2,569 | Item 1A heading | 10,402 | Item 7A heading | No |
+
+In every case the section ends exactly at the next Item's body heading, with no other heading-like line inside the
+span. Uber's and DoorDash's Item 1 are short because the filings are: the tables of contents put Item 1 on pages 4-9
+(Uber) and 6-10 (DoorDash), and both sections end with the usual website and investor-relations paragraphs. Etsy's
+figures come from the cached 10-K (its Retrieve stopped at the cover-page check).
+
+**Supplementary counts, not used for ranking** (Items 1 and 7; "AI" whole-word and case-sensitive; "machine
+learning" whole-phrase, any case):
+
+| Company | AI per 10k | machine learning per 10k |
+|---|---|---|
+| Etsy | 7.6 (12) | 1.9 (3) |
+| Zillow | 4.5 (7) | 0.6 (1) |
+| Uber | 0.0 (0) | 0.0 (0) |
+| DoorDash | 0.0 (0) | 0.0 (0) |
