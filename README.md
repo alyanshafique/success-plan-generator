@@ -2,9 +2,11 @@
 
 An experimental CLI that turns public company information into a structured first draft of a customer success plan.
 
-**The goal:** a first draft a customer success manager (CSM) reviews before strategic customer conversations, built from
-public information only. It connects publicly disclosed business initiatives to potential product value, measurable
-outcomes, and discovery questions, as a hypothesis to validate with the customer, never as fact.
+## Why this matters for Customer Success
+
+Preparing for strategic customer conversations often requires CSMs to research company priorities, connect them to product capabilities, and develop relevant discovery questions and success measures.
+
+This prototype explores whether AI can help create that initial draft from public information, giving the CSM a structured starting point for research and discovery. It is designed to support preparation, not replace customer discovery or validate business outcomes automatically.
 
 > All inputs are publicly available. This tool does not use proprietary or customer data. This output is a
 > hypothesis generated from public information and has not been validated with the company.
