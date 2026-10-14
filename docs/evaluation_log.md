@@ -1059,3 +1059,33 @@ model stage is run in this pre-screen.
   number of 8-Ks retrieved.
 - **Limits:** keyword density is a proxy for how much the filing talks about internal technology work, not a measure
   of fit; a substring such as "integrat" also matches commercial integrations. The final choice remains the owner's.
+
+**Results (2026-10-14; `spg retrieve --as-of 2026-10-14`, no model call).** Keyword counts per 10,000 words of Items 1
+and 7 combined, using the fixed list above:
+
+| Company | Words (Items 1+7) | technology platform | moderniz | migrat | engineering | automat | artificial intelligence | developer | agile | productivity | cloud | integrat | workflow | Total per 10k |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Etsy | 15,874 | 0.6 | 0.0 | 0.0 | 6.9 | 0.6 | 0.0 | 0.0 | 0.0 | 0.0 | 6.9 | 4.4 | 0.0 | **19.5** |
+| Zillow | 15,413 | 0.6 | 0.6 | 0.6 | 0.0 | 1.3 | 0.0 | 0.6 | 0.0 | 0.0 | 0.6 | 7.8 | 0.0 | **12.3** |
+| Uber | 16,957 | 1.8 | 0.6 | 0.0 | 1.2 | 0.6 | 0.0 | 0.0 | 0.0 | 0.6 | 3.5 | 0.0 | 0.0 | **8.3** |
+| DoorDash | 12,971 | 1.5 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 3.9 | 0.0 | **5.4** |
+
+| Company | Fiscal year end | 10-K filed | Name ambiguous in headlines? | 8-Ks retrieved | GDELT |
+|---|---|---|---|---|---|
+| Etsy | 2025-12-31 (cover page) | not recorded (Retrieve stopped); the 10-K is signed 2026-02-19 | Unlikely (a distinctive name) | not retrieved | not reached |
+| Zillow | 2025-12-31 | 2026-02-11 | Unlikely; resolved to Zillow Group (ticker ZG) | 5 (3 events, 2 earnings releases) | failed (HTTP 429 after three retries) |
+| Uber | 2025-12-31 | 2026-02-13 | Yes, possibly: "uber" is also an English and German word; 7 of 50 headlines named neither the company nor an alias | 6 (4 events, 2 earnings releases) | ok (16 of 50 eligible) |
+| DoorDash | 2025-12-31 | 2026-02-18 | Unlikely | 3 (1 event, 2 earnings releases) | ok (29 of 50 eligible) |
+
+Notes:
+- **Etsy: Retrieve stopped at the fiscal-year check.** The cover page reads "For the fiscal year ended | December 31 ,
+  2025": the date is in a separate table cell, and the cover-page pattern does not allow the "|" cell separator. Its
+  keyword counts above come from the cached 10-K, split with the same section splitter. Not fixed in this step; the
+  proposed fix is to allow "|" between "ended" and the date in that one pattern, with a test using this cover line.
+- **Zillow:** GDELT was rate-limited, so a plan would rest on 8-Ks and the 10-K only unless Retrieve is re-run later.
+- **DoorDash:** one GDELT headline named a person on the private list and was redacted by Retrieve; a 10-K/A filed
+  2026-05-06 amends the 10-K and was not used.
+- None of the four has an entry in `config/company_aliases.yaml`, so headline matching used the name and ticker only.
+- "integrat" mostly counts commercial integrations (partner and product integrations), and "engineering" and "cloud"
+  can describe cost lines; the density is a proxy, as stated above. No candidate uses "workflow", "agile", or
+  "artificial intelligence" in Items 1 and 7.
