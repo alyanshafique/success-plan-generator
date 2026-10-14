@@ -16,6 +16,17 @@ from .stages.retrieve.http import FetchError, RateLimitedClient
 app = typer.Typer(add_completion=False, help="Generate a hypothetical customer success plan from public information.")
 
 
+# Client factories. Every command builds its clients through these, so tests can replace them with fakes
+# (an httpx MockTransport, a fake model) without network or API calls.
+def make_http_client(user_agent: str, on_backoff=None) -> RateLimitedClient:
+    return RateLimitedClient(user_agent, on_backoff=on_backoff)
+
+
+def make_model_client():
+    """The Anthropic client, or None when ANTHROPIC_API_KEY is not set (dry runs then use the calibrated estimate)."""
+    return AnthropicLLM() if has_api_key() else None
+
+
 @app.callback()
 def main() -> None:
     load_env()
@@ -33,7 +44,7 @@ def retrieve(
         user_agent = sec_user_agent()
         as_of_date = date.fromisoformat(as_of) if as_of else None
         on_backoff = lambda msg: typer.secho(msg, fg=typer.colors.YELLOW, err=True)
-        with RateLimitedClient(user_agent, on_backoff=on_backoff) as client:
+        with make_http_client(user_agent, on_backoff) as client:
             m = run_retrieve(client, CompanyPaths.for_company(company), company, ticker=ticker, as_of=as_of_date, force=force)
     except (SettingsError, EdgarError, FetchError, RetrieveError, ValueError) as exc:
         typer.secho(f"Retrieve failed: {exc}", fg=typer.colors.RED, err=True)
@@ -66,7 +77,7 @@ def extract(
     """Stage 2: extract initiatives, challenges, and changes with verified citations."""
     try:
         config = load_models_config()
-        client = AnthropicLLM() if has_api_key() else None  # counting needs a key; dry run works without one
+        client = make_model_client()  # counting needs a key; dry run works without one
         if client is None and not dry_run:
             raise LLMError("ANTHROPIC_API_KEY is not set. Add it to .env, or use --dry-run.")
         estimates, output = run_extract(
@@ -133,7 +144,7 @@ def map_cmd(
 
     try:
         config = load_models_config()
-        client = AnthropicLLM() if has_api_key() else None
+        client = make_model_client()
         if client is None and not dry_run:
             raise LLMError("ANTHROPIC_API_KEY is not set. Add it to .env, or use --dry-run.")
         estimate, out = mp.run_map(CompanyPaths.for_company(company), None if dry_run else client, config, profile,
@@ -186,7 +197,7 @@ def draft_cmd(
 
     try:
         config = load_models_config()
-        client = AnthropicLLM() if has_api_key() else None
+        client = make_model_client()
         if client is None and not dry_run:
             raise LLMError("ANTHROPIC_API_KEY is not set. Add it to .env, or use --dry-run.")
         estimate, out = dr.run_draft(CompanyPaths.for_company(company), None if dry_run else client, config, profile,

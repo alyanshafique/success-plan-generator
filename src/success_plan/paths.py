@@ -1,10 +1,18 @@
 """Filesystem layout for per-company data and outputs."""
 
+import os
 import re
 from dataclasses import dataclass
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
+
+
+def project_root() -> Path:
+    """Where data/ and output/ live: the SPG_ROOT environment variable if set (used by tests), else the repository.
+    Config files and the schema are always read from the repository (PROJECT_ROOT)."""
+    value = os.environ.get("SPG_ROOT", "").strip()
+    return Path(value) if value else PROJECT_ROOT
 
 
 def slugify(name: str) -> str:
@@ -20,8 +28,8 @@ class CompanyPaths:
     slug: str
 
     @classmethod
-    def for_company(cls, company: str, root: Path = PROJECT_ROOT) -> "CompanyPaths":
-        return cls(root=root, slug=slugify(company))
+    def for_company(cls, company: str, root: Path | None = None) -> "CompanyPaths":
+        return cls(root=root or project_root(), slug=slugify(company))
 
     @property
     def data(self) -> Path:
