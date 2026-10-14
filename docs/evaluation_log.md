@@ -1041,3 +1041,21 @@ model. Owner decisions applied:
 - Stage outputs are written atomically; seconds per stage go to the usage log and the run summary.
 
 Not yet done: no run of `spg run` against a real company other than the committed Expedia sample.
+
+### 2026-10-14 · Second sample: pre-screen method (recorded before any result)
+
+Purpose: choose a second company for a sample plan. The choice is made for **fit with the product's capabilities**
+(Jira and Confluence: work tracking, workflows, planning, automation, documentation), **not for output quality**; no
+model stage is run in this pre-screen.
+
+- **Candidates:** Etsy, Zillow, Uber, DoorDash.
+- **Data:** `spg retrieve` for each (SEC EDGAR and GDELT only; no model call). Counts come from the saved Item 1
+  (Business) and Item 7 (MD&A) text of the latest 10-K.
+- **Fixed keyword list** (case-insensitive substring counts; the list is not changed after seeing results):
+  "technology platform", "moderniz", "migrat", "engineering", "automat", "artificial intelligence", "developer",
+  "agile", "productivity", "cloud", "integrat", "workflow".
+- **Measure:** each keyword's count per 10,000 words of Items 1 and 7 combined, and the total per 10,000 words.
+- **Also reported:** fiscal year end, 10-K filing date, whether the name could be ambiguous in news headlines, and the
+  number of 8-Ks retrieved.
+- **Limits:** keyword density is a proxy for how much the filing talks about internal technology work, not a measure
+  of fit; a substring such as "integrat" also matches commercial integrations. The final choice remains the owner's.
