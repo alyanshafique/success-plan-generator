@@ -103,3 +103,19 @@ def test_incorporated_by_reference_detected():
     )
     with pytest.raises(SectionError, match="incorporated by reference"):
         split_sections(html_to_text(html))
+
+
+@pytest.mark.parametrize("line", [
+    "For the fiscal year ended | December 31 , 2025",          # date in its own table cell (Etsy's 10-K cover)
+    "For the fiscal year ended: | December | 31, 2025",         # month and day split across cells
+    "FOR THE FISCAL YEAR ENDED | DECEMBER 31, 2025",
+])
+def test_cover_fiscal_year_split_across_table_cells(line):
+    text = f"FORM 10-K\n{line}\nOR\nTransition Report"
+    assert cover_fiscal_year_end(text) == date(2025, 12, 31)
+
+
+def test_cover_fiscal_year_from_html_table_cells():
+    html = ("<html><body><p>FORM 10-K</p><table><tr><td>For the fiscal year ended</td><td>December 31 , 2025</td>"
+            "</tr></table></body></html>")
+    assert cover_fiscal_year_end(html_to_text(html)) == date(2025, 12, 31)

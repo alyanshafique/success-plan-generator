@@ -43,8 +43,10 @@ _HEADING = re.compile(
 # A heading's text after the item number is just the title (plus a page number in the table of
 # contents). Longer text means a cross-reference sentence, not a heading.
 _MAX_TITLE_CHARS = 130
+# Cover pages often put the date in its own table cell, which html_to_text joins with " | "
+# ("For the fiscal year ended | December 31 , 2025"), so "|" may separate the words of the line and the date.
 _COVER_FY = re.compile(
-    r"for\s+the\s+(?:fiscal\s+)?year\s+ended\s*:?\s*([a-z]+\.?\s+\d{1,2}\s*,?\s*\d{4})", re.IGNORECASE
+    r"for\s+the\s+(?:fiscal\s+)?year\s+ended[\s:|]*([a-z]+\.?[\s|]+\d{1,2}[\s|]*,?[\s|]*\d{4})", re.IGNORECASE
 )
 _INCORPORATED = re.compile(r"incorporated\s+(herein\s+)?by\s+reference", re.IGNORECASE)
 
@@ -113,7 +115,7 @@ def cover_fiscal_year_end(text: str) -> date:
     match = _COVER_FY.search(text[:20000])
     if not match:
         raise SectionError("Could not find 'For the fiscal year ended ...' on the 10-K cover page.")
-    raw = re.sub(r"\s+", " ", match.group(1).replace(".", "")).replace(" ,", ",")
+    raw = re.sub(r"[\s|]+", " ", match.group(1).replace(".", "")).replace(" ,", ",")
     for fmt in ("%B %d, %Y", "%B %d %Y", "%b %d, %Y", "%b %d %Y"):
         try:
             return datetime.strptime(raw.title(), fmt).date()
