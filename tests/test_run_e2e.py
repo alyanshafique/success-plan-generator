@@ -335,3 +335,37 @@ def test_gdelt_status_throttled(env, monkeypatch, response):
 def test_gdelt_status_skipped(env):
     result = spg("--yes", "--skip-news")
     assert "GDELT skipped" in retrieve_line(result.output)
+
+
+# ---------------------------------------------------------------- saved Retrieve with a different as-of date
+
+def test_dry_run_reports_both_as_of_dates_and_keeps_the_saved_retrieve(env):
+    spg("--yes")
+    requests_before = len(env["requests"])
+    dry = CliRunner().invoke(cli.app, ["run", "Test Co", "--as-of", "2026-10-14", "--dry-run"])
+    assert dry.exit_code == 0, dry.output
+    assert ("The saved Retrieve output is as of 2026-10-12, but --as-of is 2026-10-14. A real run will re-run "
+            "Retrieve as of 2026-10-14; this dry-run estimate uses the saved output.") in dry.output
+    assert len(env["requests"]) == requests_before  # no SEC or GDELT request in the dry run
+    saved = json.loads((env["root"] / "data" / "test-co" / "stages" / "01_retrieve.json").read_text())
+    assert saved["as_of"] == "2026-10-12"
+
+
+def test_real_run_with_a_different_as_of_reruns_retrieve_and_everything_after(env):
+    spg("--yes")
+    for f in out_dir(env).iterdir():
+        f.unlink()  # no --force: only the as-of change makes Retrieve, and so every later stage, run again
+    env["model"].calls.clear()
+    result = CliRunner().invoke(cli.app, ["run", "Test Co", "--as-of", "2026-10-14", "--yes"])
+    assert result.exit_code == 0, result.output
+    line = retrieve_line(result.output)
+    assert " ran " in line and "as of 2026-10-14" in line
+    assert env["model"].calls == ["initiatives", "challenges", "map", "draft"]
+    saved = json.loads((env["root"] / "data" / "test-co" / "stages" / "01_retrieve.json").read_text())
+    assert saved["as_of"] == "2026-10-14"
+
+
+def test_same_as_of_dry_run_has_no_date_notice(env):
+    spg("--yes")
+    dry = spg("--dry-run")
+    assert "The saved Retrieve output is as of" not in dry.output

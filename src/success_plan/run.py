@@ -348,8 +348,12 @@ def run_pipeline(opts: RunOptions, *, models_config: ModelsConfig, llm, http_fac
             _run_retrieve(opts, paths, http_factory, user_agent, echo, result)
         else:
             _reused(paths, "retrieve", RetrieveManifest, result, echo, opts)
-            if opts.dry_run and opts.as_of and not opts.force:
-                result.notices.append("Dry run: the estimate uses the saved Retrieve output; --force refreshes it.")
+            saved_as_of = RetrieveManifest.model_validate_json((paths.stages / STAGE_FILES["retrieve"]).read_text()).as_of
+            if opts.dry_run and opts.as_of and saved_as_of != opts.as_of:
+                notice = (f"The saved Retrieve output is as of {saved_as_of}, but --as-of is {opts.as_of}. A real run "
+                          f"will re-run Retrieve as of {opts.as_of}; this dry-run estimate uses the saved output.")
+                result.notices.append(notice)
+                echo(notice)
         to_run = [st for st in MODEL_STAGES if plan[st] == "run"]
         result.estimate = estimate_run(paths, models_config, opts.profile, counter, config, to_run) if to_run else []
         _gate(opts, result, limit, models_config, echo, confirm)
