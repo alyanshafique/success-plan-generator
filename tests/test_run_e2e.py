@@ -42,6 +42,15 @@ def submissions():
     }, "files": []}}
 
 
+def gdelt_ok():
+    return httpx.Response(200, json={"articles": [
+        {"url": "https://news.example.com/test-co-platform", "title": "Test Co expands its platform teams",
+         "seendate": "20260901T120000Z", "domain": "news.example.com"}]})
+
+
+GDELT = {"response": gdelt_ok}  # tests swap this for a throttled GDELT
+
+
 def fake_http(requests: list):
     def handler(request: httpx.Request) -> httpx.Response:
         url = str(request.url)
@@ -55,9 +64,7 @@ def fake_http(requests: list):
         if url.endswith("/testco-8k.htm"):
             return httpx.Response(200, text=OFFICER_8K)
         if url.startswith("https://api.gdeltproject.org/"):
-            return httpx.Response(200, json={"articles": [
-                {"url": "https://news.example.com/test-co-platform", "title": "Test Co expands its platform teams",
-                 "seendate": "20260901T120000Z", "domain": "news.example.com"}]})
+            return GDELT["response"]()
         return httpx.Response(404)
 
     def factory(user_agent, on_backoff=None):
@@ -154,6 +161,7 @@ def env(monkeypatch, tmp_path):
     monkeypatch.setenv("SEC_USER_AGENT", "Test User test@example.com")
     requests: list[str] = []
     monkeypatch.setattr(cli, "make_http_client", fake_http(requests))
+    monkeypatch.setitem(GDELT, "response", gdelt_ok)
     state = {"model": FakeModel(), "requests": requests, "root": tmp_path}
     monkeypatch.setattr(cli, "make_model_client", lambda: state["model"])
     return state
@@ -290,3 +298,40 @@ def test_no_10k_stops_at_retrieve(env, monkeypatch):
     result = spg("--yes")
     assert result.exit_code == 1 and "Stopped at retrieve" in result.output and "No 10-K found" in result.output
     assert env["model"].calls == []
+
+
+# ---------------------------------------------------------------- the Retrieve line in the run summary
+
+def retrieve_line(output: str) -> str:
+    return next(l for l in output.splitlines() if l.strip().startswith("retrieve "))
+
+
+def test_summary_shows_as_of_headlines_eligible_and_gdelt_ok(env):
+    result = spg("--yes")
+    assert "as of 2026-10-12; 1 headlines retrieved, 1 eligible; GDELT ok" in retrieve_line(result.output)
+
+
+def test_dry_run_summary_shows_the_saved_retrieve(env):
+    spg("--yes")
+    dry = spg("--dry-run")
+    line = retrieve_line(dry.output)
+    assert "reused" in line and "reused 01_retrieve.json" in line and "as of 2026-10-12" in line and "GDELT ok" in line
+
+
+def test_gdelt_status_cache_hit(env):
+    spg("--yes")
+    rerun = spg("--yes", "--force")  # Retrieve runs again; the GDELT response for this as-of date is cached
+    assert "GDELT cache hit" in retrieve_line(rerun.output)
+
+
+@pytest.mark.parametrize("response", [lambda: httpx.Response(429), lambda: httpx.Response(200, text="Please limit requests")])
+def test_gdelt_status_throttled(env, monkeypatch, response):
+    monkeypatch.setitem(GDELT, "response", response)
+    result = spg("--yes")
+    assert "0 headlines retrieved, 0 eligible; GDELT throttled" in retrieve_line(result.output)
+    assert result.exit_code == 0  # without --require-news, missing news stays a warning
+
+
+def test_gdelt_status_skipped(env):
+    result = spg("--yes", "--skip-news")
+    assert "GDELT skipped" in retrieve_line(result.output)

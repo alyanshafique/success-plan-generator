@@ -401,8 +401,30 @@ def _reused(paths: CompanyPaths, stage: str, model, result: RunResult, echo, opt
     if profile and stage in MODEL_STAGES and profile not in (opts.profile, "none"):
         result.notices.append(f"{stage.capitalize()} reused from profile {profile}, not {opts.profile}; "
                               f"use --from {stage} to re-run it.")
-    result.stages.append(StageReport(stage, "reused", 0.0, 0.0, f"reused {STAGE_FILES[stage]}{note}"))
-    echo(f"{stage.capitalize()}: reused {STAGE_FILES[stage]}{note}")
+    detail = f"reused {STAGE_FILES[stage]}{note}"
+    if stage == "retrieve":
+        detail += f"; {retrieve_detail(saved)}"
+    result.stages.append(StageReport(stage, "reused", 0.0, 0.0, detail))
+    echo(f"{stage.capitalize()}: {detail}")
+
+
+def news_status(news) -> str:
+    """ok, throttled, skipped, cache hit, or failed. GDELT signals rate limiting with HTTP 429 or, after a retry,
+    with a plain-text notice instead of JSON, so either counts as throttled."""
+    if news.status == "skipped":
+        return "skipped"
+    if news.from_cache:
+        return "cache hit"
+    if news.status == "failed":
+        error = news.error or ""
+        return "throttled" if ("429" in error or "JSONDecodeError" in error) else "failed"
+    return "ok"
+
+
+def retrieve_detail(manifest: RetrieveManifest) -> str:
+    news = manifest.news
+    return (f"as of {manifest.as_of}; {len(news.headlines)} headlines retrieved, {news.eligible_count} eligible; "
+            f"GDELT {news_status(news)}")
 
 
 def _timed(fn):
@@ -422,7 +444,7 @@ def _run_retrieve(opts, paths, http_factory, user_agent, echo, result: RunResult
     except (EdgarError, FetchError, RetrieveError, ValueError) as exc:
         raise RunStop("retrieve", str(exc)) from exc
     detail = (f"{manifest.company.name} ({manifest.company.ticker}); 10-K FY{manifest.filing.fiscal_year} filed "
-              f"{manifest.filing.filing_date}; {len(manifest.eight_ks.events)} 8-K events; news {manifest.news.status}")
+              f"{manifest.filing.filing_date}; {len(manifest.eight_ks.events)} 8-K events; {retrieve_detail(manifest)}")
     result.stages.append(StageReport("retrieve", "ran", seconds, 0.0, detail))
     result.notices += [f"Retrieve: {w}" for w in manifest.warnings]
     echo(f"  {detail} ({seconds:.0f}s)")
