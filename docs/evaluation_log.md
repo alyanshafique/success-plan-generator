@@ -1021,3 +1021,23 @@ to check a claim. Renamed accordingly: `plan_brief.md` and `plan_brief.docx` are
 `csm_draft.docx`; `stages/brief.py` and `tests/test_brief.py` are `stages/csm_draft.py` and `tests/test_csm_draft.py`;
 `config/brief_rules.yaml` is `config/csm_draft_rules.yaml`; `spg brief` is `spg csm-draft`; the render report field
 `brief` is `csm_draft`. Earlier entries in this log keep the old names as written.
+
+### 2026-10-13 · `spg run`: decisions recorded with the build
+
+Built offline: no real API or network call was made; the end-to-end test uses a fake SEC, a fake GDELT, and a fake
+model. Owner decisions applied:
+- `--profile final` is Opus for Extract and the dev settings (Sonnet) for Map and Draft, defined in
+  `config/models.yaml`; dev and plumbing use one model for all stages. Default profile: dev.
+- No fit for any initiative is not a stop: Draft makes no model call, `04_draft.json` records no objectives with
+  `no_objectives_reason`, the plan marks every initiative no fit with the "add objectives" blank, and the run exits 0.
+- Extract stops when more than half of its proposed sentences are dropped. This threshold is a new proposal, not taken
+  from an earlier run: the sentence-level Extract evaluation runs used a stricter stop condition (at most 25% dropped;
+  see the dev-4 and run 5 entries). The message names `--from map` as the way to continue.
+- plan.md and the CSM draft open with "Generated automatically from public information; not validated with the
+  company; the CSM reviews and edits before use." and a review note from `data/<company>/inputs/review_note.txt`
+  (default: "No human has reviewed this output."). The Expedia note says the extraction was read in full and Map,
+  Draft, and the documents were not checked sentence by sentence.
+- After a run, possible personal names in the stage outputs are listed (heuristic) for `config/private_names.txt`.
+- Stage outputs are written atomically; seconds per stage go to the usage log and the run summary.
+
+Not yet done: no run of `spg run` against a real company other than the committed Expedia sample.

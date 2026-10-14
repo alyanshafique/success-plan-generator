@@ -83,14 +83,14 @@ More: [docs/known_limitations.md](docs/known_limitations.md).
 The Expedia sample cost $1.23 in model calls (from `data/expedia/stages/usage_log.jsonl`): extraction on Opus $1.159,
 mapping $0.045, drafting $0.028. Logged runs by profile:
 
-| Stage | plumbing (Haiku) | dev (Sonnet) | final (Opus) |
+| Stage | plumbing (Haiku) | dev (Sonnet) | final (Opus for Extract, Sonnet for Map and Draft) |
 |---|---|---|---|
 | Extract | $0.019 | $0.40-0.43 | $1.16 |
-| Map | $0.003 | $0.045 | not run |
-| Draft | $0.001 | $0.015-0.029 | not run |
+| Map | $0.003 | $0.045 | same as dev |
+| Draft | $0.001 | $0.015-0.029 | same as dev |
 
 Every model-calling stage supports `--dry-run`, and a run aborts before any call if its estimate exceeds
-`max_cost_usd_per_run` in `config/models.yaml`.
+`max_cost_usd_per_run` in `config/models.yaml` (for `spg run`, the whole run's estimate; see below).
 
 ## Setup and usage
 
@@ -104,6 +104,30 @@ cp .env.example .env          # .env is gitignored; never commit it
 
 In `.env`, set `SEC_USER_AGENT="Your Name you@example.com"` (required by SEC EDGAR) and `ANTHROPIC_API_KEY=...`
 (needed from Extract onward; without it, `--dry-run` still estimates cost and Render needs no key).
+
+**One command for a whole plan:**
+
+```bash
+uv run spg run "<company name>" --dry-run                # Retrieve, then the whole-run cost estimate; no model call
+uv run spg run "<company name>"                          # dev profile; shows the estimate and asks before spending
+uv run spg run "<company name>" --profile final --yes    # Opus for Extract, Sonnet for Map and Draft; no prompt
+uv run spg run "<company name>" --ticker <TICKER>        # when the name matches several SEC registrants
+uv run spg run "<company name>" --from map               # re-run Map, Draft and Render from the saved Extract output
+uv run spg run "<company name>" --force                  # re-run every stage and replace existing outputs
+```
+
+`spg run` writes `output/<company>/plan.md`, `plan.json`, `csm_draft.md` and `csm_draft.docx`. Before any model call it
+checks the keys and the product config (`--product`, default `atlassian_jira_confluence`), runs Retrieve, and compares
+a whole-run estimate with the run limit (`--max-cost`, default `max_cost_usd_per_run`); over the limit it stops, and
+otherwise it asks unless `--yes`. It resumes from saved stage outputs, and it does not replace existing outputs without
+`--force` (`--dry-run` is always allowed). It stops with a message when Retrieve finds no 10-K or cannot confirm the
+fiscal year, when Extract keeps no initiatives or drops more than half of its proposed sentences, or when Draft writes
+no criteria. If no initiative fits the product, it writes a plan with every initiative marked no fit and exits
+normally. Afterwards it lists possible personal names found in the stage outputs, to add to
+`config/private_names.txt` before committing anything. Seconds and cost per stage go to the usage log. Other options:
+`--as-of`, `--refresh-sources` (re-download EDGAR and GDELT), `--skip-news` (no GDELT).
+
+**One stage at a time:**
 
 ```bash
 uv run spg retrieve --company "Expedia" --as-of 2026-10-12   # Stage 1
