@@ -130,7 +130,7 @@ Objective titles are neutral templates, and tasks are filled from a fixed catalo
 (Day 0-30, 31-60, 61-90). Code adds the "agree baselines" task to every objective. An initiative the model returns no
 criteria for is reported as "initiative skipped by model", and its objective gets a CSM blank criterion.
 
-## Render: the plan and the brief
+## Render: the detailed plan and the CSM draft
 
 Render (no model call) assembles the plan, adds the CSM blanks (account history, renewal, customer-raised challenges,
 unmapped objectives), gathers every validation and baseline question into items to validate, runs plan-wide price and
@@ -146,8 +146,11 @@ CSM selection is optional: put `selected: [I-01, ...]` and the Extract timestamp
 unlisted initiatives show "Proposed, not selected". The committed sample has no selection file: it is unedited tool
 output.
 
-**The brief** (`plan_brief.md` and `plan_brief.docx`) is a short summary of the same plan.json for a CSM to read
-before a customer call. It has a CSM action line under each section, puts discovery questions next to what they test,
-and has no source links; the detailed plan has every sentence, source, and citation. Key challenges in the brief are
-limited to the categories and change types in [config/brief_rules.yaml](../config/brief_rules.yaml); the rest are
-counted and left to the detailed plan. Render runs the same leakage checks on the brief before keeping it.
+**The CSM draft** (`csm_draft.md` and `csm_draft.docx`) is the working draft the CSM edits and takes into the
+customer conversation, built from the same plan.json. It has no source links; it carries a CSM action under each
+section and the discovery questions next to what they test. The detailed plan (`plan.md` and `plan.json`) is the
+reference the draft was built from and the place to check a claim: every sentence with its source links and labels;
+the CSM does not edit it. Key challenges in the CSM draft are limited to the categories and change types in
+[config/csm_draft_rules.yaml](../config/csm_draft_rules.yaml); the rest are counted and left to the detailed plan.
+Render runs the same leakage checks on the CSM draft before keeping it. `spg csm-draft` rebuilds only the CSM draft
+from an existing plan.json.

@@ -82,9 +82,9 @@ def test_docx_text_is_scanned(tmp_path):
     from docx import Document
     doc = Document()
     doc.add_paragraph("A line naming Pat Example.")
-    doc.save(tmp_path / "brief.docx")
-    text = file_text(tmp_path / "brief.docx")
+    doc.save(tmp_path / "draft.docx")
+    text = file_text(tmp_path / "draft.docx")
     assert name_hits(text, [name_pattern("Pat Example")]) == [1]
     (tmp_path / "output" / "testco").mkdir(parents=True)
-    doc.save(tmp_path / "output" / "testco" / "plan_brief.docx")
-    assert [p.name for p in untracked_scope(tmp_path)] == ["plan_brief.docx"]
+    doc.save(tmp_path / "output" / "testco" / "csm_draft.docx")
+    assert [p.name for p in untracked_scope(tmp_path)] == ["csm_draft.docx"]

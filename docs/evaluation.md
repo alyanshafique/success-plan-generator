@@ -51,8 +51,8 @@ replaced with one that requires a shared named entity and ignores table rows.
 
 [`output/expedia/plan.md`](../output/expedia/plan.md) (and `plan.json`) is **unedited tool output: a first-draft
 hypothesis** for a CSM to review and edit with the company. Nothing in it was changed by hand, and the owner's review
-notes stay in [evaluation_log.md](evaluation_log.md), not in the plan. The brief
-([`plan_brief.md`](../output/expedia/plan_brief.md), [`plan_brief.docx`](../output/expedia/plan_brief.docx)) is built
+notes stay in [evaluation_log.md](evaluation_log.md), not in the plan. The CSM draft
+([`csm_draft.md`](../output/expedia/csm_draft.md), [`csm_draft.docx`](../output/expedia/csm_draft.docx)) is built
 from the same plan.json.
 
 - **I-08 (Restructuring and cost efficiency) is drafted** because Map rated it a partial fit, although the owner judged

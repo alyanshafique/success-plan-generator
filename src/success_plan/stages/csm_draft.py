@@ -1,12 +1,13 @@
-"""Brief renderer: a short summary of output/<company>/plan.json for a CSM to read before a customer call.
+"""CSM draft renderer: the working draft a CSM edits and takes into the customer conversation, built from
+output/<company>/plan.json.
 
 No model call and no new content: every line comes from plan.json (or from the capability display names in
-config/draft_tasks.yaml), apart from fixed headings and "CSM action" instructions. Writes plan_brief.md and
-plan_brief.docx next to the plan, both built from one list of blocks so they say the same thing. The brief carries
+config/draft_tasks.yaml), apart from fixed headings and "CSM action" instructions. Writes csm_draft.md and
+csm_draft.docx next to the plan, both built from one list of blocks so they say the same thing. The CSM draft carries
 no sources or citations (those are in plan.md) but keeps the provenance and fit labels. Discovery questions sit
 under the objective, criterion, or challenge they belong to, each shown once. Only challenges on the keep lists in
-config/brief_rules.yaml appear; the rest, criterion validation questions, and questions about initiatives the tool did
-not map stay in plan.md. The Render leakage checks run on the brief before anything is kept.
+config/csm_draft_rules.yaml appear; the rest, criterion validation questions, and questions about initiatives the tool did
+not map stay in plan.md. The Render leakage checks run on the CSM draft before anything is kept.
 """
 
 import json
@@ -26,8 +27,8 @@ from .render import (
     load_chunk_texts, output_dir,
 )
 
-BRIEF_MD, BRIEF_DOCX = "plan_brief.md", "plan_brief.docx"
-RULES_FILE = PROJECT_ROOT / "config" / "brief_rules.yaml"
+DRAFT_MD, DRAFT_DOCX = "csm_draft.md", "csm_draft.docx"
+RULES_FILE = PROJECT_ROOT / "config" / "csm_draft_rules.yaml"
 TITLE = "Success Plan Strategy and Initiatives"
 BANNER = "Draft hypothesis from public information. Not reviewed by a human. For CSM review."
 POINTER = "Sources, citations and evidence labels are in the detailed plan (plan.md)."
@@ -56,7 +57,7 @@ ACTION_LABEL = "CSM action:"
 TARGET_BLANK_ONCE = "[CSM to complete: set target after baseline]"
 CUSTOMER_RAISED = "Raised by the customer: [CSM to complete]"
 ENGAGEMENT_GROUP = "Could affect this engagement"
-DESCRIPTION_OMITTED = "[Description omitted in the brief; see the detailed plan]"
+DESCRIPTION_OMITTED = "[Description omitted in the CSM draft; see the detailed plan]"
 NO_FIT_PREFIX = "No product fit: "
 BASELINES_ONCE = "Agree baselines for all success criteria before setting targets (CSM, Day 31-60, proposed)"
 VALIDATE, BASELINE = "Validate: ", "Baseline: "
@@ -135,7 +136,7 @@ def build_blocks(plan: dict, display_names: dict[str, str], fields: dict[str, di
     shown_questions: set[str] = set()
 
     def question(prefix: str, q: str | None, style: str) -> list[tuple[str, str]]:
-        """A question line, once per brief."""
+        """A question line, once per CSM draft."""
         if not q or q in shown_questions:
             return []
         shown_questions.add(q)
@@ -281,7 +282,7 @@ def docx_text(path: Path) -> str:
     return "\n".join(p.text for p in Document(path).paragraphs)
 
 
-def write_brief(paths: CompanyPaths, headlines: list[str] | None = None) -> tuple[Path, Path]:
+def write_csm_draft(paths: CompanyPaths, headlines: list[str] | None = None) -> tuple[Path, Path]:
     out = output_dir(paths)
     plan_path = out / PLAN_JSON
     if not plan_path.exists():
@@ -291,34 +292,34 @@ def write_brief(paths: CompanyPaths, headlines: list[str] | None = None) -> tupl
     blocks = build_blocks(plan, display_names, extract_fields(paths), load_rules())
     md = to_markdown(blocks)
     chunks = load_chunk_texts(paths)
-    problems = brief_problems(md, chunks, headlines or [])
+    problems = draft_problems(md, chunks, headlines or [])
     if problems:
-        raise RenderError("Brief check failed (nothing written):\n" + "\n".join(problems))
-    (out / BRIEF_MD).write_text(md)
-    to_docx(blocks, out / BRIEF_DOCX)
-    problems = brief_problems(docx_text(out / BRIEF_DOCX), chunks, headlines or [])
+        raise RenderError("CSM draft check failed (nothing written):\n" + "\n".join(problems))
+    (out / DRAFT_MD).write_text(md)
+    to_docx(blocks, out / DRAFT_DOCX)
+    problems = draft_problems(docx_text(out / DRAFT_DOCX), chunks, headlines or [])
     if problems:
-        (out / BRIEF_MD).unlink()
-        (out / BRIEF_DOCX).unlink()
-        raise RenderError("Brief check failed on the .docx (nothing kept):\n" + "\n".join(problems))
-    return out / BRIEF_MD, out / BRIEF_DOCX
+        (out / DRAFT_MD).unlink()
+        (out / DRAFT_DOCX).unlink()
+        raise RenderError("CSM draft check failed on the .docx (nothing kept):\n" + "\n".join(problems))
+    return out / DRAFT_MD, out / DRAFT_DOCX
 
 
-def brief_problems(text: str, chunk_texts: list[str] | None, headlines: list[str]) -> list[str]:
+def draft_problems(text: str, chunk_texts: list[str] | None, headlines: list[str]) -> list[str]:
     """The Render leakage checks (no evidence field, no 15+ word source run, no headline), plus no numbered source
-    reference, price, plan tier, personal title, or customer framing in the brief."""
+    reference, price, plan tier, personal title, or customer framing in the CSM draft."""
     problems = evidence_problems({}, text, chunk_texts, headlines)
     ref = REF.search(text)
     if ref:
-        problems.append(f"brief contains a numbered source reference ({ref.group(0)!r})")
+        problems.append(f"CSM draft contains a numbered source reference ({ref.group(0)!r})")
     if guards.find_currency_amounts(text):
-        problems.append("brief states a currency amount")
+        problems.append("CSM draft states a currency amount")
     tier = guards.plan_tier_phrase(text.replace(PLAN_CONFIRMATION_BLANK, ""))
     if tier:
-        problems.append(f"brief states a plan tier ({tier!r})")
+        problems.append(f"CSM draft states a plan tier ({tier!r})")
     if guards.has_personal_title(text):
-        problems.append("brief contains a personal title (Mr., Ms., Dr. ...)")
+        problems.append("CSM draft contains a personal title (Mr., Ms., Dr. ...)")
     framing = guards.implies_customer(text)
     if framing:
-        problems.append(f"brief implies the company is a customer ({framing!r})")
+        problems.append(f"CSM draft implies the company is a customer ({framing!r})")
     return problems

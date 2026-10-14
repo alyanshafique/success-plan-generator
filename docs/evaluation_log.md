@@ -1012,3 +1012,12 @@ could affect buying or adoption.
 - C-08 (consumer fraud) remains in the brief because the rule uses categories (it shares security_technology with C-07).
 - Weak objective-level validation questions and criterion O-03-C3 ("transactional efficiency in payments and customer
   service", not countable as written) remain until a Draft prompt change and rerun.
+
+### 2026-10-13 · Rename: the "brief" is now the "CSM draft"
+
+The owner decided the document is the CSM's working draft, not a summary: the CSM edits it and takes it into the
+customer conversation, while the detailed plan (plan.md, plan.json) is the reference it was built from and the place
+to check a claim. Renamed accordingly: `plan_brief.md` and `plan_brief.docx` are now `csm_draft.md` and
+`csm_draft.docx`; `stages/brief.py` and `tests/test_brief.py` are `stages/csm_draft.py` and `tests/test_csm_draft.py`;
+`config/brief_rules.yaml` is `config/csm_draft_rules.yaml`; `spg brief` is `spg csm-draft`; the render report field
+`brief` is `csm_draft`. Earlier entries in this log keep the old names as written.

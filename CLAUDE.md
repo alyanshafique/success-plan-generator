@@ -57,7 +57,7 @@ Use relative windows only (for example `Day 0-30`, `Day 31-60`, `Day 61-90`, or 
 2. **Extract**: pull initiatives, challenges, and leadership or structural changes into JSON with citations. No drafting here. The guards flag any currency amount or per-user price in extracted text that would flow into the plan (ground rule 10).
 3. **Map**: map each initiative to config capabilities or `no_fit`.
 4. **Draft**: generate objectives, success criteria, and tasks per the schema, for initiatives Map fitted (full or partial). The model writes only success criteria, each tied to Extract or Map sentences by reference; code builds objective titles, tasks (from `config/draft_tasks.yaml`), and targets (the number is a CSM blank). Any currency amount (e.g. "$12", "USD 5,000", "€8"), per-user price (e.g. "per user per month"), or plan tier in a criterion drops it (ground rule 10), as does a date: a month name, a specific day, a quarter label, or a year its referenced texts do not contain.
-5. **Render** (includes what was planned as a separate Flag stage): set baseline flags, gather discovery and validation questions into the "things to validate with the customer" list, add the CSM blanks, apply the optional CSM selection (`data/<company>/inputs/csm_selection.yaml`), and output JSON and Markdown. Validate JSON against the schema before writing. The plan shows source links only, never evidence phrases, and omits (and reports) any sentence that copies 15 or more consecutive words from a source. It also writes a short brief from the same plan.json (`plan_brief.md` and `plan_brief.docx`) for a CSM to read before a call.
+5. **Render** (includes what was planned as a separate Flag stage): set baseline flags, gather discovery and validation questions into the "things to validate with the customer" list, add the CSM blanks, apply the optional CSM selection (`data/<company>/inputs/csm_selection.yaml`), and output JSON and Markdown. Validate JSON against the schema before writing. The plan shows source links only, never evidence phrases, and omits (and reports) any sentence that copies 15 or more consecutive words from a source. It also writes the CSM draft from the same plan.json (`csm_draft.md` and `csm_draft.docx`): the working draft the CSM edits and takes into the customer conversation.
 
 Intermediate outputs are saved per stage so any stage can be inspected or re-run.
 
@@ -86,14 +86,14 @@ pyproject.toml                         # Python 3.12, managed with uv
 config/product_atlassian_jira_confluence.yaml
 schema/success_plan_schema.json
 src/success_plan/
-  cli.py                               # spg run | retrieve | extract | map | draft | render (plus replay-* commands)
+  cli.py                               # spg run | retrieve | extract | map | draft | render | csm-draft (plus replay-* commands)
   config.py                            # loads capability config; model view strips plan_availability
   models.py                            # pydantic models for each stage's output
   llm.py                               # Anthropic client wrapper; per-stage model; token and cost logging
   guards.py                            # deterministic rule checks (citations, quotes, plan wording, dates)
   stages/retrieve/                     # edgar, sections, news, chunks
   stages/extract.py, map.py, draft.py, render.py   # render.py also builds the Markdown
-  stages/brief.py                      # short brief (Markdown and Word) from plan.json
+  stages/csm_draft.py                  # CSM draft (Markdown and Word) from plan.json
   prompts/                             # prompt files, version-controlled
 tests/                                 # per-stage tests; no network or API calls in unit tests
 data/<company>/raw/                    # gitignored: filings, section text, chunks

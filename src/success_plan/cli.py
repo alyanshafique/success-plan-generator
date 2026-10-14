@@ -243,18 +243,18 @@ def render_cmd(
         typer.secho(f"Render failed: {exc}", fg=typer.colors.RED, err=True)
         raise typer.Exit(1)
     typer.echo(f"Wrote {json_path} (schema-valid) and {md_path}")
-    typer.echo(f"Wrote the brief: {', '.join(report['brief'])} (same folder)")
+    typer.echo(f"Wrote the CSM draft: {', '.join(report['csm_draft'])} (same folder)")
     for w in report["warnings"]:
         typer.secho(f"Warning: {w}", fg=typer.colors.YELLOW)
 
 
-@app.command("brief")
-def brief_cmd(
+@app.command("csm-draft")
+def csm_draft_cmd(
     company: str = typer.Option(..., help="Company name used for retrieve, e.g. 'Expedia'"),
 ) -> None:
-    """Rebuild only the brief (plan_brief.md and .docx) from the existing plan.json. No model call."""
+    """Rebuild only the CSM draft (csm_draft.md and .docx) from the existing plan.json. No model call."""
     from .models import RetrieveManifest
-    from .stages import brief as bf
+    from .stages import csm_draft as cdr
     from .stages import render as rd
 
     paths = CompanyPaths.for_company(company)
@@ -262,8 +262,8 @@ def brief_cmd(
     headlines = ([h.headline for h in RetrieveManifest.model_validate_json(manifest.read_text()).news.headlines]
                  if manifest.exists() else [])
     try:
-        md_path, docx_path = bf.write_brief(paths, headlines)
+        md_path, docx_path = cdr.write_csm_draft(paths, headlines)
     except rd.RenderError as exc:
-        typer.secho(f"Brief failed: {exc}", fg=typer.colors.RED, err=True)
+        typer.secho(f"CSM draft failed: {exc}", fg=typer.colors.RED, err=True)
         raise typer.Exit(1)
     typer.echo(f"Wrote {md_path} and {docx_path}")

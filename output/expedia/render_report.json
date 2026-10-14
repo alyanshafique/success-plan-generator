@@ -1,6 +1,6 @@
 {
   "stage": "render",
-  "generated_at": "2026-10-13T22:29:57+00:00",
+  "generated_at": "2026-10-14T00:16:39+00:00",
   "warnings": [
     "key_challenges.public_signals[10].text: currency amount or plan wording in source-derived text (check it is not a price)",
     "key_challenges.public_signals[10].sentences[0].text: currency amount or plan wording in source-derived text (check it is not a price)",

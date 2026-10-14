@@ -455,10 +455,10 @@ def render(paths: CompanyPaths, now: datetime | None = None) -> tuple[Path, Path
     (out / PLAN_JSON).write_text(json.dumps(plan, indent=2, ensure_ascii=False) + "\n")
     (out / PLAN_MD).write_text(md)
     (out / REPORT_NAME).write_text(json.dumps(report, indent=2) + "\n")
-    from .brief import write_brief  # the brief is built from the plan.json just written
+    from .csm_draft import write_csm_draft  # the CSM draft is built from the plan.json just written
 
-    brief_md, brief_docx = write_brief(paths, headlines)
-    report["brief"] = [brief_md.name, brief_docx.name]
+    draft_md, draft_docx = write_csm_draft(paths, headlines)
+    report["csm_draft"] = [draft_md.name, draft_docx.name]
     return out / PLAN_JSON, out / PLAN_MD, report
 
 

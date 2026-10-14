@@ -13,9 +13,13 @@ This prototype explores whether AI can help create that initial draft from publi
 
 ## Example output (Expedia and Atlassian Jira and Confluence)
 
-- [`output/expedia/plan_brief.docx`](output/expedia/plan_brief.docx): the short brief a CSM reads before a call, in Word.
-- [`output/expedia/plan_brief.md`](output/expedia/plan_brief.md): the same brief in Markdown.
-- [`output/expedia/plan.md`](output/expedia/plan.md): the detailed plan, with every sentence, source link, and label.
+- [`output/expedia/csm_draft.docx`](output/expedia/csm_draft.docx) (Word) and
+  [`output/expedia/csm_draft.md`](output/expedia/csm_draft.md) (Markdown): the working draft the CSM edits and takes
+  into the customer conversation. It has no source links; it carries a CSM action under each section and the discovery
+  questions next to what they test.
+- [`output/expedia/plan.md`](output/expedia/plan.md) and [`output/expedia/plan.json`](output/expedia/plan.json): the
+  detailed plan: every sentence with its source links and labels. It is the reference the draft was built from and the
+  place to check a claim; the CSM does not edit it.
 
 The sample is unedited tool output. What it gets wrong is recorded in [docs/evaluation.md](docs/evaluation.md).
 
@@ -29,8 +33,8 @@ The pipeline has five stages:
 3. **Map:** evaluate whether each initiative aligns with configured product capabilities, including partial and no-fit
    cases.
 4. **Draft:** generate proposed objectives, success criteria, and tasks with relative timelines.
-5. **Render:** assemble the detailed plan and the brief, surface validation questions, and apply final checks. No model
-   call.
+5. **Render:** assemble both the detailed plan and the CSM draft, surface validation questions, and apply final checks.
+   No model call.
 
 The model proposes, code verifies: each stage's output passes deterministic checks before the next stage uses it.
 Details: [docs/how_it_works.md](docs/how_it_works.md).
@@ -69,7 +73,7 @@ observed failures: [docs/evaluation.md](docs/evaluation.md) and [docs/evaluation
 - One company (Expedia) and one product (Jira and Confluence) so far.
 - Some success criteria have weak or unitless measures.
 - Some objective-level questions drift away from what the product does.
-- The brief's challenge grouping is coarse (by Extract's category fields).
+- The CSM draft's challenge grouping is coarse (by Extract's category fields).
 - Semantic errors, such as a result restated as an aim, can pass the automated checks.
 
 More: [docs/known_limitations.md](docs/known_limitations.md).
@@ -107,8 +111,8 @@ uv run spg extract --company "Expedia" --dry-run             # Stage 2 estimate,
 uv run spg extract --company "Expedia" --profile dev         # profiles: plumbing, dev, final
 uv run spg map --company "Expedia" --profile dev             # Stage 3 (also: replay-map)
 uv run spg draft --company "Expedia" --profile dev           # Stage 4 (also: replay-draft)
-uv run spg render --company "Expedia"                        # Stage 5: plan.json, plan.md, and the brief
-uv run spg brief --company "Expedia"                         # rebuild only the brief from plan.json
+uv run spg render --company "Expedia"                        # Stage 5: plan.json, plan.md, and the CSM draft
+uv run spg csm-draft --company "Expedia"                     # rebuild only the CSM draft from plan.json
 uv run pytest                                                # offline tests (no network, no API calls)
 ```
 

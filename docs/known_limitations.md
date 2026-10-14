@@ -22,10 +22,10 @@ evaluation caveats are in [evaluation.md](evaluation.md); the heuristic flags an
   customer service", is not something a CSM can count as written.
 - **Some objective questions drift from the product.** A few objective-level validation questions ask about the
   company's priorities rather than about the work the product supports.
-- **Coarse challenge grouping in the brief.** The brief keeps challenges by Extract's `category` and `change_type`
-  fields (see [config/brief_rules.yaml](../config/brief_rules.yaml)), which Extract assigns without a check. C-08
-  (consumer fraud) is kept only because it shares a category with C-07; C-11 is categorised "other" although it is a
-  financing risk. The grouping is a filter, not a relevance judgment; the CSM decides relevance.
+- **Coarse challenge grouping in the CSM draft.** The CSM draft keeps challenges by Extract's `category` and
+  `change_type` fields (see [config/csm_draft_rules.yaml](../config/csm_draft_rules.yaml)), which Extract assigns
+  without a check. C-08 (consumer fraud) is kept only because it shares a category with C-07; C-11 is categorised
+  "other" although it is a financing risk. The grouping is a filter, not a relevance judgment; the CSM decides relevance.
 - **Omitted sentences.** Three sentences are omitted from the sample: two for verbatim runs of 15 or more words, and
   one that pointed back at an omitted sentence. Shorter verbatim spans remain, cited by source link.
 - **No fit is common by design.** Nine of twelve Expedia initiatives mapped to "no fit", since Jira and Confluence track
