@@ -65,8 +65,10 @@ Expedia extraction runs:
 | Final run (Opus) | 1 of 30 |
 
 The first two counts were an AI-assisted read with some findings confirmed by the owner; the last two are the owner's
-full read. None are held-out results: the pipeline was tuned on the earlier runs. Methodology, who confirmed what, and
-observed failures: [docs/evaluation.md](docs/evaluation.md) and [docs/evaluation_log.md](docs/evaluation_log.md).
+full read. None are held-out results: the pipeline was tuned on the earlier runs. A second, held-out sample (Etsy,
+chosen by the pre-registered rule in [docs/evaluation_log.md](docs/evaluation_log.md)) is in progress and will be added
+with its error count, whatever it is. Methodology, who confirmed what, and observed failures:
+[docs/evaluation.md](docs/evaluation.md) and [docs/evaluation_log.md](docs/evaluation_log.md).
 
 ## Known limitations
 
