@@ -11,7 +11,7 @@ from ...paths import CompanyPaths
 from . import edgar
 from .chunks import Chunk, SourceMeta, chunk_text
 from .http import RateLimitedClient
-from .news import AliasMatcher, fetch_headlines, redact_headline
+from .news import GDELT_MAX_DAYS, AliasMatcher, NewsResult, fetch_headlines, gdelt_query, redact_headline
 from .sections import SectionError, cover_fiscal_year_end, html_to_text, split_sections
 
 EVENTS_WINDOW_DAYS = 365
@@ -51,6 +51,7 @@ def run_retrieve(
     ticker: str | None = None,
     as_of: date | None = None,
     force: bool = False,
+    skip_news: bool = False,
 ) -> RetrieveManifest:
     as_of = as_of or date.today()
     warnings: list[str] = []
@@ -190,9 +191,13 @@ def run_retrieve(
 
     low_signal_domains = load_low_signal_domains()
     gdelt_cache = paths.shared_cache / "gdelt" / f"cik{company.cik}_{as_of.isoformat()}.json"
-    news = fetch_headlines(
-        client, phrase, matcher, as_of, cache_path=gdelt_cache, force=force, low_signal_domains=low_signal_domains
-    )
+    if skip_news:
+        news = NewsResult("skipped", gdelt_query(phrase), as_of - timedelta(days=GDELT_MAX_DAYS), as_of, [])
+        warnings.append("GDELT not called (--skip-news). Continuing with 8-Ks and the 10-K only.")
+    else:
+        news = fetch_headlines(
+            client, phrase, matcher, as_of, cache_path=gdelt_cache, force=force, low_signal_domains=low_signal_domains
+        )
     if news.status == "failed":
         warnings.append(f"GDELT request failed ({news.error}). Continuing with 8-Ks only.")
     elif news.status == "empty":

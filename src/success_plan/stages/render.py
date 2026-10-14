@@ -24,7 +24,7 @@ from ..models import (
     OBJECTIVES_BLANK, PLAN_CONFIRMATION_BLANK, DraftOutput, ExtractItem, ExtractOutput, MapOutput, RetrieveManifest,
 )
 from ..paths import PROJECT_ROOT, CompanyPaths
-from .map import load_config
+from .map import CONFIG_FILE, load_config
 
 SCHEMA_FILE = PROJECT_ROOT / "schema" / "success_plan_schema.json"
 SELECTION_NAME = "csm_selection.yaml"
@@ -383,7 +383,8 @@ def _at(node, path: str):
 def build_plan(paths: CompanyPaths, now: datetime | None = None) -> tuple[dict, dict]:
     manifest, extract, mapping, draft = load_stages(paths)
     selection = load_selection(paths, extract)
-    config = load_config()
+    config_path = PROJECT_ROOT / mapping.config_file
+    config = load_config(config_path if config_path.exists() else CONFIG_FILE)  # the product config Map used
     log = usage_log(paths)
     now = now or datetime.now(timezone.utc).replace(microsecond=0)
     products = (config.get("meta") or {}).get("products_in_scope") or []

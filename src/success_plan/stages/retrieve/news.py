@@ -39,7 +39,7 @@ class Headline:
 
 @dataclass
 class NewsResult:
-    status: str  # "ok" | "empty" | "failed"
+    status: str  # "ok" | "empty" | "failed" | "skipped"
     query: str
     window_from: date
     window_to: date

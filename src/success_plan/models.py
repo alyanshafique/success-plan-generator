@@ -64,7 +64,7 @@ class HeadlineInfo(BaseModel):
 
 class NewsInfo(BaseModel):
     provider: Literal["gdelt"]
-    status: Literal["ok", "empty", "failed"]
+    status: Literal["ok", "empty", "failed", "skipped"]
     query: str
     window_from: date
     window_to: date

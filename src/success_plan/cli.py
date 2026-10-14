@@ -278,3 +278,45 @@ def csm_draft_cmd(
         typer.secho(f"CSM draft failed: {exc}", fg=typer.colors.RED, err=True)
         raise typer.Exit(1)
     typer.echo(f"Wrote {md_path} and {docx_path}")
+
+
+@app.command("run")
+def run_cmd(
+    company: str = typer.Argument(..., help="Company name, e.g. 'Expedia'"),
+    ticker: Optional[str] = typer.Option(None, help="Ticker, to pick one company when the name matches several"),
+    profile: str = typer.Option("dev", help="plumbing (Haiku), dev (Sonnet), or final (Opus for Extract, Sonnet for Map and Draft)"),
+    product: str = typer.Option("atlassian_jira_confluence", help="Product config: config/product_<name>.yaml"),
+    as_of: Optional[str] = typer.Option(None, help="As-of date (YYYY-MM-DD). Defaults to today."),
+    dry_run: bool = typer.Option(False, "--dry-run", help="Run Retrieve, print the whole-run estimate, make no model call"),
+    yes: bool = typer.Option(False, "--yes", help="Do not ask for confirmation (the run limit still applies)"),
+    max_cost: Optional[float] = typer.Option(None, help="Run limit in USD (default: max_cost_usd_per_run in config/models.yaml)"),
+    force: bool = typer.Option(False, "--force", help="Re-run every stage and allow overwriting this company's outputs"),
+    refresh_sources: bool = typer.Option(False, "--refresh-sources", help="Re-download EDGAR documents and refresh the GDELT cache"),
+    from_stage: Optional[str] = typer.Option(None, "--from", help="Re-run from this stage: extract, map, draft, or render"),
+    skip_news: bool = typer.Option(False, "--skip-news", help="Do not call GDELT (8-Ks and the 10-K only)"),
+) -> None:
+    """Run every stage for a company: Retrieve, Extract, Map, Draft, Render."""
+    from .run import RunOptions, run_pipeline
+
+    try:
+        as_of_date = date.fromisoformat(as_of) if as_of else None
+    except ValueError:
+        typer.secho(f"--as-of must be YYYY-MM-DD, got {as_of!r}", fg=typer.colors.RED, err=True)
+        raise typer.Exit(1)
+    opts = RunOptions(company=company, ticker=ticker, profile=profile, product=product, as_of=as_of_date, dry_run=dry_run,
+                      yes=yes, max_cost=max_cost, force=force, refresh_sources=refresh_sources, from_stage=from_stage,
+                      skip_news=skip_news)
+    result = run_pipeline(opts, models_config=load_models_config(), llm=make_model_client(), http_factory=make_http_client,
+                          echo=typer.echo, confirm=lambda message: typer.confirm(message, default=False))
+    for notice in result.notices:
+        typer.secho(f"Note: {notice}", fg=typer.colors.YELLOW)
+    if result.stages:
+        typer.echo("Summary:")
+        for s in result.stages:
+            typer.echo(f"  {s.name:<9} {s.status:<8} {s.seconds:>7.1f}s  ${s.cost_usd:.4f}{('  ' + s.detail) if s.detail else ''}")
+        typer.echo(f"  total cost ${result.cost_usd:.4f} (estimate ${result.estimated_cost_usd:.2f})")
+    for path in result.outputs:
+        typer.echo(f"Wrote {path}")
+    if result.stop:
+        typer.secho(f"Stopped at {result.stop.stage}: {result.stop.message}", fg=typer.colors.RED, err=True)
+        raise typer.Exit(1)

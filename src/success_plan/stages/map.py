@@ -270,7 +270,8 @@ def process_mapping(raw, n: int, initiative, claims: dict[str, dict], caps: dict
 
 def assemble(paths: CompanyPaths, extract: ExtractOutput, config: dict, parsed: LLMMapOutput, usage: list[UsageRecord],
              profile: str, models_config: ModelsConfig, now: datetime, *, today: date | None = None,
-             replayed_from: str | None = None) -> MapOutput:
+             replayed_from: str | None = None, config_path: Path | None = None) -> MapOutput:
+    config_path = config_path or CONFIG_FILE
     claims, withheld, caps = build_claims(config)
     gap_ids = {g["id"] for g in config.get("not_covered", [])}
     vocabulary = rationale_vocabulary(paths, extract, config, claims)
@@ -306,7 +307,7 @@ def assemble(paths: CompanyPaths, extract: ExtractOutput, config: dict, parsed: 
     distribution = {f: sum(1 for b in benefits if b.fit == f) for f in ("full", "partial", "no_fit")}
     output = MapOutput(
         generated_at=now, company=extract.company, profile=profile, extract_generated_at=extract.generated_at,
-        config_file=str(CONFIG_FILE.relative_to(PROJECT_ROOT)), withheld_claims=withheld, key_benefits=benefits,
+        config_file=config_label(config_path), withheld_claims=withheld, key_benefits=benefits,
         fit_distribution=distribution, usage=usage, total_cost_usd=round(sum(u.cost_usd for u in usage), 6),
         prices_as_of=models_config.prices_as_of, warnings=warnings, replayed_from=replayed_from,
     )
@@ -321,15 +322,24 @@ def assemble(paths: CompanyPaths, extract: ExtractOutput, config: dict, parsed: 
 
 # ---------------------------------------------------------------- run and replay
 
+def config_label(path: Path) -> str:
+    """The product config path as recorded in 03_map.json (relative to the repository when possible)."""
+    try:
+        return str(path.resolve().relative_to(PROJECT_ROOT))
+    except ValueError:
+        return str(path)
+
+
 def load_config(path: Path = CONFIG_FILE) -> dict:
     return yaml.safe_load(path.read_text())
 
 
 def run_map(paths: CompanyPaths, llm: LLM | None, models_config: ModelsConfig, profile: str, *, dry_run: bool = False,
             counter: TokenCounter | None = None, config: dict | None = None, system: str | None = None,
-            today: date | None = None):
+            today: date | None = None, config_path: Path | None = None):
     extract = load_extract(paths)
-    config = config or load_config()
+    config_path = config_path or CONFIG_FILE
+    config = config or load_config(config_path)
     claims, withheld, caps = build_claims(config)
     gaps = config.get("not_covered", [])
     system = system or system_prompt(extract.company)
@@ -390,7 +400,8 @@ def run_map(paths: CompanyPaths, llm: LLM | None, models_config: ModelsConfig, p
         estimated_input_tokens=estimate["input_tokens"], estimated_cost_usd=estimate["cost_usd"],
     )]
     log_run("ok", usage)
-    return estimate, assemble(paths, extract, config, parsed, usage, profile, models_config, now, today=today)
+    return estimate, assemble(paths, extract, config, parsed, usage, profile, models_config, now, today=today,
+                              config_path=config_path)
 
 
 def latest_response_dir(paths: CompanyPaths) -> Path | None:
@@ -400,7 +411,7 @@ def latest_response_dir(paths: CompanyPaths) -> Path | None:
 
 
 def replay_map(paths: CompanyPaths, models_config: ModelsConfig, response_dir: Path | None = None, *,
-               config: dict | None = None, today: date | None = None) -> MapOutput:
+               config: dict | None = None, today: date | None = None, config_path: Path | None = None) -> MapOutput:
     """Re-apply the current guards to a saved Map response. No API call of any kind."""
     response_dir = (response_dir or latest_response_dir(paths))
     if response_dir is None or not response_dir.resolve().exists():
@@ -413,5 +424,7 @@ def replay_map(paths: CompanyPaths, models_config: ModelsConfig, response_dir: P
                          input_tokens=u.get("input_tokens", 0), output_tokens=u.get("output_tokens", 0),
                          cost_usd=0.0, estimated_input_tokens=0, estimated_cost_usd=0.0)]
     now = datetime.now(timezone.utc).replace(microsecond=0)
-    return assemble(paths, load_extract(paths), config or load_config(), parsed, usage, record.get("profile", "unknown"),
-                    models_config, now, today=today, replayed_from=str(response_dir.relative_to(paths.root.resolve())))
+    config_path = config_path or CONFIG_FILE
+    return assemble(paths, load_extract(paths), config or load_config(config_path), parsed, usage,
+                    record.get("profile", "unknown"), models_config, now, today=today,
+                    replayed_from=str(response_dir.relative_to(paths.root.resolve())), config_path=config_path)
