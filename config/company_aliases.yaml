@@ -15,3 +15,13 @@ companies:
     brands: [Expedia, Hotels.com, Vrbo, Orbitz, Travelocity, ebookers, Wotif, trivago]
     # Named in Item 1 but left out as too generic to match headlines reliably:
     #   One Key (loyalty program), Rapid (B2B API), TAAP (agent booking tool).
+  "1370637":
+    name: Etsy, Inc.
+    ticker: ETSY
+    source: Form 10-K for fiscal year 2025, Item 1 Business (accession 0001370637-26-000019)
+    brands: []
+    # Named in Item 1 but left out:
+    #   Depop: sale to eBay completed July 30, 2026 (Form 8-K Item 2.01, filed 2026-07-30).
+    #   Reverb: sold June 2, 2025; also an ordinary word, so it would match unrelated headlines.
+    #   Elo7: sold August 10, 2023.
+    #   Etsy Ads, Etsy Insider, Etsy app: already matched by "Etsy".
