@@ -13,6 +13,7 @@ from .chunks import Chunk, SourceMeta, chunk_text
 from .http import RateLimitedClient
 from .news import GDELT_MAX_DAYS, AliasMatcher, NewsResult, fetch_headlines, gdelt_query, redact_headline
 from .sections import SectionError, cover_fiscal_year_end, html_to_text, split_sections
+from ... import atomic
 
 EVENTS_WINDOW_DAYS = 365
 EARNINGS_RELEASES = 2
@@ -103,7 +104,7 @@ def run_retrieve(
     sections_dir = paths.raw / "10k" / "sections"
     sections_dir.mkdir(parents=True, exist_ok=True)
     for item, section in sections.items():
-        (sections_dir / f"item{item}.txt").write_text(section.text)
+        atomic.write_text(sections_dir / f"item{item}.txt", section.text)
         source_id = f"10k-item{item}"
         chunks = chunk_text(section.text, source_id, source_id)
         add_source(
@@ -240,9 +241,7 @@ def run_retrieve(
 
     # 6. Save chunks (gitignored, full text) and the manifest (committed, short facts only).
     paths.raw.mkdir(parents=True, exist_ok=True)
-    with paths.chunks_file.open("w") as fh:
-        for record in records:
-            fh.write(json.dumps(record, ensure_ascii=False) + "\n")
+    atomic.write_text(paths.chunks_file, "".join(json.dumps(record, ensure_ascii=False) + "\n" for record in records))
 
     manifest = RetrieveManifest(
         generated_at=datetime.now(timezone.utc).replace(microsecond=0),
@@ -268,5 +267,5 @@ def run_retrieve(
         warnings=warnings,
     )
     paths.stages.mkdir(parents=True, exist_ok=True)
-    (paths.stages / MANIFEST_NAME).write_text(manifest.model_dump_json(indent=2) + "\n")
+    atomic.write_text(paths.stages / MANIFEST_NAME, manifest.model_dump_json(indent=2) + "\n")
     return manifest

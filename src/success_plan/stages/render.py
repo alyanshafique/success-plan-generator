@@ -18,7 +18,7 @@ from urllib.parse import urlparse
 import jsonschema
 import yaml
 
-from .. import guards
+from .. import atomic, guards
 from ..config import load_brand_aliases
 from ..models import (
     OBJECTIVES_BLANK, PLAN_CONFIRMATION_BLANK, DraftOutput, ExtractItem, ExtractOutput, MapOutput, RetrieveManifest,
@@ -453,9 +453,9 @@ def render(paths: CompanyPaths, now: datetime | None = None) -> tuple[Path, Path
                                  else "passed except the long-run check: raw/chunks.jsonl not found")
     out = output_dir(paths)
     out.mkdir(parents=True, exist_ok=True)
-    (out / PLAN_JSON).write_text(json.dumps(plan, indent=2, ensure_ascii=False) + "\n")
-    (out / PLAN_MD).write_text(md)
-    (out / REPORT_NAME).write_text(json.dumps(report, indent=2) + "\n")
+    atomic.write_text(out / PLAN_JSON, json.dumps(plan, indent=2, ensure_ascii=False) + "\n")
+    atomic.write_text(out / PLAN_MD, md)
+    atomic.write_text(out / REPORT_NAME, json.dumps(report, indent=2) + "\n")
     from .csm_draft import write_csm_draft  # the CSM draft is built from the plan.json just written
 
     draft_md, draft_docx = write_csm_draft(paths, headlines)

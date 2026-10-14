@@ -317,6 +317,13 @@ def run_cmd(
         typer.echo(f"  total cost ${result.cost_usd:.4f} (estimate ${result.estimated_cost_usd:.2f})")
     for path in result.outputs:
         typer.echo(f"Wrote {path}")
+    if result.personal_names:
+        typer.secho("Possible personal names in this company's stage outputs (heuristic; check each one):",
+                    fg=typer.colors.YELLOW)
+        for name in result.personal_names:
+            typer.echo(f"  {name}")
+        typer.secho("Add the real people to config/private_names.txt (gitignored) before committing any of these files.",
+                    fg=typer.colors.YELLOW)
     if result.stop:
         typer.secho(f"Stopped at {result.stop.stage}: {result.stop.message}", fg=typer.colors.RED, err=True)
         raise typer.Exit(1)

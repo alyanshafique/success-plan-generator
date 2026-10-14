@@ -549,6 +549,7 @@ class DraftOutput(BaseModel):
     objectives: list[Objective]
     objectives_blank: str = OBJECTIVES_BLANK
     not_drafted: list[str]  # initiative ids with no_fit: no objective
+    no_objectives_reason: str | None = None  # set when Draft made no model call because Map found no fit
     usage: list[UsageRecord]
     total_cost_usd: float
     prices_as_of: str

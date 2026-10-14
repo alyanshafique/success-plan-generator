@@ -9,6 +9,7 @@ initiatives.
 import html
 from pathlib import Path
 
+from .. import atomic
 from ..models import ExtractOutput, KeyBenefit, MapGuardReport, MapOutput
 from .extract_review import _CSS, _highlight
 
@@ -86,4 +87,4 @@ def write_map_review_sheet(path: Path, output: MapOutput, report: MapGuardReport
     doc = (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>{e(title)}</title>'
            f"<style>{_CSS}{_EXTRA_CSS}</style></head><body>" + "\n".join(head + body) + "</body></html>\n")
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(doc)
+    atomic.write_text(path, doc)

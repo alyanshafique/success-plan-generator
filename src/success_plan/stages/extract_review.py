@@ -8,6 +8,7 @@ import html
 import re
 from pathlib import Path
 
+from .. import atomic
 from ..models import ExtractItem, ExtractOutput, GuardReport
 
 _CSS = """
@@ -146,4 +147,4 @@ def write_review_sheet(path: Path, output: ExtractOutput, report: GuardReport, c
         f"<style>{_CSS}</style></head><body>" + "\n".join(head + body) + "</body></html>\n"
     )
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(doc)
+    atomic.write_text(path, doc)

@@ -15,7 +15,7 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .. import guards
+from .. import atomic, guards
 from ..llm import LLM, CallSettings, LLMError, ModelsConfig, TokenCounter, cost_usd, estimate_tokens
 from ..models import (
     DroppedSentence, ExtractItem, ExtractOutput, GuardEntry, GuardReport, ItemFlag, LegacyLLMChallengesChangesOutput,
@@ -426,7 +426,7 @@ def _save_response(run_dir: Path, call: CallSpec, profile: str, settings: CallSe
         },
         "output": result.parsed.model_dump(mode="json"),
     }
-    (run_dir / f"{call.name}.json").write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n")
+    atomic.write_text(run_dir / f"{call.name}.json", json.dumps(record, indent=2, ensure_ascii=False) + "\n")
 
 
 def assemble(
@@ -468,8 +468,8 @@ def assemble(
     if legacy:
         output.warnings.insert(0, "LEGACY response format (item-level citations), replayed read-only; not the current format.")
     paths.stages.mkdir(parents=True, exist_ok=True)
-    (paths.stages / OUTPUT_NAME).write_text(output.model_dump_json(indent=2) + "\n")
-    (paths.stages / GUARD_REPORT_NAME).write_text(report.model_dump_json(indent=2) + "\n")
+    atomic.write_text(paths.stages / OUTPUT_NAME, output.model_dump_json(indent=2) + "\n")
+    atomic.write_text(paths.stages / GUARD_REPORT_NAME, report.model_dump_json(indent=2) + "\n")
     write_review_sheet(paths.raw / REVIEW_SHEET_NAME, output, report, chunks)
     return output
 
@@ -599,5 +599,5 @@ def replay_extract(paths: CompanyPaths, config: ModelsConfig, response_dir: Path
                       replayed_from=source, legacy=bool(legacy))
     if rebuilt_notes:
         output.warnings.insert(0, f"Replayed a REBUILT response, not a saved one: {rebuilt_notes[0]}")
-        (paths.stages / OUTPUT_NAME).write_text(output.model_dump_json(indent=2) + "\n")
+        atomic.write_text(paths.stages / OUTPUT_NAME, output.model_dump_json(indent=2) + "\n")
     return output

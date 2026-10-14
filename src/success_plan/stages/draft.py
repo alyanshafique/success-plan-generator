@@ -20,7 +20,7 @@ from typing import Literal
 import yaml
 from pydantic import BaseModel, create_model
 
-from .. import guards
+from .. import atomic, guards
 from ..llm import LLM, LLMError, ModelsConfig, TokenCounter, cost_usd, estimate_tokens
 from ..models import (
     COMPANY_MEASURE_LABEL, CRITERION_BLANK, TARGET_BLANK, WINDOWS, DraftGuardReport, DraftOutput, DraftTask,
@@ -311,7 +311,7 @@ def needs_capability(task: dict) -> bool:
 
 def assemble(paths: CompanyPaths, extract: ExtractOutput, mapping: MapOutput, tasks: dict, parsed: LLMDraftOutput,
              usage: list[UsageRecord], profile: str, models_config: ModelsConfig, now: datetime, *,
-             replayed_from: str | None = None) -> DraftOutput:
+             replayed_from: str | None = None, no_objectives_reason: str | None = None) -> DraftOutput:
     benefits = eligible(mapping)
     table = reference_table(extract, benefits)
     names = capability_names(benefits)
@@ -404,11 +404,11 @@ def assemble(paths: CompanyPaths, extract: ExtractOutput, mapping: MapOutput, ta
         map_generated_at=mapping.generated_at, map_profile=mapping.profile, map_replayed_from=mapping.replayed_from,
         objectives=objectives, not_drafted=[b.initiative_id for b in mapping.key_benefits if b.fit == "no_fit"],
         usage=usage, total_cost_usd=round(sum(u.cost_usd for u in usage), 6), prices_as_of=models_config.prices_as_of,
-        warnings=warnings, replayed_from=replayed_from,
+        warnings=warnings, replayed_from=replayed_from, no_objectives_reason=no_objectives_reason,
     )
     paths.stages.mkdir(parents=True, exist_ok=True)
-    (paths.stages / OUTPUT_NAME).write_text(output.model_dump_json(indent=2) + "\n")
-    (paths.stages / GUARD_REPORT_NAME).write_text(report.model_dump_json(indent=2) + "\n")
+    atomic.write_text(paths.stages / OUTPUT_NAME, output.model_dump_json(indent=2) + "\n")
+    atomic.write_text(paths.stages / GUARD_REPORT_NAME, report.model_dump_json(indent=2) + "\n")
     return output
 
 
@@ -468,7 +468,7 @@ def run_draft(paths: CompanyPaths, llm: LLM | None, models_config: ModelsConfig,
     raw_output = result.parsed.model_dump(mode="json")
     parsed = flatten(raw_output)
     run_dir.mkdir(parents=True, exist_ok=True)
-    (run_dir / "draft.json").write_text(json.dumps({
+    atomic.write_text(run_dir / "draft.json", json.dumps({
         "call": "draft", "profile": profile, "model": result.model, "effort": settings.effort, "stop_reason": result.stop_reason,
         "usage": {"input_tokens": result.input_tokens, "output_tokens": result.output_tokens,
                   "cache_read_input_tokens": result.cache_read_input_tokens,
@@ -484,6 +484,19 @@ def run_draft(paths: CompanyPaths, llm: LLM | None, models_config: ModelsConfig,
     )]
     log_run("ok", usage)
     return estimate, assemble(paths, extract, mapping, tasks, parsed, usage, profile, models_config, now)
+
+
+NO_FIT_REASON = "Map found no full or partial fit, so no objectives were drafted and no model call was made."
+
+
+def write_without_fits(paths: CompanyPaths, models_config: ModelsConfig, tasks: dict | None = None) -> DraftOutput:
+    """04_draft.json with no objectives, for a plan where every initiative is no_fit (no model call)."""
+    extract, mapping = load_inputs(paths)
+    if eligible(mapping):
+        raise DraftError("Map found fits; run Draft normally.")
+    now = datetime.now(timezone.utc).replace(microsecond=0)
+    return assemble(paths, extract, mapping, tasks or load_tasks(), LLMDraftOutput(criteria=[], tasks=[]), [], "none",
+                    models_config, now, no_objectives_reason=NO_FIT_REASON)
 
 
 def latest_response_dir(paths: CompanyPaths) -> Path | None:

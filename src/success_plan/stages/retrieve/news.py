@@ -16,6 +16,7 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from urllib.parse import urlparse
 
+from ... import atomic
 from .http import FetchError, RateLimitedClient
 
 GDELT_URL = "https://api.gdeltproject.org/api/v2/doc/doc"
@@ -160,7 +161,7 @@ def fetch_headlines(
         return NewsResult("failed", query, window_from, as_of, [], error=f"{type(exc).__name__}: {exc}"[:300])
     if cache_path is not None and not from_cache:
         cache_path.parent.mkdir(parents=True, exist_ok=True)
-        cache_path.write_text(payload)  # only reached when the payload parsed as valid GDELT JSON
+        atomic.write_text(cache_path, payload)  # only reached when the payload parsed as valid GDELT JSON
     kept = rank_and_cap(parsed)
     return NewsResult(
         "ok" if kept else "empty", query, window_from, as_of, kept, returned_count=len(parsed), from_cache=from_cache

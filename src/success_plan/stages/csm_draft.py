@@ -18,7 +18,7 @@ import yaml
 from docx import Document
 from docx.shared import Inches, Pt
 
-from .. import guards
+from .. import atomic, guards
 from ..models import PLAN_CONFIRMATION_BLANK
 from ..paths import PROJECT_ROOT, CompanyPaths
 from .draft import FIT_LABELS, TASKS_FILE
@@ -275,7 +275,7 @@ def to_docx(blocks: list[tuple[str, str]], path: Path) -> None:
             for run in p.runs:
                 run.italic = True
                 run.bold = text == BANNER
-    doc.save(path)
+    atomic.save_with(path, doc.save)
 
 
 def docx_text(path: Path) -> str:
@@ -295,7 +295,7 @@ def write_csm_draft(paths: CompanyPaths, headlines: list[str] | None = None) -> 
     problems = draft_problems(md, chunks, headlines or [])
     if problems:
         raise RenderError("CSM draft check failed (nothing written):\n" + "\n".join(problems))
-    (out / DRAFT_MD).write_text(md)
+    atomic.write_text(out / DRAFT_MD, md)
     to_docx(blocks, out / DRAFT_DOCX)
     problems = draft_problems(docx_text(out / DRAFT_DOCX), chunks, headlines or [])
     if problems:

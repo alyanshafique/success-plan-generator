@@ -18,7 +18,7 @@ from typing import Literal
 import yaml
 from pydantic import BaseModel, create_model
 
-from .. import guards
+from .. import atomic, guards
 from ..llm import LLM, CallSettings, LLMError, ModelsConfig, TokenCounter, cost_usd, estimate_tokens
 from ..models import (
     PLAN_CONFIRMATION_BLANK, BenefitSentence, DroppedBenefitSentence, ExtractOutput, GuardEntry, ItemFlag, KeyBenefit,
@@ -312,8 +312,8 @@ def assemble(paths: CompanyPaths, extract: ExtractOutput, config: dict, parsed: 
         prices_as_of=models_config.prices_as_of, warnings=warnings, replayed_from=replayed_from,
     )
     paths.stages.mkdir(parents=True, exist_ok=True)
-    (paths.stages / OUTPUT_NAME).write_text(output.model_dump_json(indent=2) + "\n")
-    (paths.stages / GUARD_REPORT_NAME).write_text(report.model_dump_json(indent=2) + "\n")
+    atomic.write_text(paths.stages / OUTPUT_NAME, output.model_dump_json(indent=2) + "\n")
+    atomic.write_text(paths.stages / GUARD_REPORT_NAME, report.model_dump_json(indent=2) + "\n")
     from .map_review import write_map_review_sheet
 
     write_map_review_sheet(paths.raw / REVIEW_SHEET_NAME, output, report, extract, claims)
@@ -385,7 +385,7 @@ def run_map(paths: CompanyPaths, llm: LLM | None, models_config: ModelsConfig, p
         raise MapError(f"Model call failed: {exc}. Nothing was saved except the usage log.") from exc
     parsed = LLMMapOutput.model_validate(result.parsed.model_dump(mode="json"))
     run_dir.mkdir(parents=True, exist_ok=True)
-    (run_dir / "map.json").write_text(json.dumps({
+    atomic.write_text(run_dir / "map.json", json.dumps({
         "call": "map", "profile": profile, "model": result.model, "effort": settings.effort, "stop_reason": result.stop_reason,
         "usage": {"input_tokens": result.input_tokens, "output_tokens": result.output_tokens,
                   "cache_read_input_tokens": result.cache_read_input_tokens,

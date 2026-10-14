@@ -5,6 +5,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 import httpx
+from ... import atomic
 
 # EDGAR allows up to 10 requests per second per user; we stay well below.
 # All sec.gov hosts share one budget. GDELT asks for at most one request every 5 seconds.
@@ -119,5 +120,5 @@ class RateLimitedClient:
             return dest.read_bytes()
         content = self.get(url).content
         dest.parent.mkdir(parents=True, exist_ok=True)
-        dest.write_bytes(content)
+        atomic.write_bytes(dest, content)
         return content
