@@ -1124,3 +1124,29 @@ year ended | December 31 , 2025" (the date in its own table cell). The cover-pag
 "ended" and the date and inside the date (commit "Retrieve: cover-page fiscal year can be split by "|" across table
 cells"), with regression tests on synthetic cover text. The fiscal-year check itself is unchanged: the cover date must
 still equal EDGAR's report period. Etsy's Retrieve has not been re-run yet.
+
+### 2026-10-14 · Second pre-screen: method (recorded before any retrieval)
+
+- **Candidates:** Cigna Group, CVS Health, ExxonMobil, Wells Fargo, Ford Motor Company, McDonald's, Etsy.
+- **Why they were chosen:** large US 10-K filers with December fiscal years and sizeable IT and engineering
+  organizations, drawn from third-party lists of companies reported to use Jira (unverified estimates, not used by the
+  tool and not a statement about any company's customer status), filtered to exclude foreign filers, private companies,
+  IT services partners, and non-December fiscal years. The first list (above) was chosen for name clarity, not fit.
+  **Etsy is carried over from the first list** so that both lists are compared under the same keyword list; it can win
+  under the choice rule.
+- **Fixed keyword list** (case-insensitive substring counts unless stated; not changed after seeing results). It
+  differs from the first list because that list over-counted commercial "integrat" mentions: "digital
+  transformation", "legacy", "moderniz", "migrat", "agile", "automat", "artificial intelligence", "machine learning",
+  "developer", "engineering", "productivity", "operating model", "simplif", "cloud", "workflow", "technology
+  investment"; plus whole-word, case-sensitive "AI".
+- **Measure:** each keyword's count per 10,000 words of Items 1 and 7 combined, and the total per 10,000 words.
+- **Exclusions from ranking:**
+  - a company whose name is ambiguous in headlines: more than 10% of the first 50 retrieved headlines do not name the
+    company; if GDELT stays throttled, ambiguity is "not assessed" and the company stays in the ranking, flagged;
+  - a company whose Item 1 or Item 7 is a stub: under 2,000 words, or text saying it is incorporated by reference;
+  - a company where Retrieve fails.
+- **Choice rule:** the highest total per 10,000 words among the companies not excluded. The pre-screen states which
+  company the rule selects; it does not run it.
+- **Procedure:** `spg retrieve` for each candidate (SEC EDGAR and GDELT only, no model call); if GDELT stays throttled
+  after its retries, Retrieve continues without news. The step A section check (each Item 1 and Item 7 ends at the next
+  Item's body heading) is applied to each candidate.
