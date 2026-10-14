@@ -31,7 +31,10 @@ SELECTION_NAME = "csm_selection.yaml"
 PLAN_JSON, PLAN_MD, REPORT_NAME = "plan.json", "plan.md", "render_report.json"
 DISCLAIMER = ("All inputs are publicly available. This tool does not use proprietary or customer data. This output is a "
               "hypothesis generated from public information and has not been validated with the company.")
-NOTICE = "First-draft hypothesis for a CSM to review and edit."
+NOTICE = ("Generated automatically from public information; not validated with the company; the CSM reviews and "
+          "edits before use.")
+REVIEW_NOTE_NAME = "review_note.txt"  # optional, in data/<company>/inputs/
+DEFAULT_REVIEW_NOTE = "No human has reviewed this output."
 BLANKS = {
     "renewal": "[CSM to complete: renewal date, ARR, status, next steps]",
     "account_history": "[CSM to complete: account history]",
@@ -75,6 +78,13 @@ def load_selection(paths: CompanyPaths, extract: ExtractOutput) -> dict[str, boo
     if unknown:
         raise RenderError(f"{SELECTION_NAME} lists unknown initiative ids: {', '.join(unknown)}")
     return {i: i in selected for i in ids}
+
+
+def load_review_note(paths: CompanyPaths) -> str:
+    """What a human has checked, from data/<company>/inputs/review_note.txt; by default, nothing."""
+    path = inputs_dir(paths) / REVIEW_NOTE_NAME
+    text = " ".join(path.read_text().split()) if path.exists() else ""
+    return text or DEFAULT_REVIEW_NOTE
 
 
 def load_stages(paths: CompanyPaths):
@@ -395,6 +405,7 @@ def build_plan(paths: CompanyPaths, now: datetime | None = None) -> tuple[dict, 
         "filing": {"form": f.form, "fiscal_year": f.fiscal_year, "filing_date": f.filing_date.isoformat(), "url": f.url},
         "news_window": {"from": manifest.news.window_from.isoformat(), "to": manifest.news.window_to.isoformat()},
         "notice": NOTICE,
+        "review_note": load_review_note(paths),
         "stages": {"extract": stage_record("extract", extract, log), "map": stage_record("map", mapping, log),
                    "draft": stage_record("draft", draft, log)},
         "omitted_sentences": "",
@@ -494,7 +505,8 @@ def markdown(plan: dict) -> str:
     status = {i["id"]: STATUS[i["csm_selected"]] for i in plan["key_business_initiatives"]}
     titles = {i["id"]: i["title"] for i in plan["key_business_initiatives"]}
     L = [f"# Hypothetical success plan: {m['company']} and {m['product']}", "",
-         f"> **{m['notice']}**", ">", f"> {m['disclaimer']}", "",
+         f"> **{m['notice']}**", ">", f"> Review: {m.get('review_note', DEFAULT_REVIEW_NOTE)}", ">",
+         f"> {m['disclaimer']}", "",
          f"Filing: Form {m['filing']['form']} for fiscal year {m['filing']['fiscal_year']}, filed {m['filing']['filing_date']} "
          f"([EDGAR]({m['filing']['url']})). News window: {m['news_window']['from']} to {m['news_window']['to']}. "
          f"Generated {m['generated_at']}. CSM selection: {m['csm_selection']}.", "",

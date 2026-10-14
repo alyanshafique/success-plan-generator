@@ -347,3 +347,13 @@ def test_baselines_task_once_at_the_top_of_objectives(draft):
     assert sec.index(cdr.BASELINES_ONCE) < first_objective
     assert all(any(t["text"] == baselines for t in ob["tasks"]) for ob in plan["objectives"])  # plan.json keeps them
     assert draft["plan_md"].count(baselines) == len(plan["objectives"])  # and so does plan.md
+
+
+def test_csm_draft_opens_with_the_plan_header_and_review_note(draft):
+    md = draft["md"]
+    lines = [l for l in md.splitlines() if l.strip()]
+    assert cdr.BANNER == rd.NOTICE
+    assert lines[2] == f"_{rd.NOTICE}_" and lines[3] == f"_Review: {rd.DEFAULT_REVIEW_NOTE}_"
+    assert lines[4] == f"_{rd.DISCLAIMER}_" and lines[5] == f"_{cdr.POINTER}_"
+    texts = [p.text for p in Document(draft["docx"]).paragraphs]
+    assert texts[2:6] == [rd.NOTICE, f"Review: {rd.DEFAULT_REVIEW_NOTE}", rd.DISCLAIMER, cdr.POINTER]

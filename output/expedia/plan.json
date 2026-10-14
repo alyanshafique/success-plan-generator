@@ -3,7 +3,7 @@
     "company": "Expedia Group, Inc.",
     "ticker": "EXPE",
     "product": "Atlassian Jira and Confluence",
-    "generated_at": "2026-10-14T00:16:39+00:00",
+    "generated_at": "2026-10-14T00:46:45+00:00",
     "filing": {
       "form": "10-K",
       "fiscal_year": "2025",
@@ -14,7 +14,8 @@
       "from": "2026-07-14",
       "to": "2026-10-12"
     },
-    "notice": "First-draft hypothesis for a CSM to review and edit.",
+    "notice": "Generated automatically from public information; not validated with the company; the CSM reviews and edits before use.",
+    "review_note": "Extraction read in full by the author (see docs/evaluation.md); Map, Draft and this document were not checked sentence by sentence.",
     "stages": {
       "extract": {
         "profile": "final",

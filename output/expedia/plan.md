@@ -1,10 +1,12 @@
 # Hypothetical success plan: Expedia Group, Inc. and Atlassian Jira and Confluence
 
-> **First-draft hypothesis for a CSM to review and edit.**
+> **Generated automatically from public information; not validated with the company; the CSM reviews and edits before use.**
+>
+> Review: Extraction read in full by the author (see docs/evaluation.md); Map, Draft and this document were not checked sentence by sentence.
 >
 > All inputs are publicly available. This tool does not use proprietary or customer data. This output is a hypothesis generated from public information and has not been validated with the company.
 
-Filing: Form 10-K for fiscal year 2025, filed 2026-02-13 ([EDGAR](https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm)). News window: 2026-07-14 to 2026-10-12. Generated 2026-10-14T00:16:39+00:00. CSM selection: none: every initiative awaits CSM review.
+Filing: Form 10-K for fiscal year 2025, filed 2026-02-13 ([EDGAR](https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm)). News window: 2026-07-14 to 2026-10-12. Generated 2026-10-14T00:46:45+00:00. CSM selection: none: every initiative awaits CSM review.
 
 3 sentences omitted: verbatim runs of 15+ words. Details: render_report.json.
 

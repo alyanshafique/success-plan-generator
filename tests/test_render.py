@@ -447,3 +447,24 @@ def test_real_i12_and_c06_omission_layout_and_question_placement():
 def test_validation_blank_wording():
     assert rd.VALIDATION_BLANK == "[CSM to complete: validation question]"
     assert rd.VALIDATION_BLANK.startswith("[CSM to complete:")  # merged only within its own section
+
+
+# ---------------------------------------------------------------- header and review note
+
+def test_header_and_default_review_note(paths):
+    plan, md, _ = rendered(paths)
+    assert rd.NOTICE == ("Generated automatically from public information; not validated with the company; the CSM "
+                         "reviews and edits before use.")
+    assert plan["metadata"]["review_note"] == "No human has reviewed this output."
+    lines = md.splitlines()
+    assert lines[2] == f"> **{rd.NOTICE}**" and lines[4] == "> Review: No human has reviewed this output."
+    assert md.index("> Review:") < md.index(rd.DISCLAIMER)
+
+
+def test_review_note_read_from_inputs(paths):
+    rd.inputs_dir(paths).mkdir(parents=True, exist_ok=True)
+    (rd.inputs_dir(paths) / rd.REVIEW_NOTE_NAME).write_text("Extraction read in full\nby the author.\n")
+    plan, md, _ = rendered(paths)
+    assert plan["metadata"]["review_note"] == "Extraction read in full by the author."
+    assert "> Review: Extraction read in full by the author." in md
+    jsonschema.validate(plan, json.loads(rd.SCHEMA_FILE.read_text()))

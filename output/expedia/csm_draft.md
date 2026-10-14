@@ -2,7 +2,9 @@
 
 **Expedia Group, Inc.**
 
-_Draft hypothesis from public information. Not reviewed by a human. For CSM review._
+_Generated automatically from public information; not validated with the company; the CSM reviews and edits before use._
+
+_Review: Extraction read in full by the author (see docs/evaluation.md); Map, Draft and this document were not checked sentence by sentence._
 
 _All inputs are publicly available. This tool does not use proprietary or customer data. This output is a hypothesis generated from public information and has not been validated with the company._
 

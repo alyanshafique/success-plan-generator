@@ -34,7 +34,8 @@
             "to": { "type": "string", "format": "date" }
           }
         },
-        "notice": { "type": "string", "const": "First-draft hypothesis for a CSM to review and edit." },
+        "notice": { "type": "string", "const": "Generated automatically from public information; not validated with the company; the CSM reviews and edits before use." },
+        "review_note": { "type": "string", "description": "What a human has checked, from data/<company>/inputs/review_note.txt (default: no human review)." },
         "stages": {
           "type": "object",
           "description": "Per stage: profile, model, and cost. A replayed stage names the saved real run it replays; its real cost comes from the usage log.",

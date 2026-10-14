@@ -23,14 +23,14 @@ from ..models import PLAN_CONFIRMATION_BLANK
 from ..paths import PROJECT_ROOT, CompanyPaths
 from .draft import FIT_LABELS, TASKS_FILE
 from .render import (
-    DISCLAIMER, OMITTED_ITEM_TEXT, OMITTED_MARKER, PLAN_JSON, RenderError, STATUS, evidence_problems,
-    load_chunk_texts, output_dir,
+    DEFAULT_REVIEW_NOTE, DISCLAIMER, NOTICE, OMITTED_ITEM_TEXT, OMITTED_MARKER, PLAN_JSON, RenderError, STATUS,
+    evidence_problems, load_chunk_texts, output_dir,
 )
 
 DRAFT_MD, DRAFT_DOCX = "csm_draft.md", "csm_draft.docx"
 RULES_FILE = PROJECT_ROOT / "config" / "csm_draft_rules.yaml"
 TITLE = "Success Plan Strategy and Initiatives"
-BANNER = "Draft hypothesis from public information. Not reviewed by a human. For CSM review."
+BANNER = NOTICE  # the same opening line as plan.md
 POINTER = "Sources, citations and evidence labels are in the detailed plan (plan.md)."
 SECTIONS = [
     "1. Company Highlights",
@@ -145,7 +145,9 @@ def build_blocks(plan: dict, display_names: dict[str, str], fields: dict[str, di
     def section(n: int) -> list[tuple[str, str]]:
         return [(H1, SECTIONS[n]), (ACTION, ACTIONS[n])]
 
-    B: list[tuple[str, str]] = [(TITLE_S, TITLE), (SUBTITLE_S, m["company"]), (NORMAL, BANNER), (NORMAL, DISCLAIMER),
+    review = f"Review: {m.get('review_note') or DEFAULT_REVIEW_NOTE}"
+    B: list[tuple[str, str]] = [(TITLE_S, TITLE), (SUBTITLE_S, m["company"]), (NORMAL, BANNER), (NORMAL, review),
+                                (NORMAL, DISCLAIMER),
                                 (NORMAL, POINTER)]
 
     # 1. Company Highlights
@@ -251,7 +253,7 @@ def to_markdown(blocks: list[tuple[str, str]]) -> str:
         elif style == BULLET3:
             lines.append(f"    - {text}")
         else:
-            lines += ["", f"_{text}_" if text in (BANNER, DISCLAIMER, POINTER) else text]
+            lines += ["", f"_{text}_" if text in (BANNER, DISCLAIMER, POINTER) or text.startswith("Review: ") else text]
         prev = style
     return "\n".join(lines).strip() + "\n"
 
@@ -271,7 +273,7 @@ def to_docx(blocks: list[tuple[str, str]], path: Path) -> None:
             p.add_run(f" {text}")
             continue
         p = doc.add_paragraph(text, style=style)
-        if text in (BANNER, DISCLAIMER, POINTER):
+        if text in (BANNER, DISCLAIMER, POINTER) or text.startswith("Review: "):
             for run in p.runs:
                 run.italic = True
                 run.bold = text == BANNER
