@@ -1226,3 +1226,23 @@ checks (owner-reported; the 2026-10-14 pre-screen runs in this log also show GDE
 Decision: the Etsy sample will be run with `--skip-news`, using the 10-K and 8-Ks only. It is therefore less
 comparable to the Expedia sample, whose extraction also drew on news headlines. This was decided before the run and
 does not depend on any result. The README will say that the Etsy sample has no news.
+
+### 2026-10-15 · Etsy: first held-out run stopped at the CSM draft check
+
+First held-out Etsy run: `spg run "Etsy" --skip-news --profile final --as-of 2026-10-15` (Opus for Extract, Sonnet
+for Map and Draft).
+
+- **Retrieve, Extract, Map, and Draft completed.** Extract: 0 of 94 proposed sentences dropped (12 initiatives, 12
+  challenges, 7 changes). Map: 2 of 12 initiatives with a full or partial fit (both partial). Draft: 2 objectives
+  (O-01 for I-07, O-02 for I-12), 6 criteria.
+- **Render stopped at the CSM draft check** because two Draft questions for criterion O-02-C2 imply the company is a
+  customer ("your Atlassian Cloud apps"):
+  - baseline question: "How many people today query data from your Atlassian Cloud apps, and with what tools?"
+  - validation question: "Would querying data from your Atlassian Cloud apps be useful to your product, engineering,
+    and operations teams?"
+- The Draft guard flagged both as `implies_customer` in `04_draft_guard_report.json` (a review flag, so Draft kept
+  them).
+- **No CSM draft was written.** Render had already written `output/etsy/plan.json` and `plan.md` before the CSM draft
+  check, and kept them (the stop message says so); `plan.md` contains the same two questions, because the plan-wide
+  check treats customer framing as a warning, not a stop. These outputs are not committed.
+- **Next step:** re-run the Draft stage only, with no code or prompt change. The result will be logged either way.
