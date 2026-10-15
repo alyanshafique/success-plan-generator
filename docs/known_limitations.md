@@ -22,6 +22,10 @@ evaluation caveats are in [evaluation.md](evaluation.md); the heuristic flags an
   customer service", is not something a CSM can count as written.
 - **Some objective questions drift from the product.** A few objective-level validation questions ask about the
   company's priorities rather than about the work the product supports.
+- **Draft questions can presume the company is a customer.** On the held-out Etsy run, one criterion's questions said
+  "your Atlassian Cloud apps" in all three Draft attempts; the guards flag this, but only the CSM draft check stops on
+  it, and the CSM draft omits per-criterion validation questions. The detailed plan (plan.md, plan.json) can therefore
+  still contain such wording, flagged, for the CSM to rewrite before use.
 - **Coarse challenge grouping in the CSM draft.** The CSM draft keeps challenges by Extract's `category` and
   `change_type` fields (see [config/csm_draft_rules.yaml](../config/csm_draft_rules.yaml)), which Extract assigns
   without a check. C-08 (consumer fraud) is kept only because it shares a category with C-07; C-11 is categorised

@@ -1265,3 +1265,21 @@ was overwritten by this run) to 7 (this run's `04_draft_guard_report.json`).
 - **No CSM draft was written.** As in run 1, `plan.json` and `plan.md` were written and kept (not committed).
 - **Next step:** exactly one more unchanged Draft re-run. Its result will be reported as "passed on attempt 3" or
   "failed all three attempts".
+
+### 2026-10-15 · Etsy: Draft attempt 3 wrote the CSM draft; customer-presuming wording remains in the plan
+
+Draft attempt 3 (unchanged settings, no code or prompt change) **passed on attempt 3**: the run completed and wrote the
+CSM draft.
+
+- **Draft flags across the three attempts:** 12 (attempt 1, owner-reported; its guard report was overwritten), 7
+  (attempt 2), 11 (attempt 3).
+- **Criterion O-02-C2 had customer-presuming wording in all three attempts:** the baseline question in attempts 1 and
+  2 ("your Atlassian Cloud apps"), and the validation question in attempt 3: "Would querying data from your Atlassian
+  Cloud apps in one place be useful to your teams?"
+- **Why the CSM draft passed:** it omits per-criterion validation questions by design, so the attempt-3 question is
+  not in it. `plan.md` and `plan.json` still contain the wording, flagged by Render's plan-wide check (a warning).
+- **The eight currency notes** (Render warnings on S-01, S-03, and S-04) are all Etsy's own figures: Depop sale
+  proceeds, restructuring charges, and buyback authorizations. None is a product price or plan tier.
+- **Depop staleness:** S-01 records the completed Depop sale (Form 8-K filed 2026-07-30), so it is not stale.
+- **Decision:** no change to the Draft prompt or any code, so the Etsy Draft result stays held-out. The weakness is
+  listed in `docs/known_limitations.md`.
