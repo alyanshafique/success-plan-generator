@@ -1217,3 +1217,12 @@ Etsy is the company the second pre-screen's choice rule selected. Recorded befor
   sold; Etsy Ads, Etsy Insider, and the Etsy app are already matched by "Etsy"), so headline matching uses the name and
   ticker only.
 - **Dates:** every Etsy command uses `--as-of 2026-10-14`.
+
+### 2026-10-15 · Etsy: run without news (decided before any Etsy run)
+
+GDELT returned HTTP 429 on every attempt from 2026-10-14 to 2026-10-15, including `--require-news` retries and manual
+checks (owner-reported; the 2026-10-14 pre-screen runs in this log also show GDELT throttled or failing for Etsy).
+
+Decision: the Etsy sample will be run with `--skip-news`, using the 10-K and 8-Ks only. It is therefore less
+comparable to the Expedia sample, whose extraction also drew on news headlines. This was decided before the run and
+does not depend on any result. The README will say that the Etsy sample has no news.
