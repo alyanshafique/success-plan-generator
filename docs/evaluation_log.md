@@ -1246,3 +1246,22 @@ for Map and Draft).
   check, and kept them (the stop message says so); `plan.md` contains the same two questions, because the plan-wide
   check treats customer framing as a warning, not a stop. These outputs are not committed.
 - **Next step:** re-run the Draft stage only, with no code or prompt change. The result will be logged either way.
+
+### 2026-10-15 · Etsy: second Draft-only re-run stopped at the CSM draft check again
+
+Draft-only re-run with the same settings (`--from draft --profile final --skip-news --as-of 2026-10-15`), no code or
+prompt change. Draft: 2 objectives, 6 criteria. Draft flags fell from 12 (run 1, owner-reported; run 1's guard report
+was overwritten by this run) to 7 (this run's `04_draft_guard_report.json`).
+
+- **The CSM draft check stopped the render again.** The stop message named one baseline question under O-01-C2,
+  flagged for the phrase "currently use": "How many spaces currently use the same workflow today?" This question names
+  no product; it is arguably a false positive of a deliberately broad pattern, unlike run 1, where the question said
+  "your Atlassian Cloud apps".
+- **Correction found when checking the saved files:** this run also repeats run 1's problem. O-02-C2's baseline
+  question is again "How many people today query data from your Atlassian Cloud apps, and with what tools?", flagged
+  `implies_customer` in the guard report and present in `plan.md`. The stop message names only the first match in the
+  CSM draft, so it showed "currently use"; the render would have stopped on "your Atlassian" without the false
+  positive.
+- **No CSM draft was written.** As in run 1, `plan.json` and `plan.md` were written and kept (not committed).
+- **Next step:** exactly one more unchanged Draft re-run. Its result will be reported as "passed on attempt 3" or
+  "failed all three attempts".
