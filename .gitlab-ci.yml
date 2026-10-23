@@ -1,0 +1,142 @@
+# GitLab CI/CD for success-plan-generator
+#
+# Every push and merge request: lint -> test -> security -> smoke (offline, no API spend).
+# Scheduled pipelines add: live source checks (EDGAR/GDELT) and, when RUN_EVAL=true,
+# a real end-to-end model run with a hard cost cap.
+
+stages:
+  - lint
+  - test
+  - security
+  - smoke
+  - eval
+
+default:
+  image: ghcr.io/astral-sh/uv:python3.12-bookworm-slim
+  interruptible: true
+  cache:
+    key:
+      files: [uv.lock]
+    paths: [.cache/uv]
+
+variables:
+  UV_CACHE_DIR: "$CI_PROJECT_DIR/.cache/uv"
+  UV_LINK_MODE: copy
+  UV_FROZEN: "1"          # install exactly what uv.lock pins; fail if it is stale
+
+# Run on merge requests and the default branch, but not twice for the same commit.
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS
+      when: never
+    - if: $CI_COMMIT_BRANCH
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+
+# Fast checks never run on schedules; schedules exist for the slow/paid jobs.
+.on_push: &on_push
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+      when: never
+    - when: on_success
+
+# ---------------------------------------------------------------- lint
+lint:errors:
+  stage: lint
+  <<: *on_push
+  script:
+    # Syntax errors and undefined names: these block the pipeline.
+    - uvx ruff check --select E9,F63,F7,F82 --output-format=gitlab --output-file=gl-code-quality.json . || (cat gl-code-quality.json; exit 1)
+  artifacts:
+    when: always
+    reports:
+      codequality: gl-code-quality.json
+
+lint:style:
+  stage: lint
+  <<: *on_push
+  allow_failure: true      # existing style debt; reported, not blocking
+  script:
+    - uvx ruff check .
+    - uvx ruff format --check .
+
+# ---------------------------------------------------------------- test
+test:
+  stage: test
+  <<: *on_push
+  script:
+    - uv sync
+    - uv run --with pytest-cov pytest
+        --junitxml=report.xml
+        --cov=success_plan --cov-report=term --cov-report=xml:coverage.xml
+  coverage: '/^TOTAL.*\s+(\d+%)$/'
+  artifacts:
+    when: always
+    reports:
+      junit: report.xml
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
+
+# ---------------------------------------------------------------- security
+include:
+  - template: Jobs/SAST.gitlab-ci.yml               # Semgrep-based static analysis
+  - template: Jobs/Secret-Detection.gitlab-ci.yml   # catches committed API keys
+
+sast:
+  stage: security
+secret_detection:
+  stage: security
+
+dependency_audit:
+  stage: security
+  <<: *on_push
+  script:
+    - uv export --format requirements-txt --no-hashes --no-dev --no-emit-project -o requirements.txt
+    - uvx --python 3.12 pip-audit --strict -r requirements.txt
+
+# ---------------------------------------------------------------- smoke
+# Re-render the committed Expedia sample from saved stage outputs: exercises
+# schema validation, Markdown and .docx rendering with no network or model call.
+render_sample:
+  stage: smoke
+  <<: *on_push
+  script:
+    - uv sync
+    - uv run spg render --company "Expedia"
+  artifacts:
+    name: "expedia-plan-$CI_COMMIT_SHORT_SHA"
+    paths: [output/expedia/]
+    expire_in: 1 week
+
+# ---------------------------------------------------------------- scheduled
+live_sources:
+  stage: smoke
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+  script:
+    - test -n "$SEC_USER_AGENT" || (echo "Set SEC_USER_AGENT as a CI/CD variable"; exit 1)
+    - uv sync
+    - uv run pytest -m live
+
+eval_run:
+  stage: eval
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule" && $RUN_EVAL == "true"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE != "schedule"
+      when: manual
+      allow_failure: true
+  variables:
+    EVAL_COMPANY: "Expedia"
+    EVAL_MAX_COST: "2.00"
+  script:
+    - test -n "$ANTHROPIC_API_KEY" || (echo "Set ANTHROPIC_API_KEY as a masked CI/CD variable"; exit 1)
+    - uv sync
+    # The tool estimates cost first and stops before any model call if the estimate exceeds the cap.
+    - uv run spg run "$EVAL_COMPANY" --profile dev --yes --force --max-cost "$EVAL_MAX_COST"
+  artifacts:
+    when: always
+    name: "eval-$EVAL_COMPANY-$CI_PIPELINE_ID"
+    paths: [output/, data/]
+    exclude: [data/**/raw/**]
+    expire_in: 30 days
