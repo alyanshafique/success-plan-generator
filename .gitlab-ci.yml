@@ -64,6 +64,9 @@ lint:style:
 test:
   stage: test
   <<: *on_push
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq --no-install-recommends git > /dev/null
+    - git config --global --add safe.directory "$CI_PROJECT_DIR"
   script:
     - uv sync
     - uv run --with pytest-cov pytest
