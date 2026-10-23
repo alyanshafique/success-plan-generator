@@ -1,5 +1,7 @@
 # AI-Powered Customer Success Plan Generator
 
+[![pipeline](https://gitlab.com/alyanshafique/success-plan-generator/badges/main/pipeline.svg)](https://gitlab.com/alyanshafique/success-plan-generator/-/pipelines) [![coverage](https://gitlab.com/alyanshafique/success-plan-generator/badges/main/coverage.svg)](https://gitlab.com/alyanshafique/success-plan-generator/-/pipelines)
+
 An experimental CLI that turns public company information into a structured first draft of a customer success plan.
 
 ## Why this matters for Customer Success
@@ -93,6 +95,10 @@ mapping $0.045, drafting $0.028. Logged runs by profile:
 
 Every model-calling stage supports `--dry-run`, and a run aborts before any call if its estimate exceeds
 `max_cost_usd_per_run` in `config/models.yaml` (for `spg run`, the whole run's estimate; see below).
+
+## CI/CD
+
+GitLab CI runs on every push and merge request: lint, 430+ offline tests with coverage, SAST, secret detection, a dependency audit, and an offline render of the Expedia sample. A weekly schedule checks the live EDGAR/GDELT sources, and a monthly schedule runs a full model pipeline capped at $2. See .gitlab-ci.yml.
 
 ## Setup and usage
 
